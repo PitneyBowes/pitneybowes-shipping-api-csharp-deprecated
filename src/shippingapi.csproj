@@ -5,7 +5,7 @@
     <AssemblyName>shippingapi</AssemblyName>
     <Version>1.1.0</Version>
     <PackageId>shippingapi</PackageId>
-    <PackageVersion>1.1.0</PackageVersion>
+    <PackageVersion>1.1.0-prerelease</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyVersion>1.1.0</AssemblyVersion>
     <FileVersion>1.1.0.0</FileVersion>
@@ -24,7 +24,7 @@
     <Title>ShippingAPI</Title>
     <RepositoryUrl>https://github.com/PitneyBowes/pitneybowes-shipping-api-csharp</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>https://raw.githubusercontent.com/PitneyBowes/pitneybowes-shipping-api-csharp/master/CHANGES.md</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/PitneyBowes/pitneybowes-shipping-api-csharp/master/CHANGES.md</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug OSX|AnyCPU' ">

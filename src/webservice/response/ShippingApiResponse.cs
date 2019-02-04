@@ -127,16 +127,22 @@ namespace PitneyBowes.Developer.ShippingApi
             }
         }
 
-
-        private static void DeserializationError(object sender, Newtonsoft.Json.Serialization.ErrorEventArgs e)
-        {
-            throw new JsonSerializationException("Error deserializing", e.ErrorContext.Error);
-        }
-
         internal static void Deserialize(ISession session, RecordingStream respStream, ShippingApiResponse<Response> apiResponse, long streamPos = 0)
         {
             var deserializer = new JsonSerializer();
-            deserializer.Error += DeserializationError;
+            deserializer.Error += delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args)
+            {
+                // only log an error once
+                if (args.CurrentObject == args.ErrorContext.OriginalObject)
+                {
+                    session.LogError(String.Format("Deserialization error at path {0}: {1}", args.ErrorContext.Path, args.ErrorContext.Error));
+                }
+                if (!session.ThrowExceptions)
+                {
+                    args.ErrorContext.Handled = true;
+                }
+            }; 
+
             deserializer.ContractResolver = new ShippingApiContractResolver();
             ((ShippingApiContractResolver)deserializer.ContractResolver).Registry = session.SerializationRegistry;
             respStream.Seek(streamPos, SeekOrigin.Begin);

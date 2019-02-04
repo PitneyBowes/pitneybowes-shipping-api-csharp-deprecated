@@ -176,7 +176,11 @@ namespace PitneyBowes.Developer.ShippingApi
                         // only log an error once
                         if (args.CurrentObject == args.ErrorContext.OriginalObject)
                         {
-                            session.LogError(args.ErrorContext.Error.Message);
+                            session.LogError(String.Format("Deserialization error at path {0}: {1}", args.ErrorContext.Path, args.ErrorContext.Error));
+                        }
+                        if (!session.ThrowExceptions)
+                        {
+                            args.ErrorContext.Handled = true;
                         }
                     };
                     ((ShippingApiContractResolver)serializer.ContractResolver).Registry = session.SerializationRegistry;
