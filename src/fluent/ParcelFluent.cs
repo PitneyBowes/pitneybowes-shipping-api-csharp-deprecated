@@ -59,9 +59,9 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
         /// <param name="w">Width</param>
         /// <param name="u">Units - defaults to inches</param>
         /// <returns></returns>
-        public ParcelFluent<T> Dimension(decimal l, decimal h, decimal w, UnitOfDimension u = UnitOfDimension.IN) 
+        public ParcelFluent<T> Dimension(decimal l, decimal h, decimal w, UnitOfDimension u = UnitOfDimension.IN, decimal g = 0) 
         {
-            _parcel.Dimension = new ParcelDimension() { Length = l, Height = h, Width = w, UnitOfMeasurement = u };
+            _parcel.Dimension = new ParcelDimension() { Length = l, Height = h, Width = w, UnitOfMeasurement = u, IrregularParcelGirth = g };
             return this;
         }
 
@@ -96,6 +96,5 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
             _parcel.CurrencyCode = s;
             return this;
         }
-        
     }
 }
