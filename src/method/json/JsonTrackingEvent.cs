@@ -26,11 +26,30 @@ namespace PitneyBowes.Developer.ShippingApi.Json
         public JsonTrackingEvent() : base() { }
         public JsonTrackingEvent(T t) : base(t) { }
 
-        [JsonProperty("eventDateTime")]
+        [JsonIgnore]
         public DateTimeOffset EventDateTime
         {
             get => Wrapped.EventDateTime;
             set { Wrapped.EventDateTime = value; }
+        }
+        [JsonProperty("eventDate")]
+        public DateTimeOffset EventDate
+        {
+            get => Wrapped.EventDateTime.Date;
+            set
+            {
+                var t = Wrapped.EventDateTime.TimeOfDay;
+                Wrapped.EventDateTime = value.Date + t;
+            }
+        }
+        [JsonProperty("eventTime")]
+        public DateTimeOffset EventTime
+        {
+            get => DateTimeOffset.MinValue + Wrapped.EventDateTime.TimeOfDay;
+            set
+            {
+                Wrapped.EventDateTime = Wrapped.EventDateTime.Date + value.TimeOfDay;
+            }
         }
         [JsonProperty("eventCity")]
         public string EventCity

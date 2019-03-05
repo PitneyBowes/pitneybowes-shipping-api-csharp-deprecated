@@ -59,29 +59,88 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             get => Wrapped.Status;
             set { Wrapped.Status = value; }
         }
-        [JsonProperty("updatedDateTime")]
+        [JsonIgnore]
         public DateTimeOffset UpdatedDateTime
         {
-            get => Wrapped.UpdatedDateTime;
-            set { Wrapped.UpdatedDateTime = value; }
+            get;
+            set;
         }
-        [JsonProperty("shipDateTime")]
+
+        [JsonProperty("updatedDate")]
+        public DateTimeOffset UpdatedDate
+        {
+            get => Wrapped.UpdatedDateTime.Date;
+            set
+            {
+                var t = Wrapped.UpdatedDateTime.TimeOfDay;
+                Wrapped.UpdatedDateTime = value.Date + t;
+            }
+        }
+        [JsonProperty("updatedTime")]
+        public DateTimeOffset UpdatedTime
+        {
+            get => DateTimeOffset.MinValue + Wrapped.UpdatedDateTime.TimeOfDay;
+            set
+            {
+                Wrapped.UpdatedDateTime = Wrapped.UpdatedDateTime.Date + value.TimeOfDay;
+            }
+        }
+        [JsonProperty("shipDate")]
         public DateTimeOffset ShipDateTime
         {
             get => Wrapped.ShipDateTime;
             set { Wrapped.ShipDateTime = value; }
         }
-        [JsonProperty("estimatedDeliveryDateTime")]
+        [JsonIgnore]
         public DateTimeOffset EstimatedDeliveryDateTime
         {
-            get => Wrapped.EstimatedDeliveryDateTime;
-            set { Wrapped.EstimatedDeliveryDateTime = value; }
+            get;
+            set;
         }
-        [JsonProperty("deliveryDateTime")]
+        [JsonProperty("estimatedDeliveryDate")]
+        public DateTimeOffset EstimatedDeliveryDate
+        {
+            get => Wrapped.EstimatedDeliveryDateTime.Date;
+            set
+            {
+                var t = Wrapped.EstimatedDeliveryDateTime.TimeOfDay;
+                Wrapped.EstimatedDeliveryDateTime = value.Date + t;
+            }
+
+        }
+        [JsonProperty("estimatedDeliveryTime")]
+        public DateTimeOffset EstimatedDeliveryTime
+        {
+            get => DateTimeOffset.MinValue + Wrapped.EstimatedDeliveryDateTime.TimeOfDay;
+            set
+            {
+                Wrapped.EstimatedDeliveryDateTime = Wrapped.EstimatedDeliveryDateTime.Date + value.TimeOfDay;
+            }
+        }
+        [JsonIgnore]
         public DateTimeOffset DeliveryDateTime
         {
-            get => Wrapped.DeliveryDateTime;
-            set { Wrapped.DeliveryDateTime = value; }
+            get;
+            set;
+        }
+        [JsonProperty("deliveryDate")]
+        public DateTimeOffset DeliveryDate
+        {
+            get => Wrapped.DeliveryDateTime.Date;
+            set
+            {
+                var t = Wrapped.DeliveryDateTime.TimeOfDay;
+                Wrapped.DeliveryDateTime = value.Date + t;
+            }
+        }
+        [JsonProperty("deliveryTime")]
+        public DateTimeOffset DeliveryTime
+        {
+            get => DateTimeOffset.MinValue + Wrapped.DeliveryDateTime.TimeOfDay;
+            set
+            {
+                Wrapped.DeliveryDateTime = Wrapped.DeliveryDateTime.Date + value.TimeOfDay;
+            }
         }
         [JsonProperty("deliveryLocation")]
         public string DeliveryLocation
