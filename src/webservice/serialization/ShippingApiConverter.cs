@@ -25,8 +25,8 @@ namespace PitneyBowes.Developer.ShippingApi
 
     internal class ShippingApiConverter : JsonConverter
     {
-        private Type _objectType;
-        private Type _wrapperType;
+        private readonly Type _objectType;
+        private readonly Type _wrapperType;
 
         public object Wrap(object o)
         {

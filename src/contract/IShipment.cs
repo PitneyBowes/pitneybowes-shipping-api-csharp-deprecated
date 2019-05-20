@@ -38,6 +38,16 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         string ShipperRatePlan { get; set; }
         /// <summary>
+        /// Required for PB Presort. The job number that represents the agreement between the merchant and PB Presort. 
+        /// This was provided by Pitney Bowes during merchant onboarding for PB Presort.
+        /// </summary>
+        string ShipmentGroupId { get; set; }
+        /// <summary>
+        /// Required for PB Presort. The merchant’s Mailer ID (MID), as provided by Pitney Bowes during merchant 
+        /// onboarding for PB Presort.
+        /// </summary>
+        string IntegratorCarrierId { get; set; }
+        /// <summary>
         /// Request devlivery commitment
         /// </summary>
         bool IncludeDeliveryCommitment { get; set; }

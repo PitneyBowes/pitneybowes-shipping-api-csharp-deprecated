@@ -38,9 +38,10 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         /// </summary>
         virtual public string IntegratorRatePlan { get; set; }
         /// <summary>
-        /// Integrator Id
+        /// Required for PB Presort. The job number that represents the agreement between the merchant and PB Presort. 
+        /// This was provided by Pitney Bowes during merchant onboarding for PB Presort.
         /// </summary>
-        virtual public string IntegratorId { get; set; }
+        public string ShipmentGroupId { get; set; }
         /// <summary>
         /// MinimalAddressValidation header option
         /// </summary>

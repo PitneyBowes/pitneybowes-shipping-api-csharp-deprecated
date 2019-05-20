@@ -129,15 +129,21 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
             where S : class, ISpecialServices, new()
             where P : class, IParameter, new()
         {
-            var s = new S();
-            s.SpecialServiceId = SpecialServiceCodes.NOTIFICATIONS;
-            var np = new P();
-            np.Name = NotificationType.RECIPIENT_NOTIFICATION_TYPE.ToString();
-            np.Value = recipientNotificationType.ToString();
+            var s = new S
+            {
+                SpecialServiceId = SpecialServiceCodes.NOTIFICATIONS
+            };
+            var np = new P
+            {
+                Name = NotificationType.RECIPIENT_NOTIFICATION_TYPE.ToString(),
+                Value = recipientNotificationType.ToString()
+            };
             s.AddParameter(np);
-            var em = new P();
-            em.Name = NotificationType.RECIPIENT_NOTIFICATION_EMAIL.ToString();
-            em.Value = email;
+            var em = new P
+            {
+                Name = NotificationType.RECIPIENT_NOTIFICATION_EMAIL.ToString(),
+                Value = email
+            };
             s.AddParameter(em);
             r.SpecialService(s);
             return r;
@@ -168,9 +174,11 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
                         return f;
                     }
                 }
-                var rectOpt = new O();
-                rectOpt.ShipmentOption = ShipmentOption.IS_RECTANGULAR;
-                rectOpt.Value = "false";
+                var rectOpt = new O
+                {
+                    ShipmentOption = ShipmentOption.IS_RECTANGULAR,
+                    Value = "false"
+                };
             }
             return f;
         }

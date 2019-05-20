@@ -831,7 +831,11 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// Parcel Select Lightweight
         /// </summary>
-        PSLW
+        PSLW,
+        /// <summary>
+        /// Standard mail. Use for PB Presort
+        /// </summary>
+        STANDARD
 
     }
 

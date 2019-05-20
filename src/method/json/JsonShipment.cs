@@ -83,6 +83,20 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             set => Wrapped.ShipperRatePlan = value;
         }
 
+        [ShippingApiHeader("x-pb-shipmentgroupid", true)]
+        public string ShipmentGroupId
+        {
+            get => Wrapped.ShipmentGroupId;
+            set => Wrapped.ShipmentGroupId = value;
+        }
+
+        [ShippingApiHeader("x-pb-integrator-carrierid", true)]
+        public string IntegratorCarrierId
+        {
+            get => Wrapped.IntegratorCarrierId;
+            set => Wrapped.IntegratorCarrierId = value;
+        }
+
         [ShippingApiQuery("includeDeliveryCommitment" )]
         public bool IncludeDeliveryCommitment {
             get => Wrapped.IncludeDeliveryCommitment;

@@ -13,15 +13,16 @@ namespace MyShip
         {
             var sandbox = new Session() { EndPoint = "https://api-sandbox.pitneybowes.com", Requester = new ShippingApiHttpRequest() };
 
-            sandbox.AddConfigItem("ApiKey", "your api key");
-            sandbox.AddConfigItem("ApiSecret", "your api secret");
-            sandbox.AddConfigItem("ShipperID", "your shipper id");
-            sandbox.AddConfigItem("DeveloperID", "your developer id");
+            sandbox.AddConfigItem("ApiKey", "hjyWnfAcjG1rVzizKAq0uyExJY6VGW55");
+            sandbox.AddConfigItem("ApiSecret", "QLmKAPLtogmnc93o");
+            sandbox.AddConfigItem("ShipperID", "9026169668");
+            sandbox.AddConfigItem("DeveloperID", "46841939");
 
             Model.RegisterSerializationTypes(sandbox.SerializationRegistry);
             Globals.DefaultSession = sandbox;
 
             var shipment = ShipmentFluent<Shipment>.Create()
+                .PBPresortShipment<Shipment>("", "")
                 .ToAddress((Address)AddressFluent<Address>.Create()
                     .AddressLines("643 Greenway Rd")
                     .PostalCode("28607")
@@ -33,15 +34,21 @@ namespace MyShip
                     .CityTown("Shelton").StateProvince("CT").PostalCode("06484")
                     .CountryCode("US")
                     )
+               
                .Parcel((Parcel)ParcelFluent<Parcel>.Create()
-                    .Dimension(12, 12, 10)
-                    .Weight(16m, UnitOfWeight.OZ))
+                    .Dimension(12, 0.25M, 9)
+                    .Weight(3m, UnitOfWeight.OZ))
                .Rates(RatesArrayFluent<Rates>.Create()
-                    .USPSPriority<Rates, Parameter>())
+                    .Carrier(Carrier.PBPRESORT)
+                    .Service(Services.BPM)
+                    .ParcelType(ParcelType.LGENV)
+                    .CurrencyCode("USD")
+                    )
                .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
                     .ShippingLabel(ContentType.URL, Size.DOC_4X6, FileFormat.PDF))
                .ShipmentOptions(ShipmentOptionsArrayFluent<ShipmentOptions>.Create()
-                    .ShipperId("your shipper id")    // ******* dont forget this one too *******
+                    .ShipperId("9026169668")    // ******* dont forget this one too *******
+                    .PBPresortPermit("123")
                     )
                .TransactionId(Guid.NewGuid().ToString().Substring(15));
 

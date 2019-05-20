@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 
@@ -42,11 +43,13 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         public static int TimeOutMilliseconds { get { return _timeOutMilliseconds; } set { _timeOutMilliseconds = value; } }
         private static Dictionary<string, HttpClient> _clientLookup = new Dictionary<string, HttpClient>();
-        private static string _userAgent = "Pitney Bowes CSharp SDK 1.0";
         /// <summary>
         /// User agent string provided by each http call. Useful for server side troubleshooting and analytics.
         /// </summary>
-        public static string UserAgent { get { return _userAgent; } set { _userAgent = value; } }
+        public static string UserAgent
+        {
+            get => string.Format("PitneyBowes-CSharpSDK/{0} {1} ", Assembly.GetEntryAssembly().GetName().Version, DefaultSession.GetConfigItem("DeveloperID"));
+        } 
         /// <summary>
         /// Maximum number of http connections allowed for http client
         /// </summary>

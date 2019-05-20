@@ -58,6 +58,7 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
         /// <param name="h">Height</param>
         /// <param name="w">Width</param>
         /// <param name="u">Units - defaults to inches</param>
+        /// <param name="g">Girth - defaults to 0</param>
         /// <returns></returns>
         public ParcelFluent<T> Dimension(decimal l, decimal h, decimal w, UnitOfDimension u = UnitOfDimension.IN, decimal g = 0) 
         {
