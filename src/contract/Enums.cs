@@ -83,6 +83,72 @@ namespace PitneyBowes.Developer.ShippingApi
     }
 
     /// <summary>
+    /// The parameters include information the merchant received from the carrier and must provide to the developer. 
+    /// </summary>
+    public enum CarrierAccountParameters
+    {
+        /// <summary>
+        /// The two-character ISO country code for the merchant’s country.
+        /// Supported countries: US, CA
+        /// Carriers: UPS
+        /// </summary>
+        ACCOUNT_COUNTRY_CODE,
+        /// <summary>
+        /// The merchant’s postal code.	
+        /// Carriers: UPS
+        /// </summary>
+        ACCOUNT_POSTAL_CODE,
+        /// <summary>
+        /// The title of the primary contact that the merchant provided to the carrier.
+        /// </summary>
+        CONTACT_TITLE,
+        /// <summary>
+        /// The black-box identity of the merchant’s machine.
+        /// For help in retrieving this information, consult your Pitney Bowes implementation engineer.
+        /// Carriers UPS(Required)
+        /// </summary>
+        DEVICE_IDENTITY,
+        /// <summary>
+        /// The IP address of the merchant’s machine.	
+        /// Carriers: UPS(Required)
+        /// </summary>
+        END_USER_IP,
+        /// <summary>
+        /// The amount charged on a recent invoice. The invoice must be from within the last 90 days. Use the same invoice for all the 
+        ///  INVOICE_* parameters in this table.
+        /// The value for this parameter can have a maximum of 16 digits before the decimal and 2 digits after the decimal.
+        /// Example: 1235.84
+        /// Carriers: UPS (For UPS, this is the amount in the invoice’s Charges This Period field.)
+        /// </summary>
+        INVOICE_AMOUNT,
+        /// <summary>
+        /// The Control ID displayed on the invoice.	
+        /// Carriers: UPS (Required)
+        /// </summary>
+        INVOICE_CONTROL_ID,
+        /// <summary>
+        /// The currency code used on the invoice.
+        /// Carriers: UPS (Supported currencies:USD, CAD)
+        /// </summary>
+        INVOICE_CURRENCY_CODE,
+        /// <summary>
+        /// The date of the invoice. The invoice date should be within the last 90 days.Use the following format:yyyyMMdd
+        /// Carriers: UPS
+        /// </summary>
+        INVOICE_DATE,
+        /// <summary>
+        /// The invoice number.	
+        /// Carriers: (UPS)
+        /// </summary>
+        INVOICE_NUMBER,
+        /// <summary>
+        /// The text of the merchant’s license agreement with the carrier, as retrieved through the Get Carrier License Agreement API.	
+        /// Carriers: UPS (Required)
+        /// </summary>
+        LICENSE_TEXT
+    }
+
+    /// <summary>
     /// Party cancelling a shipment.
     /// </summary>
     public enum CancelInitiator
@@ -440,63 +506,63 @@ namespace PitneyBowes.Developer.ShippingApi
     public enum ParcelType
     {
         /// <summary>
-        ///  Letter. Generates a First-Class label with IMB barcode.
+        /// USPS Letter. Generates a First-Class label with IMB barcode.
         /// </summary>
         LETTER,
         /// <summary>
-        /// Flat rate envelope.
+        /// USPS Flat rate envelope.
         /// </summary>
         FRE,
         /// <summary>
-        /// Large envelope.
+        /// USPS Large envelope.
         /// </summary>
         LGENV,
         /// <summary>
-        /// Legal flat rate envelope.
+        /// USPS Legal flat rate envelope.
         /// </summary>
         LGLFRENV,
         /// <summary>
-        /// Padded flat rate envelope.
+        /// USPS Padded flat rate envelope.
         /// </summary>
         PFRENV,
         /// <summary>
-        /// Small flat rate box
+        /// USPS Small flat rate box
         /// </summary>
         SFRB,
         /// <summary>
-        /// Medium flat rate box.
+        /// USPS Medium flat rate box.
         /// </summary>
         FRB,
         /// <summary>
-        /// Large Flat rate box.
+        /// USPS Large Flat rate box.
         /// </summary>
         LFRB,
         /// <summary>
-        /// DVD box.
+        /// USPS DVD box.
         /// </summary>
         DVDBOX,
         /// <summary>
-        /// Video box.
+        /// USPS Video box.
         /// </summary>
         VIDEOBOX,
         /// <summary>
-        /// Military flat raqte box.
+        /// USPS Military flat raqte box.
         /// </summary>
         MLFRB,
         /// <summary>
-        /// Regional rate box, type A
+        /// USPS Regional rate box, type A
         /// </summary>
         RBA,
         /// <summary>
-        /// Regional rate box, type B.
+        /// USPS Regional rate box, type B.
         /// </summary>
         RBB,
         /// <summary>
-        /// Package (not eligible for special package rate).
+        /// USPS Package (not eligible for special package rate).
         /// </summary>
         PKG,
         /// <summary>
-        /// Large package.
+        /// USPS Large package. UPS Standard Package
         /// </summary>
         LP,
         /// <summary>
@@ -504,37 +570,82 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         FLAT,
         /// <summary>
-        /// Extended Managed Mail Tray Box
+        /// USPS Extended Managed Mail Tray Box
         /// </summary>
         EMMTB,
         /// <summary>
-        /// Full tray box
+        /// USPS Full tray box
         /// </summary>
         FTB,
         /// <summary>
-        /// Half tray box
+        /// USPS Half tray box
         /// </summary>
         HTB,
         /// <summary>
-        /// Sack
+        /// USPS Sack
         /// </summary>
         SACK,
         /// <summary>
-        /// Flat tub tray
+        /// USPS Flat tub tray
         /// </summary>
         FTTB,
         /// <summary>
-        /// Soft Pack Envelope
+        /// USPS Soft Pack Envelope
         /// </summary>
         SOFTPACK,
         /// <summary>
-        /// PMOD Enclosed Package Type
+        /// USPS PMOD Enclosed Package Type
         /// </summary>
         MIX,
         /// <summary>
-        /// Letter for stamp API call
+        /// USPS Letter for stamp API call. 
+        /// UPS Express Envelope, All U.S. domestic services except 3DA and GRD.  All U.S. intl services except XPD and STD.
+        ///     All Canadian domestic services except STD.  All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
         /// </summary>
-        LTR
+        LTR,
+        /// <summary>
+        /// UPS Express Pak. All U.S. domestic services except 3DA and GRD. 
+        /// All U.S. intl services except STD.
+        /// All Canadian domestic services except STD. 
+        /// All Canadian intl services except 3DA_USA, STD_USA.
+        /// </summary>
+        PACK,
+        /// <summary>
+        /// UPS Express Tube, All U.S. domestic services except 3DA and GRD. 
+        /// All U.S. intl services except STD.
+        /// All Canadian domestic services except STD. 
+        /// All Canadian intl services except 3DA_USA, STD_USA.
+        /// </summary>
+        TUBE,
+        /// <summary>
+        /// UPS Express Box Small All U.S. domestic services except 3DA and GRD. 
+        /// All U.S. intl services except STD.
+        /// All Canadian domestic services except STD. 
+        /// All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
+        /// </summary>
+        SMALL_EXP_BOX,
+        /// <summary>
+        /// UPS Express Box Medium. All U.S. domestic services except 3DA and GRD. 
+        /// All U.S. intl services except STD.
+        /// All Canadian domestic services except STD. 
+        /// All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
+        /// </summary>
+        MED_EXP_BOX,
+        /// <summary>
+        /// UPS Express Box Large, All U.S. domestic services except 3DA and GRD. 
+        /// All U.S. intl services except STD.
+        /// All Canadian domestic services except STD. 
+        /// All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
+        /// </summary>
+        LG_EXP_BOX,
+        /// <summary>
+        /// UPS 25 KG Box. U.S. international services XPP, EXP, EXS.
+        /// </summary>
+        UPS_25KG,
+        /// <summary>
+        /// UPS 10 KG Box, U.S. international services XPP, EXP, EXS.
+        /// </summary>
+        UPS_10KG    
     }
 
     /// <summary>
@@ -835,8 +946,84 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// Standard mail. Use for PB Presort
         /// </summary>
-        STANDARD
-
+        STANDARD,
+        /// <summary>
+        /// UPS Next Day Air Early
+        /// U.S. 48, Alaska, Hawaii
+        /// </summary>
+        NDA_AM,
+        /// <summary>
+        /// UPS Next Day Air
+        /// U.S. 48, Alaska, Hawaii, Puerto Rico
+        /// </summary>
+        NDA,
+        /// <summary>
+        /// UPS Next Day Air Saver
+        /// U.S. 48, Alaska, Hawaii
+        /// </summary>
+        NDA_SVR,
+        /// <summary>
+        /// UPS 2nd Day Air® A.M.
+        /// U.S. 48, Alaska, Hawaii
+        /// </summary>
+	    UPS_2DA_AM, //2DA_AM,
+        /// <summary>
+        /// UPS 2nd Day Air
+        /// U.S. 48, Alaska, Hawaii, Puerto Rico
+        /// </summary>
+        UPS_2DA, //@2DA,
+        /// <summary>
+        /// UPS 3 Day Select
+        /// </summary>
+        UPS_3DA,
+        /// <summary>
+        /// UPS Ground
+        /// </summary>
+        GRD,
+        /// <summary>
+        /// UPS Worldwide Express Plus
+        /// </summary>
+        XPP,
+        /// <summary>
+        /// UPS Worldwide Express
+        /// </summary>
+        EXP,
+        /// <summary>
+        /// UPS Worldwide Saver
+        /// </summary>
+        EXS,
+        /// <summary>
+        /// UPS Worldwide Expedited
+        /// </summary>
+        XPD,
+        /// <summary>
+        /// UPS Standard (to Canada/Mexico)
+        /// </summary>
+        STD,
+        /// <summary>
+        /// UPS Express Early (to US Only)
+        /// </summary>
+        XPP_USA,
+        /// <summary>
+        /// UPS Express
+        /// </summary>
+        EXP_USA,
+        /// <summary>
+        /// UPS Express Saver
+        /// </summary>
+        EXS_USA,
+        /// <summary>
+        /// UPS Expedited
+        /// </summary>
+        XPD_USA,
+        /// <summary>
+        /// UPS 3 Day Select (to US Only)
+        /// </summary>
+        UPS_3DA_USA,
+        /// <summary>
+        /// UPS Standard (to US Only)
+        /// </summary>
+        STD_USA
     }
 
     /// <summary>
@@ -996,139 +1183,284 @@ namespace PitneyBowes.Developer.ShippingApi
     public enum SpecialServiceCodes
     {
         /// <summary>
-        /// Insured Mail.
+        /// USPS Insured Mail.
         /// </summary>
         Ins,
         /// <summary>
-        /// Return receipt.
+        /// USPS Return receipt.
         /// </summary>
         RR,
         /// <summary>
-        /// Signature confirmation.
+        /// USPS Signature confirmation.
         /// </summary>
         Sig,
         /// <summary>
-        /// Adult signature required.
+        /// USPS Adult signature required.
         /// </summary>
         ADSIG,
         /// <summary>
-        /// Certified mail.
+        /// USPS Certified mail.
         /// </summary>
         Cert,
         /// <summary>
-        /// Delivery confirmation.
+        /// USPS Delivery confirmation.
         /// </summary>
         DelCon,
         /// <summary>
-        /// Electronic return receipt.
+        /// USPS Electronic return receipt.
         /// </summary>
         ERR,
         /// <summary>
-        /// Return receipt for merchandise
+        /// USPS Return receipt for merchandise
         /// </summary>
         RRM,
         /// <summary>
-        /// Registered mail.
+        /// USPS Registered mail.
         /// </summary>
         Reg,
         /// <summary>
-        /// Registered mail with insurance.
+        /// USPS Registered mail with insurance.
         /// </summary>
         RegIns,
         /// <summary>
-        /// Special handling - fragile.
+        /// USPS Special handling - fragile.
         /// </summary>
         SH,
         /// <summary>
-        /// Certified mail with restricted delivery.
+        /// USPS Certified mail with restricted delivery.
         /// </summary>
         CertRD,
         /// <summary>
-        /// Collect on delivery.
+        /// USPS Collect on delivery.
         /// </summary>
         COD,
         /// <summary>
-        /// Collect on delivery with restricted delivery.
+        /// USPS Collect on delivery with restricted delivery.
         /// </summary>
         CODRD,
         /// <summary>
-        /// Insurance with restricted delivery.
+        /// USPS Insurance with restricted delivery.
         /// </summary>
         InsRD,
         /// <summary>
-        /// Registered mail with restricted delivery.
+        /// USPS Registered mail with restricted delivery.
         /// </summary>
         RegRD,
         /// <summary>
-        /// Registered mail with COD.
+        /// USPS Registered mail with COD.
         /// </summary>
         RegCOD,
         /// <summary>
-        /// Signature required with restricted delivery.
+        /// USPS Signature required with restricted delivery.
         /// </summary>
         SigRD,
         /// <summary>
-        /// Adult signature required with restricted delivery.
+        /// USPS Adult signature required with restricted delivery.
         /// </summary>
         ADSIGRD,
         /// <summary>
-        /// Registered mail with insurance and restricted delivery.
+        /// USPS Registered mail with insurance and restricted delivery.
         /// </summary>
         RegInsRD,
         /// <summary>
-        /// Certified mail with adult signature.
+        /// USPS Certified mail with adult signature.
         /// </summary>
         CERTAD,
         /// <summary>
-        /// Certified mail with adult signature and restricted delivery.
+        /// USPS Certified mail with adult signature and restricted delivery.
         /// </summary>
         CERTADRD,
         /// <summary>
-        /// Hazardous materials.
+        /// USPS Hazardous materials.
         /// </summary>
         hazmat,
         /// <summary>
-        /// Live animal surcharge.
+        /// USPS Live animal surcharge.
         /// </summary>
         liveanimal,
         /// <summary>
-        /// Live Animal-Day Old Poultry Surcharge
+        /// USPS Live Animal-Day Old Poultry Surcharge
         /// </summary>
         liveanimal_poultry,
         /// <summary>
-        /// Holiday Delivery- For Priority Mail Express Service Only
+        /// USPS Holiday Delivery- For Priority Mail Express Service Only
         /// </summary>
         holiday,
         /// <summary>
-        /// Sunday delivery.
+        /// USPS Sunday delivery.
         /// </summary>
         sunday,
         /// <summary>
-        /// Sunday and holidaqy delivery.
+        /// USPS Sunday and holiday delivery.
         /// </summary>
         sunday_holiday,
         /// <summary>
-        /// PO to addressee
+        /// USPS PO to addressee
         /// </summary>
         PO_to_Addressee,
         /// <summary>
-        /// Do not deliver on weekend
+        /// USPS Do not deliver on weekend
         /// </summary>
         noWeekend,
         /// <summary>
-        /// Delivery by 10:30 AM
+        /// USPS Delivery by 10:30 AM
         /// </summary>
         TenThirty,
         /// <summary>
-        /// PMOD options
+        /// USPS PMOD options
         /// </summary>
         PMOD_OPTIONS,
         /// <summary>
-        /// Notifications.
+        /// USPS Notifications.
         /// </summary>
-        NOTIFICATIONS
+        NOTIFICATIONS,
+        ///<summary>
+        ///USP Additional handling
+        ///</summary>
+        ADD_HDL,
+        ///<summary>
+        ///USP Adult Signature Required
+        ///</summary>
+        ADULT_SIG,
+        ///<summary>
+        ///USP Collect on Delivery (C.O.D.) - Cashier’s Check or Money Order
+        ///</summary>
+        COD_CASHIER,
+        ///<summary>
+        ///USP Collect on Delivery (C.O.D.) - Check
+        ///</summary>
+        COD_CHECK,
+        ///<summary>
+        ///USP Declared Value
+        ///</summary>
+        INS,
+        ///<summary>
+        ///USP Delivery Area Surcharge
+        ///</summary>
+        DELIVERY_AREA,
+        ///<summary>
+        ///USP Direct Delivery Only
+        ///</summary>
+        DIRECT,
+        ///<summary>
+        ///USP Dry Ice
+        ///</summary>
+        DRY_ICE,
+        ///<summary>
+        ///USP Extended Area Pickup Surcharge
+        ///</summary>
+        EXT_AREA_PU,
+        ///<summary>
+        ///USP Extended Area Surcharge
+        ///</summary>
+        EXTENDED_AREA,
+        ///<summary>
+        ///USP Fuel Surcharge
+        ///</summary>
+        FUEL,
+        ///<summary>
+        ///USP Hold for Pickup
+        ///</summary>
+        HOLD,
+        ///<summary>
+        ///USP Large Package Surcharge
+        ///</summary>
+        LARGE_PACKAGE,
+        ///<summary>
+        ///USP Peak Season Surcharge
+        ///</summary>
+        PEAK_SURCHARGE,
+        ///<summary>
+        ///USP Peak Season Surcharge - Additional Handling
+        ///</summary>
+        PEAK_ADD_HDL,
+        ///<summary>
+        ///USP Peak Season Surcharge - Large Package
+        ///</summary>
+        PEAK_LG_PKG,
+        ///<summary>
+        ///USP Residential Surcharge
+        ///</summary>
+        RESIDENTIAL,
+        ///<summary>
+        ///USP Saturday Delivery
+        ///</summary>
+        SAT_DELIVERY,
+        ///<summary>
+        ///USP Shipper Release
+        ///</summary>
+        SHP_RELEASE,
+        ///<summary>
+        ///USP Signature Required
+        ///</summary>
+        SIG,
+        ///<summary>
+        ///USP UPS carbon neutral
+        ///</summary>
+        CARBON,
+        ///<summary>
+        ///USP UPS Delivery Confirmation
+        ///</summary>
+        DEL_CON,
+        ///<summary>
+        ///USP UPS Premium Care
+        ///</summary>
+        PREMIUM_CARE,
+        ///<summary>
+        ///USP UPS Print Return Label
+        ///</summary>
+        PRL,
+        ///<summary>
+        ///USP Verbal Confirmation of Delivery
+        ///</summary>
+        VERBAL
 
     }
+
+    /// <summary>
+    /// Response Only, USPS and UPS Only. Additional fees or surcharges for the shipment. Each object in this array has two 
+    /// fields, name and fee.
+    /// </summary>
+    public enum Surcharges
+    {
+        /// <summary>
+        /// Delivery Area Surcharge 
+        /// </summary>
+        DELIVERY_AREA,
+        /// <summary>
+        /// Extended Area Pickup Surcharge  
+        /// </summary>
+        EXT_AREA_PU,
+        /// <summary>
+        /// Extended Area Surcharge 
+        /// </summary>
+        EXTENDED_AREA,
+        /// <summary>
+        /// Fuel Surcharge
+        /// </summary>
+        FUEL,
+        /// <summary>
+        /// Large Package Surcharge 
+        /// </summary>
+        LARGE_PACKAGE,
+        /// <summary>
+        /// Peak Season Surcharge   
+        /// </summary>
+        PEAK_SURCHARGE,
+        /// <summary>
+        /// Peak Season Surcharge - Additional Handling 
+        /// </summary>
+        PEAK_ADD_HDL,
+        /// <summary>
+        /// Peak Season Surcharge - Large Package   
+        /// </summary>
+        PEAK_LG_PKG,
+        /// <summary>
+        /// UPS Premium Car
+        /// </summary>
+        PREMIUM_CARE
+    }
+
     /// <summary>
     /// You can subscribe the shipment to receive provisioned transit triggers by including the NOTIFICATIONS special service in the request. 
     /// The merchant must be configured for Newgistics transit triggers to use this feature.

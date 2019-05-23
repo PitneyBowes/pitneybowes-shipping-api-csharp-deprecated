@@ -92,5 +92,14 @@ namespace PitneyBowes.Developer.ShippingApi
         /// Response only. Destination Zone based on the fromAddress and toAddress specified.
         /// </summary>
         int? DestinationZone { get; set; }
+        /// <summary>
+        /// Surcharges
+        /// </summary>
+        IEnumerable<ICarrierSurcharge> Surcharges { get; set;  }
+        /// <summary>
+        /// Add a surcharge
+        /// </summary>
+        /// <param name="surcharge"></param>
+        void AddSurcharge(ICarrierSurcharge surcharge);
     }
 }

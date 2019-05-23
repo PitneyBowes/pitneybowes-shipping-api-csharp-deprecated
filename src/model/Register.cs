@@ -58,6 +58,7 @@ namespace PitneyBowes.Developer.ShippingApi.Model
             registry.RegisterSerializationTypes<ITransaction, Transaction>();
             registry.RegisterSerializationTypes<ITransactionSort, TransactionSort>();
             registry.RegisterSerializationTypes<IUserInfo, UserInfo>();
+            registry.RegisterSerializationTypes<ICarrierSurcharge, CarrierSurcharge>();
         }
     }
 }

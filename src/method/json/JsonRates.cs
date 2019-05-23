@@ -25,19 +25,19 @@ using System.IO;
 namespace PitneyBowes.Developer.ShippingApi.Json
 {
     [JsonObject(MemberSerialization.OptIn)]
-    internal class JsonRates<T> : JsonWrapper<T>, IShippingApiRequest, IRates where T:IRates, new()
+    internal class JsonRates<T> : JsonWrapper<T>, IShippingApiRequest, IRates where T : IRates, new()
     {
         public JsonRates() : base() { }
 
         public JsonRates(T t) : base(t) { }
 
-        public string RecordingSuffix => Carrier.ToString()+ServiceId.ToString()+ParcelType.ToString();
+        public string RecordingSuffix => Carrier.ToString() + ServiceId.ToString() + ParcelType.ToString();
         public string RecordingFullPath(string resource, ISession session)
         {
             return ShippingApiRequest.RecordingFullPath(this, resource, session);
         }
 
-        [JsonProperty("carrier", Order =0)]
+        [JsonProperty("carrier", Order = 0)]
         [JsonConverter(typeof(StringEnumConverter))]
         public Carrier Carrier
         {
@@ -84,11 +84,11 @@ namespace PitneyBowes.Developer.ShippingApi.Json
         }
 
         public bool ShouldSerializeBaseCharge() => false;
-        
+
         [JsonProperty("baseCharge")]
         public decimal BaseCharge
         {
-            get =>Wrapped.BaseCharge;
+            get => Wrapped.BaseCharge;
             set { Wrapped.BaseCharge = value; }
         }
 
@@ -123,6 +123,15 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             get => Wrapped.DeliveryCommitment;
             set { Wrapped.DeliveryCommitment = value; }
         }
+        public void AddSurcharge(ICarrierSurcharge surcharge)
+        {
+            Wrapped.AddSurcharge(surcharge);
+        }
+
+        [JsonProperty("deliveryCommitment")]
+        public IEnumerable<ICarrierSurcharge> Surcharges { get => Wrapped.Surcharges; set => Wrapped.Surcharges = value; }
+
+
         [JsonProperty("currencyCode")]
         public string CurrencyCode
         {
@@ -149,6 +158,7 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             ShippingApiRequest.SerializeBody(this, writer, session);
         }
 
+
         [JsonProperty("destinationZone")]
         public int? DestinationZone
         {
@@ -161,4 +171,5 @@ namespace PitneyBowes.Developer.ShippingApi.Json
         [ShippingApiHeaderAttribute("Bearer")]
         public StringBuilder Authorization { get; set; }
     }
+
 }

@@ -107,9 +107,9 @@ namespace tests
                 // Get rates
                 ShippingApiResponse shippingApiResponse = Api.Rates(shipment).Result;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-
+                throw;
             }
         }
     }

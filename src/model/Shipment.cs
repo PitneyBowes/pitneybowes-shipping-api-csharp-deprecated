@@ -38,6 +38,10 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         /// </summary>
         virtual public string IntegratorRatePlan { get; set; }
         /// <summary>
+        /// The unique identifier returned in the shipperCarrierAccountId field by the Register an Existing Carrier Account API call.
+        /// </summary>
+        virtual public string CarrierAccountId { get; set; }
+        /// <summary>
         /// Required for PB Presort. The job number that represents the agreement between the merchant and PB Presort. 
         /// This was provided by Pitney Bowes during merchant onboarding for PB Presort.
         /// </summary>
@@ -70,6 +74,14 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         /// return address.
         /// </summary>
         virtual public IAddress AltReturnAddress { get; set; }
+        /// <summary>
+        /// UPS Only. This object is required for shipments from the U.S.to Puerto Rico or an international destination.
+        /// The soldToAddress.countryCode must match the toAddress.countryCode, with the exception of shipments to Canada 
+        /// and to U.S.satellite countries. Enter the importer’s address in the toAddress object. If importer’s address is 
+        /// the same as the final recipient, the entries in the toAddress object must match the entries in the soldToAddress 
+        /// object.
+        /// </summary>
+        virtual public IAddress SoldToAddress { get; set; }
         /// <summary>
         /// REQUIRED. Contains physical characteristics of the parcel.
         /// </summary>

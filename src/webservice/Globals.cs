@@ -84,6 +84,7 @@ namespace PitneyBowes.Developer.ShippingApi
                         client.DefaultRequestHeaders.Accept.Clear();
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                         client.DefaultRequestHeaders.Add("user-agent", UserAgent);
+                        client.DefaultRequestHeaders.Add("X-PB-UnifiedErrorStructure", "true");
                         client.Timeout = new TimeSpan(0, 0, 0, 0, TimeOutMilliseconds);
                         _clientLookup.Add(baseUrl, client);
                     }

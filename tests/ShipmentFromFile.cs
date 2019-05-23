@@ -53,7 +53,7 @@ namespace tests
                 {
                     response = FileRequest.Request(file, Globals.DefaultSession);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                     throw;

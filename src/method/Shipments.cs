@@ -42,7 +42,12 @@ namespace PitneyBowes.Developer.ShippingApi
         /// REQUIRED. Unique transaction ID.
         /// </summary>
         [ShippingApiHeader("X-PB-TransactionId")]
-        public string TransactionId {get;set;}
+        public string TransactionId { get; set;}
+        /// <summary>
+        /// UPS Only. The unique identifier returned in the shipperCarrierAccountId field by the Register an Existing Carrier Account API.
+        /// </summary>
+        [ShippingApiHeader("X-PB-Shipper-Carrier-AccountId")]
+        public string CarrierAccountId { get; set; }
         /// <summary>
         /// REQUIRED. Shipment ID used when printing the shipment label.
         /// </summary>

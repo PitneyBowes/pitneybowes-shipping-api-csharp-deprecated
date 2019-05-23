@@ -97,6 +97,13 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             set => Wrapped.IntegratorCarrierId = value;
         }
 
+        [ShippingApiHeader("x-pb-shipper-carrier-accountid")]
+        public string CarrierAccountId
+        {
+            get => Wrapped.CarrierAccountId;
+            set => Wrapped.CarrierAccountId = value;
+        }
+
         [ShippingApiQuery("includeDeliveryCommitment" )]
         public bool IncludeDeliveryCommitment {
             get => Wrapped.IncludeDeliveryCommitment;
@@ -121,6 +128,13 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             get => Wrapped.AltReturnAddress;
             set => Wrapped.AltReturnAddress = value;
         }
+        [JsonProperty("soldToAddress")]
+        public IAddress SoldToAddress
+        {
+            get => Wrapped.SoldToAddress;
+            set => Wrapped.SoldToAddress = value;
+        }
+
         [JsonProperty("parcel")]
         public IParcel Parcel
         {

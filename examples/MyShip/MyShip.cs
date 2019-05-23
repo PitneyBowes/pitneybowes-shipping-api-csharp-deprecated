@@ -13,10 +13,10 @@ namespace MyShip
         {
             var sandbox = new Session() { EndPoint = "https://api-sandbox.pitneybowes.com", Requester = new ShippingApiHttpRequest() };
 
-            sandbox.AddConfigItem("ApiKey", "hjyWnfAcjG1rVzizKAq0uyExJY6VGW55");
-            sandbox.AddConfigItem("ApiSecret", "QLmKAPLtogmnc93o");
-            sandbox.AddConfigItem("ShipperID", "9026169668");
-            sandbox.AddConfigItem("DeveloperID", "46841939");
+            sandbox.AddConfigItem("ApiKey", "your api key");
+            sandbox.AddConfigItem("ApiSecret", "your api secret");
+            sandbox.AddConfigItem("ShipperID", "your shipper id");
+            sandbox.AddConfigItem("DeveloperID", "your developer id");
 
             Model.RegisterSerializationTypes(sandbox.SerializationRegistry);
             Globals.DefaultSession = sandbox;
@@ -45,14 +45,18 @@ namespace MyShip
                     .CurrencyCode("USD")
                     )
                .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
-                    .ShippingLabel(ContentType.URL, Size.DOC_4X6, FileFormat.PDF))
+                    .ShippingLabel(ContentType.BASE64, Size.DOC_4X6, FileFormat.PNG))
                .ShipmentOptions(ShipmentOptionsArrayFluent<ShipmentOptions>.Create()
                     .ShipperId("9026169668")    // ******* dont forget this one too *******
                     .PBPresortPermit("123")
                     )
                .TransactionId(Guid.NewGuid().ToString().Substring(15));
 
-            var label = Api.CreateShipment((Shipment)shipment).GetAwaiter().GetResult();
+            var s = (Shipment)shipment;
+            s.AddShipmentOptions(new ShipmentOptions() { ShipmentOption = ShipmentOption.MINIMAL_ADDRESS_VALIDATION, Value = "true" });
+
+            s.IncludeDeliveryCommitment = true;
+            var label = Api.CreateShipment(s).GetAwaiter().GetResult();
             if (label.Success)
             {
                 var sw = new StreamWriter("label.pdf");
