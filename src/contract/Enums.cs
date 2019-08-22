@@ -79,7 +79,11 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// Newgistics.
         /// </summary>
-        NEWGISTICS
+        NEWGISTICS,
+        /// <summary>
+        /// UPS
+        /// </summary>
+        UPS
     }
 
     /// <summary>

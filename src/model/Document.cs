@@ -86,6 +86,16 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         /// <value>The pages.</value>
         virtual public IEnumerable<IPage> Pages { get; set; }
         /// <summary>
+        /// Add a doc tab.
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public IDocTab AddDocTab(IDocTab d)
+        {
+            return ModelHelper.AddToEnumerable<IDocTab, DocTab>(d, () => DocTab, (x) => DocTab = x);
+        }
+
+        /// <summary>
         /// Add a page to existing list of pages.
         /// </summary>
         /// <param name="s"></param>

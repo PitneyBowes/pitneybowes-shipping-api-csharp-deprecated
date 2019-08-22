@@ -80,6 +80,11 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <value>The document tab.</value>
         IEnumerable<IDocTab> DocTab { get; set; }
         /// <summary>
+        /// Add a doctab to array for each page
+        /// </summary>
+        /// <param name="docTab"></param>
+        IDocTab AddDocTab(IDocTab docTab);
+        /// <summary>
         ///  When ``contentType`` is ``BASE64``, this field value will have the encoded
         /// base64 string of the shipment label.This structure will repeat if
         /// there are multiple pages.
