@@ -219,7 +219,6 @@ namespace PitneyBowes.Developer.ShippingApi
         public async static Task<ShippingApiResponse<TransactionPageResponse>> TransactionPage(ReportRequest request, ISession session = null)
         {
             if (session == null) session = Globals.DefaultSession;
-            request.Authorization = new StringBuilder(session.AuthToken.AccessToken);
             return await WebMethod.Get<TransactionPageResponse, ReportRequest>("/shippingservices/v2/ledger/developers/{DeveloperId}/transactions/reports", request, session);
         }
 

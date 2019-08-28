@@ -15,25 +15,33 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 */
 
+
+
 using System;
 using System.Collections.Generic;
 using System.Text;
+using PitneyBowes.Developer.ShippingApi;
 
-namespace PitneyBowes.Developer.ShippingApi
+namespace PitneyBowes.Developer.ShippingApi.Model
 {
     /// <summary>
-    /// Attribute for the GenerateWrapper tool to control the code that is generated.
+    /// This operation retrieves a carrier’s license agreement. The operation is used in the Carrier Registration Tutorial.
     /// </summary>
-    public class CodeGenerationAttribute : Attribute
+    public class CarrierLicense : ICarrierLicense
     {
         /// <summary>
-        /// If true, generate a model class
+        /// Required. The carrier.
+        /// Valid value:
+        ///   UPS
         /// </summary>
-        public bool GenerateModel { get; set; }
+        public Carrier Carrier { get; set; }
         /// <summary>
-        /// If true, generate a JsonWrapper class
+        /// ISO Country code
         /// </summary>
-        public bool GenerateJsonWrapper { get; set; }
+        public string OriginCountryCode { get; set; }
+        /// <summary>
+        /// License Text
+        /// </summary>
+        public string LicenseText { get; set; }
     }
-
 }

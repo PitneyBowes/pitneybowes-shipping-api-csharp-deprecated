@@ -24,7 +24,6 @@ namespace PitneyBowes.Developer.ShippingApi
     /// <summary>
     /// Transaction report line items
     /// </summary>
-    [CodeGeneration( GenerateJsonWrapper = true, GenerateModel = false)]
     public interface ITransaction
     {
         /// <summary>

@@ -24,9 +24,9 @@ using Xunit.Abstractions;
 
 namespace tests
 {
-    public class Addresses : TestSession
+    public class TestAddresses : TestSession
     {
-        public Addresses(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
+        public TestAddresses(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
         {
             InitializeFramework();
         }
@@ -76,7 +76,7 @@ namespace tests
             Assert.True(address.Status == AddressStatus.NOT_CHANGED);
 
             address = (Address)addressFluent.Verify();
-            Assert.True(address.Status == AddressStatus.VALIDATED_CHANGED);
+            Assert.True(address.Status == AddressStatus.VALIDATED_AND_NOT_CHANGED);
             Assert.Same(address.PostalCode,"28607-4819");
             
 

@@ -15,36 +15,23 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace PitneyBowes.Developer.ShippingApi
+namespace PitneyBowes.Developer.ShippingApi.Json
 {
-    /// <summary>
-    /// Sort information for transaction and manifest reports
-    /// </summary>
-    public interface ITransactionSort
+    [JsonObject(MemberSerialization.OptIn)]
+    internal class JsonCarrierSurcharge<T> : JsonWrapper<T>, ICarrierSurcharge where T : ICarrierSurcharge, new()
     {
-        /// <summary>
-        /// Whether the result set is sorted
-        /// </summary>
-        string Ascending { get; set; }
-        /// <summary>
-        /// ASC, DESC
-        /// </summary>
-        string Direction { get; set; }
-        /// <summary>
-        /// Whether case was ignored when sorting
-        /// </summary>
-        string IgnoreCase { get; set; }
-        /// <summary>
-        /// NATIVE or ???
-        /// </summary>
-        string NullHandling { get; set; }
-        /// <summary>
-        /// Field that the sort was done on
-        /// </summary>
-        string Property { get; set; }
+        public JsonCarrierSurcharge() : base() { }
+
+        public JsonCarrierSurcharge(T t) : base(t) { }
+
+        [JsonProperty("name")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Surcharges Surcharge { get => Wrapped.Surcharge; set => Wrapped.Surcharge = value; }
+
+        [JsonProperty("fee")]
+        public decimal Fee { get => Wrapped.Fee; set => Wrapped.Fee = value; }
     }
 }

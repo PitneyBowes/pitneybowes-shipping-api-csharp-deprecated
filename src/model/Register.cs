@@ -30,6 +30,8 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         {
             registry.RegisterSerializationTypes<IAddress, Address>();
             registry.RegisterSerializationTypes<IAutoRefill, AutoRefill>();
+            registry.RegisterSerializationTypes<ICarrierAccount, CarrierAccount>();
+            registry.RegisterSerializationTypes<ICarrierSurcharge, CarrierSurcharge>();
             registry.RegisterSerializationTypes<ICcPaymentDetails, CcPaymentDetails>();
             registry.RegisterSerializationTypes<ICustoms, Customs>();
             registry.RegisterSerializationTypes<ICustomsItems, CustomsItems>();

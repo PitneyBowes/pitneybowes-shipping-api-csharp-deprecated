@@ -4,8 +4,6 @@
     "RatePlan":   "",
     "ShipperID":  "YOUR_SHIPPER_ID",
     "DeveloperID":"YOUR_DEVELOPER_ID",
-    "Retries":  "3",
-    "RecordAPICalls": "true",
-    "RecordRoot" :  ".",
+    "RecordAPICalls": "false",
     "RecordOverwrite": "false"
 }

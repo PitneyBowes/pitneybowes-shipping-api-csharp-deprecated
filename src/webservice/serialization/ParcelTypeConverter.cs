@@ -21,30 +21,21 @@ using Newtonsoft.Json.Converters;
 
 namespace PitneyBowes.Developer.ShippingApi
 {
-    internal class PackageLocationConverter : JsonConverter
+    internal class ParcelTypeConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {
-            return typeof(PackageLocation).Equals(objectType);
+            return typeof(ParcelType).Equals(objectType);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            switch (reader.Value)
+            switch(reader.Value)
             {
-
-                case "Front Door":
-                    return PackageLocation.FrontDoor;
-                case "Back Door":
-                    return PackageLocation.BackDoor;
-                case "Side Door":
-                    return PackageLocation.SideDoor;
-                case "Knock on Door/Ring Bell":
-                    return PackageLocation.KnockonDoorRingBell;
-                case "Mail Room":
-                    return PackageLocation.MailRoom;
-                case "In/At Mailbox":
-                    return PackageLocation.InAtMailbox;
+                case "10KG":
+                    return ParcelType.UPS_10KG;
+                case "25KG":
+                    return ParcelType.UPS_25KG;
                 default:
                     var converter = new StringEnumConverter();
                     return converter.ReadJson(reader, objectType, existingValue, serializer);
@@ -53,27 +44,15 @@ namespace PitneyBowes.Developer.ShippingApi
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (!typeof(PackageLocation).Equals(value.GetType())) throw new InvalidOperationException(string.Format("Can't use PackageLocationConverter on a {0}", value.GetType().ToString())); 
-            var s = (PackageLocation)value;
-            switch (s)
+            if (!typeof(ParcelType).Equals(value.GetType())) throw new InvalidOperationException(string.Format("Can't use a ParcelTypeConverter to serialize {0}", value.GetType().ToString())); 
+            var s = (ParcelType)value;
+            switch(s)
             {
-                case PackageLocation.FrontDoor:
-                    writer.WriteValue("Front Door");
+                case ParcelType.UPS_10KG:
+                    writer.WriteValue("10KG");
                     break;
-                case PackageLocation.BackDoor:
-                    writer.WriteValue("Back Door");
-                    break;
-                case PackageLocation.SideDoor:
-                    writer.WriteValue("Side Door");
-                    break;
-                case PackageLocation.KnockonDoorRingBell:
-                    writer.WriteValue("Knock on Door/Ring Bell");
-                    break;
-                case PackageLocation.MailRoom:
-                    writer.WriteValue("Mail Room");
-                    break;
-                case PackageLocation.InAtMailbox:
-                    writer.WriteValue("In/At Mailbox");
+                case ParcelType.UPS_25KG:
+                    writer.WriteValue("25KG");
                     break;
                 default:
                     var converter = new StringEnumConverter();

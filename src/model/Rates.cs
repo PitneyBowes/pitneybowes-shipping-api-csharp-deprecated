@@ -51,6 +51,21 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         {
             return ModelHelper.AddToEnumerable<ISpecialServices, SpecialServices>(s, () => SpecialServices, (x) => SpecialServices = x);
         }
+
+        /// <summary>
+        /// Surcharges
+        /// </summary>
+        public IEnumerable<ICarrierSurcharge> Surcharges { get; set; }
+
+        /// <summary>
+        /// Add a surcharge
+        /// </summary>
+        /// <param name="surcharge"></param>
+        public void AddSurcharge(ICarrierSurcharge surcharge)
+        {
+            ModelHelper.AddToEnumerable<ICarrierSurcharge, CarrierSurcharge>(surcharge, () => Surcharges, (x) => Surcharges = x);
+        }
+
         /// <summary>
         /// Postal code where the shipment is tendered to the carrier. Postal code of Shipment fromAddress is used in absence of this field.
         ///

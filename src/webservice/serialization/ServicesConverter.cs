@@ -21,30 +21,25 @@ using Newtonsoft.Json.Converters;
 
 namespace PitneyBowes.Developer.ShippingApi
 {
-    internal class PackageLocationConverter : JsonConverter
+    internal class ServicesConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {
-            return typeof(PackageLocation).Equals(objectType);
+            return typeof(Services).Equals(objectType);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            switch (reader.Value)
+            switch(reader.Value)
             {
-
-                case "Front Door":
-                    return PackageLocation.FrontDoor;
-                case "Back Door":
-                    return PackageLocation.BackDoor;
-                case "Side Door":
-                    return PackageLocation.SideDoor;
-                case "Knock on Door/Ring Bell":
-                    return PackageLocation.KnockonDoorRingBell;
-                case "Mail Room":
-                    return PackageLocation.MailRoom;
-                case "In/At Mailbox":
-                    return PackageLocation.InAtMailbox;
+                case "2DA":
+                    return Services.UPS_2DA;
+                case "2DA_AM":
+                    return Services.UPS_2DA_AM;
+                case "3DA":
+                    return Services.UPS_3DA;
+                case "3DA_USA":
+                    return Services.UPS_3DA_USA;
                 default:
                     var converter = new StringEnumConverter();
                     return converter.ReadJson(reader, objectType, existingValue, serializer);
@@ -53,27 +48,21 @@ namespace PitneyBowes.Developer.ShippingApi
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (!typeof(PackageLocation).Equals(value.GetType())) throw new InvalidOperationException(string.Format("Can't use PackageLocationConverter on a {0}", value.GetType().ToString())); 
-            var s = (PackageLocation)value;
-            switch (s)
+            if (!typeof(Services).Equals(value.GetType())) throw new InvalidOperationException(string.Format("Can't use a ServicesConverter to serialize {0}", value.GetType().ToString())); 
+            var s = (Services)value;
+            switch(s)
             {
-                case PackageLocation.FrontDoor:
-                    writer.WriteValue("Front Door");
+                case Services.UPS_2DA:
+                    writer.WriteValue("2DA");
                     break;
-                case PackageLocation.BackDoor:
-                    writer.WriteValue("Back Door");
+                case Services.UPS_2DA_AM:
+                    writer.WriteValue("2DA_AM");
                     break;
-                case PackageLocation.SideDoor:
-                    writer.WriteValue("Side Door");
+                case Services.UPS_3DA:
+                    writer.WriteValue("3DA");
                     break;
-                case PackageLocation.KnockonDoorRingBell:
-                    writer.WriteValue("Knock on Door/Ring Bell");
-                    break;
-                case PackageLocation.MailRoom:
-                    writer.WriteValue("Mail Room");
-                    break;
-                case PackageLocation.InAtMailbox:
-                    writer.WriteValue("In/At Mailbox");
+                case Services.UPS_3DA_USA:
+                    writer.WriteValue("3DA_USA");
                     break;
                 default:
                     var converter = new StringEnumConverter();

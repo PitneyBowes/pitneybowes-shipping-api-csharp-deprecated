@@ -23,9 +23,9 @@ using Xunit.Abstractions;
 
 namespace tests
 {
-    public class CarrierRulesTests: TestSession
+    public class TestCarrierRules: TestSession
     {
-        public CarrierRulesTests(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
+        public TestCarrierRules(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
         {
         }
 

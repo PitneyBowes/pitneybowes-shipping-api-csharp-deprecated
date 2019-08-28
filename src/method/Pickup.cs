@@ -36,6 +36,17 @@ namespace PitneyBowes.Developer.ShippingApi
         public override string ContentType { get => "application/json"; }
 
         /// <summary>
+        /// Write to standard location
+        /// </summary>
+        /// <param name="resource"></param>
+        /// <param name="session"></param>
+        /// <returns></returns>
+        public string RecordingFullPath(string resource, ISession session)
+        {
+            return ShippingApiRequest.RecordingFullPath(this, resource, session);
+        }
+
+        /// <summary>
         /// Gets or sets the authorization. Set automatically.
         /// </summary>
         /// <value>The authorization.</value>
@@ -43,10 +54,23 @@ namespace PitneyBowes.Developer.ShippingApi
         public override StringBuilder Authorization { get; set; }
 
         /// <summary>
+        /// Transaction Id
+        /// </summary>
+        /// <value></value>
+        [ShippingApiHeader("x-pb-transactionId", true)]
+        public string TransactionId { get; set; }
+
+        /// <summary>
         /// Gets or sets the pickup identifier.
         /// </summary>
         /// <value>The pickup identifier.</value>
         public string PickupId { get; set; }
+
+        /// <summary>
+        /// Status is response only
+        /// </summary>
+        /// <returns></returns>
+        public bool ShouldSerializeStatus() => false;
 
         /// <summary>
         /// Gets or sets the status.
@@ -68,23 +92,11 @@ namespace PitneyBowes.Developer.ShippingApi
         ///    the day of pickup.
         /// 3. Before you schedule a pickup, it is recommended you use USPS's
         ///    package-pickup-api to confirm that service to the pickup address is available.
-        ///      <a href="https://www.usps.com/business/web-tools-apis/package-pickup-api.htm#_Toc450550246" target="_blank"> Package Pickup Availability Web Tool</a>
         /// 4. For a valid request, you must have at least one of the following: a
         ///    Priority Mail Express package, a Priority Mail package, or an international package.
         /// 5. The address entered in the pickup request might look different in the
         ///    pickup response. This is because USPS standardizes and verifies addresses
         ///    to make certain that carriers can find the pickup location.
-        ///
-        ///    For example, this request:
-        ///         ABC Movers
-        ///         1500 East Main Avenue, Suite 201
-        ///         Springfield, VA 22162
-        ///
-        ///    Returns this response:
-        ///         ABC MOVERS
-        ///         1500 E MAIN AVE STE 201
-        ///    SPRINGFIELD, VA 22162-1010
-        /// 6. Package pickup is available only for domestic addresses.
         /// </summary>
         /// <returns>The schedule.</returns>
         /// <param name="request">Request.</param>
@@ -104,7 +116,7 @@ namespace PitneyBowes.Developer.ShippingApi
         public async static Task<ShippingApiResponse<PickupCancelRequest>> CancelPickup(PickupCancelRequest request, ISession session = null)
         {
             request.Status = "Success";
-            return await WebMethod.Post<PickupCancelRequest, PickupCancelRequest>("/v1/pickups/{PickupId}/cancel", request, session);
+            return await WebMethod.Post<PickupCancelRequest, PickupCancelRequest>("/shippingservices/v1/pickups/{PickupId}/cancel", request, session);
         }
     }
 

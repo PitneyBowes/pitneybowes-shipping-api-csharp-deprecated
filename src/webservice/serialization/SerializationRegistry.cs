@@ -49,6 +49,8 @@ namespace PitneyBowes.Developer.ShippingApi
             _serializationRegistry.Add(typeof(PackageLocation), new PackageLocationConverter());
             _serializationRegistry.Add(typeof(TrackingStatusCode), new TrackingStatusConverter());
             _serializationRegistry.Add(typeof(TransactionType), new TransactionTypeConverter());
+            _serializationRegistry.Add(typeof(ParcelType), new ParcelTypeConverter());
+            _serializationRegistry.Add(typeof(Services), new ServicesConverter());
 
             RegisterSerializationWrappers();
         }
@@ -83,6 +85,8 @@ namespace PitneyBowes.Developer.ShippingApi
         {
             _wrapperRegistry.Add(typeof(IAddress), typeof(JsonAddress<>));
             _wrapperRegistry.Add(typeof(IAutoRefill), typeof(JsonAutoRefill<>));
+            _wrapperRegistry.Add(typeof(ICarrierAccount), typeof(JsonCarrierAccount<>));
+            _wrapperRegistry.Add(typeof(ICarrierLicense), typeof(JsonCarrierLicense<>));
             _wrapperRegistry.Add(typeof(ICcPaymentDetails), typeof(JsonCcPaymentDetails<>));
             _wrapperRegistry.Add(typeof(ICustoms), typeof(JsonCustoms<>));
             _wrapperRegistry.Add(typeof(ICustomsInfo), typeof(JsonCustomsInfo<>));
@@ -111,6 +115,7 @@ namespace PitneyBowes.Developer.ShippingApi
             _wrapperRegistry.Add(typeof(ITrackingStatus), typeof(JsonTrackingStatus<>));
             _wrapperRegistry.Add(typeof(ITransactionSort), typeof(JsonTransactionSort<>));
             _wrapperRegistry.Add(typeof(IUserInfo), typeof(JsonUserInfo<>));
+            _wrapperRegistry.Add(typeof(ICarrierSurcharge), typeof(JsonCarrierSurcharge<>));
         }
     }
 }

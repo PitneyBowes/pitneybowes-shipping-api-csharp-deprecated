@@ -48,6 +48,15 @@ Content-Type: application/json
 			"unitOfMeasurement": "IN"
 		}
 	},
+	"documents": [
+		{
+		"type": "SHIPPING_LABEL",
+		"contentType": "URL",
+		"size": "DOC_8X11",
+		"fileFormat": "PDF",
+		"printDialogOption": "EMBED_PRINT_DIALOG"
+		}
+  	],
 	"rates": [{
 		"carrier": "usps",
 		"serviceId": "PRCLSEL",

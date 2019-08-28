@@ -88,6 +88,12 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             get => Wrapped.Pages;
             set => Wrapped.Pages = value;
         }
+
+        public IDocTab AddDocTab(IDocTab docTab)
+        {
+            return Wrapped.AddDocTab(docTab);
+        }
+
         public void AddPage(IPage s)
         {
             Wrapped.AddPage(s);

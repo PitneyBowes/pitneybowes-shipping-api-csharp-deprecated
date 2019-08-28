@@ -95,6 +95,15 @@ namespace tests
                                 option.Value = session.GetConfigItem("ShipperID");
                             }
                         }
+                        if (shipment.ShipmentGroupId != null && shipment.ShipmentGroupId != string.Empty)
+                        {
+                            shipment.ShipmentGroupId = "500002"; //TODO: get from config
+                        }
+                        if (shipment.IntegratorCarrierId != null || shipment.IntegratorCarrierId != string.Empty)
+                        {
+                            shipment.IntegratorCarrierId = "987654321"; //TODO: get from config
+                        }
+
                     }
                     return request.Call(session);
                 }
