@@ -19,7 +19,6 @@ using System;
 using PitneyBowes.Developer.ShippingApi;
 using PitneyBowes.Developer.ShippingApi.Fluent;
 using PitneyBowes.Developer.ShippingApi.Model;
-using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -47,7 +46,7 @@ namespace tests
             Assert.NotNull(responseLicense.LicenseText);
         }
 
-        [Fact]
+        //[Fact] // Need to have UPS account
         public void TestRegistration()
         {
             var license = new CarrierLicense();
@@ -87,9 +86,9 @@ namespace tests
             registration.LicenseText = responseLicense.LicenseText;
 
             var response = Api.RegisterCarrierAccount(registration, Globals.DefaultSession).GetAwaiter().GetResult();
-            //Assert.True(response.Success);
-            //var responseAccount = response.ResponseObject as CarrierAccount;
-            //Assert.NotNull(responseAccount);
+            Assert.True(response.Success);
+            var responseAccount = response.ResponseObject as CarrierAccount;
+            Assert.NotNull(responseAccount);
 
         }
     }

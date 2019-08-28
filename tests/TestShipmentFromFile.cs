@@ -95,7 +95,13 @@ namespace tests
             Assert.NotNull(response.ResponseObject);
         }
 
-
+        //[Fact]   // need to have UPS account set up
+        public void TestUPS()
+        {
+            ShippingApiResponse response = TestFile("UPS.txt");
+            Assert.NotNull(response);
+            Assert.NotNull(response.ResponseObject);
+        }
         private static ShippingApiResponse TestFile(string fileName)
         {
             var pwd = Directory.GetCurrentDirectory();
