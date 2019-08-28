@@ -39,11 +39,11 @@ namespace PitneyBowes.Developer.ShippingApi
                     return PackageLocation.BackDoor;
                 case "Side Door":
                     return PackageLocation.SideDoor;
-                case "Knock on Door / Ring Bell":
+                case "Knock on Door/Ring Bell":
                     return PackageLocation.KnockonDoorRingBell;
-                case "MailRoom":
+                case "Mail Room":
                     return PackageLocation.MailRoom;
-                case "In / At Mailbox":
+                case "In/At Mailbox":
                     return PackageLocation.InAtMailbox;
                 default:
                     var converter = new StringEnumConverter();
@@ -67,13 +67,13 @@ namespace PitneyBowes.Developer.ShippingApi
                     writer.WriteValue("Side Door");
                     break;
                 case PackageLocation.KnockonDoorRingBell:
-                    writer.WriteValue("Knock on Door / Ring Bell");
+                    writer.WriteValue("Knock on Door/Ring Bell");
                     break;
                 case PackageLocation.MailRoom:
                     writer.WriteValue("Mail Room");
                     break;
                 case PackageLocation.InAtMailbox:
-                    writer.WriteValue("In / At Mailbox");
+                    writer.WriteValue("In/At Mailbox");
                     break;
                 default:
                     var converter = new StringEnumConverter();

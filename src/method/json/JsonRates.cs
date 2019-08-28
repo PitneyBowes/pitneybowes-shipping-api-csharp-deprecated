@@ -128,7 +128,7 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             Wrapped.AddSurcharge(surcharge);
         }
 
-        [JsonProperty("deliveryCommitment")]
+        [JsonProperty("surcharges")]
         public IEnumerable<ICarrierSurcharge> Surcharges { get => Wrapped.Surcharges; set => Wrapped.Surcharges = value; }
 
 

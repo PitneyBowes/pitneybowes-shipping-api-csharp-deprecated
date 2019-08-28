@@ -24,7 +24,15 @@ using System.Text;
 namespace PitneyBowes.Developer.ShippingApi
 {
     /// <summary>
-    /// This operation retrieves a carrier’s license agreement. The operation is used in the Carrier Registration Tutorial.
+    /// This operation authorizes a merchant to use an additional carrier for use with a merchant’s Pitney Bowes Account. 
+    /// The merchant must have an existing account with the carrier. Currently, this API supports integration with UPS.
+    /// For step-by-step implementation of the API, please see the Carrier Registration Tutorial.
+    /// When you issue this API call, Pitney Bowes verifies the merchant’s account with the carrier using information you 
+    /// send in the API request.The carrier sends back to Pitney Bowes a unique set of credentials to use with the merchant’s 
+    /// Pitney Bowes account.Pitney Bowes returns the credentials in the response to this API call but also returns a unique 
+    /// shipperCarrierAccountId you use instead of the credentials. When the merchant performs an action that uses this carrier, 
+    /// you need only pass the shipperCarrierAccountId. Pitney Bowes uses the ID to locate and send the required credentials 
+    /// to the carrier.You pass the ID in the X-PB-Shipper-Carrier-AccountId request header of an API request.
     /// </summary>
     public interface ICarrierLicense
     {

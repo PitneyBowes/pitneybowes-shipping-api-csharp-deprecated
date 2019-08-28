@@ -1,4 +1,5 @@
-﻿/*
+﻿
+/*
 Copyright 2018 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
@@ -15,25 +16,34 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
+using PitneyBowes.Developer.ShippingApi;
+using PitneyBowes.Developer.ShippingApi.Rules;
+using Xunit;
+using Xunit.Abstractions;
 
-namespace PitneyBowes.Developer.ShippingApi
+namespace tests
 {
-    /// <summary>
-    /// Attribute for the GenerateWrapper tool to control the code that is generated.
-    /// </summary>
-    public class CodeGenerationAttribute : Attribute
+    public class TestCarrierRules: TestSession
     {
-        /// <summary>
-        /// If true, generate a model class
-        /// </summary>
-        public bool GenerateModel { get; set; }
-        /// <summary>
-        /// If true, generate a JsonWrapper class
-        /// </summary>
-        public bool GenerateJsonWrapper { get; set; }
-    }
+        public TestCarrierRules(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
+        {
+        }
 
+        [Fact]
+        void ParseCarrierRules()
+        {
+            InitializeFramework();
+
+            var req = new RatingServicesRequest()
+            {
+
+                Carrier = Carrier.USPS,
+                OriginCountryCode = "US",
+                DestinationCountryCode = "US"
+            };
+            var res = CarrierRulesMethods.RatingServices(req).GetAwaiter().GetResult();
+
+        }
+
+    }
 }

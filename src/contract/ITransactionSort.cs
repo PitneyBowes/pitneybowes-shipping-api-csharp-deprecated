@@ -24,7 +24,6 @@ namespace PitneyBowes.Developer.ShippingApi
     /// <summary>
     /// Sort information for transaction and manifest reports
     /// </summary>
-    [CodeGeneration(GenerateJsonWrapper = true, GenerateModel = false)]
     public interface ITransactionSort
     {
         /// <summary>

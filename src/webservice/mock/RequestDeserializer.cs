@@ -154,14 +154,18 @@ namespace PitneyBowes.Developer.ShippingApi.Mock
                         // header properties
                         ShippingApiRequest.ProcessRequestAttributes<ShippingApiHeaderAttribute>(request,
                             (a, s, v, p) => {
-                                if (headers.ContainsKey(s))
+                                foreach (var h in headers)
                                 {
-                                    PropertyInfo prop = request.GetType().GetProperty(p);
-                                    var sb = new StringBuilder(headers[s]).Replace("\"", "\\\"").Append("\"");
-                                    sb.Insert(0, "\"");
-                                    var tx = new StringReader(sb.ToString());
-                                    var o = deserializer.Deserialize(tx, prop.PropertyType);
-                                    prop.SetValue(request, o);
+                                    if (h.Key.ToLower() == s.ToLower())
+                                    {
+                                        PropertyInfo prop = request.GetType().GetProperty(p);
+                                        var sb = new StringBuilder(h.Value).Replace("\"", "\\\"").Append("\"");
+                                        sb.Insert(0, "\"");
+                                        var tx = new StringReader(sb.ToString());
+                                        var o = deserializer.Deserialize(tx, prop.PropertyType);
+                                        prop.SetValue(request, o);
+                                        break;
+                                    }
                                 }
                             }
                          );                                                                             

@@ -16,8 +16,10 @@ namespace PitneyBowes.Developer.ShippingApi.Json
 
         [ShippingApiQuery("carrier")]
         public Carrier Carrier { get => Wrapped.Carrier; set => Wrapped.Carrier = value; }
+        
         [ShippingApiQuery("originCountryCode")]
         public string OriginCountryCode { get => Wrapped.OriginCountryCode; set => Wrapped.OriginCountryCode = value; }
+        
         [JsonProperty("licenseText")]
         public string LicenseText { get => Wrapped.LicenseText; set => Wrapped.LicenseText = value; }
 

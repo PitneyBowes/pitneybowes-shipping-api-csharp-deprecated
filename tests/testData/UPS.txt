@@ -1,0 +1,79 @@
+MIME-Version: 1.0
+Content-Type: multipart/mixed;boundary = "523d1498-5afa-4409-8c34-4e4681620e12"
+
+This is a multipart message in MIME format.
+
+
+--523d1498-5afa-4409-8c34-4e4681620e12
+MIME-Version: 1.0
+Content-Type: text/httpRequest
+
+POST /shippingservices/v1/shipments?includeDeliveryCommitment=False HTTP/1.1
+Authorization: Bearer 0wH85iHV0nVOrox5iLz9GK8GHeja
+Content-Type: application/json
+-H "X-PB-Shipper-Carrier-AccountId: <unique_carrier_id>" \
+-H "X-PB-UnifiedErrorStructure: true" \
+-d '
+{
+    "fromAddress": {
+        "company": "Supplies",
+        "name": "Manager",
+        "phone": "415-555-0000",
+        "email": "supplies@example.com",
+        "residential": false,
+        "addressLines": [ "545 Market St" ],
+        "cityTown": "San Francisco",
+        "stateProvince": "CA",
+        "postalCode": "94105",
+        "countryCode": "US"
+    },
+    "toAddress": {
+        "company": "Shop",
+        "name": "Manager",
+        "phone": "620-555-1212",
+        "email": "shop@example.com",
+        "residential": false,
+        "addressLines": [ "643 Greenway RD" ],
+        "cityTown": "Boone",
+        "stateProvince": "NC",
+        "postalCode": "28607",
+        "countryCode": "US"
+    },
+    "parcel": {
+        "weight": {
+            "unitOfMeasurement": "OZ",
+            "weight": 38
+        },
+        "dimension": {
+            "unitOfMeasurement": "IN",
+            "length": 6,
+            "width": 4,
+            "height": 6
+        },
+        "currencyCode": "USD"
+    },
+    "rates": [ {
+        "carrier": "UPS",
+        "serviceId": "NDA_AM",
+        "parcelType": "PKG",
+        "specialServices": [ {
+            "specialServiceId": "INS",
+            "inputParameters": [ {
+                "name":"INPUT_VALUE",
+                "value":"100.00"
+            } ]
+        } ]
+    } ],
+    "documents": [ {
+        "size": "DOC_4X6",
+        "printDialogOption": "NO_PRINT_DIALOG",
+        "type": "SHIPPING_LABEL",
+        "contentType": "URL",
+        "fileFormat": "PDF"
+    } ],
+    "shipmentOptions": [ {
+        "name": "SHIPPER_ID",
+        "value": "9024324564"
+    } ]
+}
+--523d1498-5afa-4409-8c34-4e4681620e12--

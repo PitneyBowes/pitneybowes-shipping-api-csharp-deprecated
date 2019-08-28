@@ -24,9 +24,9 @@ using Xunit.Abstractions;
 
 namespace tests
 {
-    public class RatesTest : TestSession
+    public class TestRates : TestSession
     {
-        public RatesTest(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
+        public TestRates(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
         {
             InitializeFramework();
         }
