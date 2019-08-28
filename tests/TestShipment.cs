@@ -169,7 +169,6 @@ namespace tests
             Assert.NotNull(cancelResponse);
             Assert.True(cancelResponse.Success);
             Assert.NotNull(cancelResponse.ResponseObject);
-
         }
     }
 }
