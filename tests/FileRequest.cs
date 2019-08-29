@@ -28,47 +28,47 @@ namespace tests
         {
             List<ShippingApiMethod> methods = new List<ShippingApiMethod>() {
                 new ShippingApiMethod() {Verb=HttpVerb.POST,
-                    UriRegex = "shippingservices/v1/addresses/verify-suggest",
+                    UriRegex = "/shippingservices/v1/addresses/verify-suggest",
                     RequestType=typeof(VerifySuggestResponse),
                     RequestInterface = null,
                     ResponseType = typeof(Address) },
                 new ShippingApiMethod() {Verb=HttpVerb.POST,
-                    UriRegex="shippingservices/v1/addresses/verify",
+                    UriRegex="/shippingservices/v1/addresses/verify",
                     RequestType=typeof(Address),
                     RequestInterface=typeof(IAddress),
                     ResponseType=typeof(Address)},
                 new ShippingApiMethod() {Verb=HttpVerb.GET,
-                    UriRegex="shippingservices/v1/manifests?originalTransactionId=(?<TransactionId>[^/]+)",
+                    UriRegex="/shippingservices/v1/manifests?originalTransactionId=(?<TransactionId>[^/]+)",
                     RequestType=typeof(RetryManifestRequest),
                     RequestInterface=null,
                     ResponseType=typeof(Manifest)},
                 new ShippingApiMethod() {Verb=HttpVerb.POST,
-                    UriRegex="shippingservices/v1/manifests",
+                    UriRegex="/shippingservices/v1/manifests",
                     RequestType=typeof(Manifest),
                     RequestInterface=typeof(IManifest),
                     ResponseType=typeof(Manifest)},
                 new ShippingApiMethod() {Verb=HttpVerb.GET,
-                    UriRegex="shippingservices/v1/manifests/(?<ManifestId>[^/]+)",
+                    UriRegex="/shippingservices/v1/manifests/(?<ManifestId>[^/]+)",
                     RequestType=typeof(ReprintManifestRequest),
                     RequestInterface=null,
                     ResponseType=typeof(Manifest)},
                 new ShippingApiMethod() {Verb=HttpVerb.POST,
-                    UriRegex="shippingservices/v1/rates",
+                    UriRegex="/shippingservices/v1/rates",
                     RequestType=typeof(Shipment),
                     RequestInterface=typeof(IShipment),
                     ResponseType=typeof(Shipment)},
                 new ShippingApiMethod() {Verb=HttpVerb.POST,
-                    UriRegex="shippingservices/v1/shipments",
+                    UriRegex="/shippingservices/v1/shipments",
                     RequestType=typeof(Shipment),
                     RequestInterface=typeof(IShipment),
                     ResponseType=typeof(Shipment)},
                 new ShippingApiMethod() {Verb=HttpVerb.DELETE,
-                    UriRegex="shippingservices/v1/shipments/(?<ShipmentId>[^/]+)",
+                    UriRegex="/shippingservices/v1/shipments/(?<ShipmentId>[^/]+)",
                     RequestType=typeof(CancelShipmentRequest),
                     RequestInterface=null,
                     ResponseType=typeof(CancelShipmentResponse)},
                 new ShippingApiMethod() {Verb=HttpVerb.GET,
-                    UriRegex="shippingservices/v1/shipments/(?<ShipmentId>[^/]+)",
+                    UriRegex="/shippingservices/v1/shipments/(?<ShipmentId>[^/]+)",
                     RequestType=typeof(ReprintShipmentRequest),
                     RequestInterface=null,
                     ResponseType=typeof(Shipment)
@@ -84,7 +84,7 @@ namespace tests
                     mimeStream.SeekNextPart(); //request
                     mimeStream.ClearHeaders();
                     var request = RequestDeserializer.Request(mimeStream, methods, session);
-                    if (request.Method.Verb == HttpVerb.POST && request.Method.UriRegex == "shippingservices/v1/shipments")
+                    if (request.Method.Verb == HttpVerb.POST && request.Method.UriRegex == "/shippingservices/v1/shipments")
                     {
                         var shipment = (IShipment)request.Request;
                         shipment.TransactionId = Guid.NewGuid().ToString().Substring(15);
@@ -99,12 +99,13 @@ namespace tests
                         {
                             shipment.ShipmentGroupId = "500002"; //TODO: get from config
                         }
-                        if (shipment.IntegratorCarrierId != null || shipment.IntegratorCarrierId != string.Empty)
+                        if (shipment.IntegratorCarrierId != null && shipment.IntegratorCarrierId != string.Empty)
                         {
                             shipment.IntegratorCarrierId = "987654321"; //TODO: get from config
                         }
 
                     }
+                    session.LogDebug("Getting file");
                     return request.Call(session);
                 }
             }

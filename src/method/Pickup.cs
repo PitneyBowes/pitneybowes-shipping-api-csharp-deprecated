@@ -1,5 +1,5 @@
 ﻿/*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -34,17 +34,6 @@ namespace PitneyBowes.Developer.ShippingApi
         /// Http header content type. application/jason
         /// </summary>
         public override string ContentType { get => "application/json"; }
-
-        /// <summary>
-        /// Write to standard location
-        /// </summary>
-        /// <param name="resource"></param>
-        /// <param name="session"></param>
-        /// <returns></returns>
-        public string RecordingFullPath(string resource, ISession session)
-        {
-            return ShippingApiRequest.RecordingFullPath(this, resource, session);
-        }
 
         /// <summary>
         /// Gets or sets the authorization. Set automatically.

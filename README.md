@@ -34,9 +34,9 @@ Latest changes - [CHANGES](CHANGES.md)
    * Developer ID
    * Shipper ID
 
-- Visual Studio 2017. The Community Edition is fine.
+- VSCode or Visual Studio. The Community Edition of Visual Studio is fine.
 
-- dotnet core 2.0
+- dotnet core 2.0 or later
 
 - git command line (required if [building the system out-of-box](https://github.com/PitneyBowes/pitneybowes-shipping-api-csharp#building-the-system-out-of-box))
 
@@ -138,14 +138,9 @@ If you are developing on Windows, I'd recommend that you install [Telerik Fiddle
 
 If you encounter problems, please contact Support at <ShippingAPISupport@pb.com>.
 
-#### Known issues
-
-1. For certain network configuration with .net core on Windows platforms the SDK may fail to return. The issue appears to be with .net core; it is discussed here https://stackoverflow.com/questions/50749042/httpclient-with-net-core-2-1-hangs?rq=1.
-
-
 ## Building the System Out-of-Box
 
-The following commands are specific to Windows. The code also builds on macOS Sierra using Visual Studio Community edition.
+The following commands are specific to Windows. The code also builds on macOS Sierra using Visual Studio Community edition and VSCode.
 
 At the Visual Studio developer command prompt:
  

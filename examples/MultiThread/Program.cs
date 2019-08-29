@@ -3,6 +3,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 using PitneyBowes.Developer.ShippingApi;
 using PitneyBowes.Developer.ShippingApi.Model;
 using PitneyBowes.Developer.ShippingApi.Fluent;
@@ -15,20 +16,19 @@ namespace MyShip
         static void Main(string[] args)
         {
             double throughput = 15;
-            int numThreads = 30;
-            int testLength = 36000;
+            int numThreads = 1;
+            int testLength = 5;
             int sleeptime = 100;
             Globals.MaxHttpConnections = 200;
             //--------------------
             object threadlock = new object();
             DateTime? firstlabel = null;
             int labelsPerThread = (int)(throughput * testLength / numThreads);
-            var sandbox = new Session() { EndPoint = "https://api-perf.pitneybowes.com", Requester = new ShippingApiHttpRequest() };
+            var sandbox = new Session() { EndPoint = "https://api-sandbox.pitneybowes.com", Requester = new ShippingApiHttpRequest() };
 
-            sandbox.AddConfigItem("ApiKey", "rx9SgEMSkihx9CJRJhH7FkAPfa4U3rxN");
-            sandbox.AddConfigItem("ApiSecret", "1AWINoX1lLvNHRo5");
-            sandbox.AddConfigItem("ShipperID", "9024510429");
-            sandbox.AddConfigItem("DeveloperID", "23232379");
+            IConfiguration config = SetupConfigProvider();
+            sandbox.GetConfigItem = (c) => config[c];
+            Console.WriteLine($"Developer {sandbox.GetConfigItem("DeveloperID")}");
 
             Model.RegisterSerializationTypes(sandbox.SerializationRegistry);
             Globals.DefaultSession = sandbox;
@@ -36,7 +36,7 @@ namespace MyShip
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             List<Task> TaskList = new List<Task>();
-            using (var timers = new FileStream("timers.txt", FileMode.Truncate))
+            using (var timers = new FileStream("timers.txt", FileMode.OpenOrCreate))
             using (var writer = new StreamWriter(timers))
             {
                 for (int i = 0; i < numThreads; i++)
@@ -53,7 +53,7 @@ namespace MyShip
                         {
                             var labeltimer = new Stopwatch();
                             labeltimer.Start();
-                            var label = print(s, k, j);
+                            var label = print(s, k, j, sandbox);
                             labeltimer.Stop();
                             if (label != null ) writer.WriteLine("{0} {1} {2} {3}", labeltimer.Elapsed, label.ParcelTrackingNumber, label.TransactionId, label.ShipmentId);
                             else writer.WriteLine("{0}", labeltimer.Elapsed);
@@ -77,9 +77,26 @@ namespace MyShip
             }
         }
 
-        static Shipment print( string s, int i, int j )
+        private static IConfiguration SetupConfigProvider()
         {
-            var shipment = ShipmentFluent<Shipment>.Create()
+            var configs = new Dictionary<string, string>
+            {
+                { "ApiKey", "YOUR_API_KEY" },
+                { "ApiSecret", "YOUR_API_SECRET" },
+                { "RatePlan", "YOUR_RATE_PLAN" },
+                { "ShipperID", "YOUR_SHIPPER_ID" },
+                { "DeveloperID", "YOUR_DEVELOPER_ID" }
+            };
+            var configurationBuilder = new ConfigurationBuilder();
+            
+            configurationBuilder
+                .AddInMemoryCollection(configs)
+                .AddJsonFile(Globals.GetConfigPath("shippingapisettings.json") , optional: true, reloadOnChange: true);
+            return configurationBuilder.Build();
+        }
+        static Shipment print( string s, int i, int j, ISession session )
+        {
+            var shipment = (Shipment)ShipmentFluent<Shipment>.Create()
                 .ToAddress((Address)AddressFluent<Address>.Create()
                     .AddressLines("643 Greenway Rd")
                     .PostalCode("28607")
@@ -98,11 +115,11 @@ namespace MyShip
                .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
                     .ShippingLabel(ContentType.URL, Size.DOC_4X6, FileFormat.PDF))
                .ShipmentOptions(ShipmentOptionsArrayFluent<ShipmentOptions>.Create()
-                                .ShipperId("9024510429")
+                                .ShipperId(session.GetConfigItem("ShipperID"))
                     )
                .TransactionId( string.Format("{0}{1}{2}", s, i, j));
 
-            var label = Api.CreateShipment((Shipment)shipment).GetAwaiter().GetResult();
+            var label = Api.CreateShipment(shipment, session).GetAwaiter().GetResult();
             if (!label.Success)
             {
                 Console.WriteLine("Label {0} {1} failed:{1}", i, string.Format("{0}-{1}-{2}", s, i, j, label.HttpStatus));

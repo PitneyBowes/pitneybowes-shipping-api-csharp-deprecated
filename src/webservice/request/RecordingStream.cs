@@ -1,5 +1,5 @@
 ﻿/*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -113,6 +113,7 @@ namespace PitneyBowes.Developer.ShippingApi
         }
         private void WriteHeaders(Dictionary<string, List<string>> headers )
         {
+            if (!IsRecording) return;
             if (headers == null) return;
             foreach( var h in headers.Keys)
             {
@@ -170,16 +171,24 @@ namespace PitneyBowes.Developer.ShippingApi
             get => _recording; 
             set 
             {
-                if (value && _recorder == null)
+                if (value)
+                {
+                    if (!_recording)
+                    {
+                        if (_recorder == null)
+                        {
+                            Directory.CreateDirectory(Path.GetDirectoryName(_path));
+                            _recorder = new FileStream(_path, _fileMode, FileAccess.Write);
+                        }
+                        _recording = true;
+                        WriteMimeHeader(_headers);
+                    }
+                }
+                else
                 {
                     _recording = false;
                 }
-                if (!_recording && value ) {
-                    _recording = value;
-                    WriteMimeHeader(_headers);
-                }
-                else
-                    _recording = value;
+   
             }
         }
         /// <summary>
@@ -188,13 +197,9 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <param name="startRecording">If set to <c>true</c> start recording.</param>
         public void OpenRecord(bool startRecording )
         {
-            if (_recorder == null)
-            {
-                Directory.CreateDirectory(Path.GetDirectoryName(_path));
-                _recorder = new FileStream(_path, _fileMode, FileAccess.Write);
-            }
             IsRecording = startRecording;
         }
+
         /// <summary>
         /// Close the recording stream, if enabled
         /// </summary>
@@ -225,6 +230,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <param name="s"></param>
         public void WriteRecordCRLF(string s)
         {
+            if (!IsRecording) return;
             WriteRecord(s);
             WriteRecord("\r\n");
         }

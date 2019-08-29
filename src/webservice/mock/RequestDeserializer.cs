@@ -82,102 +82,95 @@ namespace PitneyBowes.Developer.ShippingApi.Mock
                     requestParameters[h[0]] = h[1];
                 }
             }
-            try
+            
+            var deserializer = new JsonSerializer();
+            deserializer.Error += DeserializationError;
+            deserializer.ContractResolver = new ShippingApiContractResolver();
+            if (session.TraceWriter != null)
             {
-                var deserializer = new JsonSerializer();
-                deserializer.Error += DeserializationError;
-                deserializer.ContractResolver = new ShippingApiContractResolver();
-                if (session.TraceWriter != null)
+                deserializer.TraceWriter = session.TraceWriter;
+            }
+
+            foreach (var method in methods )
+            {
+                if (method.Verb.ToString() != verb)
                 {
-                    deserializer.TraceWriter = session.TraceWriter;
+                    continue;
                 }
-
-                foreach (var method in methods )
+                var re = new Regex( method.UriRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.CultureInvariant | RegexOptions.Compiled);
+                var m = re.Match(uri);
+                if (m.Success)
                 {
-                    if (method.Verb.ToString() != verb)
+                    IShippingApiRequest request = null;
+                    // create the request
+                    using (var reader = new StreamReader(mimeStream))
                     {
-                        continue;
+                        ((ShippingApiContractResolver)deserializer.ContractResolver).Registry = session.SerializationRegistry;
+                        // if wrapped create wrapper object 
+                        if (method.RequestInterface != null)
+                        {
+                            var obj = deserializer.Deserialize(reader, method.RequestType);
+                            Type[] typeArgs = { obj.GetType() };
+                            var wrapperType = session.SerializationRegistry.GetWrapperFor(method.RequestInterface).MakeGenericType(typeArgs);
+                            request = (IShippingApiRequest)Activator.CreateInstance(wrapperType, obj);
+                        }
+                        else
+                        {
+                            request = (IShippingApiRequest)deserializer.Deserialize(reader, method.RequestType);
+                        }
+
                     }
-                    var re = new Regex( method.UriRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.CultureInvariant | RegexOptions.Compiled);
-                    var m = re.Match(uri);
-                    if (m.Success)
+
+                    // set params in the URI
+                    for (int g = 0; g < m.Groups.Count; g++)
                     {
-                        IShippingApiRequest request = null;
-                        // create the request
-                        using (var reader = new StreamReader(mimeStream))
+                        var paramName = re.GroupNameFromNumber(g);
+                        // set property of the request matching capture name
+                        if (!Regex.IsMatch(paramName, "^\\d+$"))
                         {
-                            ((ShippingApiContractResolver)deserializer.ContractResolver).Registry = session.SerializationRegistry;
-                            // if wrapped create wrapper object 
-                            if (method.RequestInterface != null)
-                            {
-                                var obj = deserializer.Deserialize(reader, method.RequestType);
-                                Type[] typeArgs = { obj.GetType() };
-                                var wrapperType = session.SerializationRegistry.GetWrapperFor(method.RequestInterface).MakeGenericType(typeArgs);
-                                request = (IShippingApiRequest)Activator.CreateInstance(wrapperType, obj);
-                            }
-                            else
-                            {
-                                request = (IShippingApiRequest)deserializer.Deserialize(reader, method.RequestType);
-                            }
-
+                            PropertyInfo prop = method.RequestType.GetProperty("paramName");
+                            prop.SetValue(request, match.Groups[g].Value, null);
                         }
+                    }
 
-                        // set params in the URI
-                        for (int g = 0; g < m.Groups.Count; g++)
-                        {
-                            var paramName = re.GroupNameFromNumber(g);
-                            // set property of the request matching capture name
-                            if (!Regex.IsMatch(paramName, "^\\d+$"))
+                    // query properties
+                    ShippingApiRequest.ProcessRequestAttributes<ShippingApiQueryAttribute>(request,
+                        (a, s, v, p) => {
+                            // p is prop name
+                            if (requestParameters.ContainsKey(s))
                             {
-                                PropertyInfo prop = method.RequestType.GetProperty("paramName");
-                                prop.SetValue(request, match.Groups[g].Value, null);
+                                PropertyInfo prop = request.GetType().GetProperty(p);
+                                //TODO: better handling of JSON encoding
+                                var sb = new StringBuilder(requestParameters[s]).Replace("\"", "\\\"").Append("\"");
+                                sb.Insert(0, "\"");
+                                var tx = new StringReader(sb.ToString());
+                                var o = deserializer.Deserialize(tx, prop.PropertyType);
+                                prop.SetValue(request, o );
                             }
                         }
+                    );
 
-                        // query properties
-                        ShippingApiRequest.ProcessRequestAttributes<ShippingApiQueryAttribute>(request,
-                           (a, s, v, p) => {
-                               // p is prop name
-                               if (requestParameters.ContainsKey(s))
-                               {
+                    // header properties
+                    ShippingApiRequest.ProcessRequestAttributes<ShippingApiHeaderAttribute>(request,
+                        (a, s, v, p) => {
+                            foreach (var h in headers)
+                            {
+                                if (h.Key.ToLower() == s.ToLower())
+                                {
                                     PropertyInfo prop = request.GetType().GetProperty(p);
-                                    //TODO: better handling of JSON encoding
-                                    var sb = new StringBuilder(requestParameters[s]).Replace("\"", "\\\"").Append("\"");
+                                    var sb = new StringBuilder(h.Value).Replace("\"", "\\\"").Append("\"");
                                     sb.Insert(0, "\"");
                                     var tx = new StringReader(sb.ToString());
                                     var o = deserializer.Deserialize(tx, prop.PropertyType);
-                                    prop.SetValue(request, o );
-                               }
-                           }
-                        );
-
-                        // header properties
-                        ShippingApiRequest.ProcessRequestAttributes<ShippingApiHeaderAttribute>(request,
-                            (a, s, v, p) => {
-                                foreach (var h in headers)
-                                {
-                                    if (h.Key.ToLower() == s.ToLower())
-                                    {
-                                        PropertyInfo prop = request.GetType().GetProperty(p);
-                                        var sb = new StringBuilder(h.Value).Replace("\"", "\\\"").Append("\"");
-                                        sb.Insert(0, "\"");
-                                        var tx = new StringReader(sb.ToString());
-                                        var o = deserializer.Deserialize(tx, prop.PropertyType);
-                                        prop.SetValue(request, o);
-                                        break;
-                                    }
+                                    prop.SetValue(request, o);
+                                    break;
                                 }
                             }
-                         );                                                                             
-                        return new ShippingApiMethodRequest() { Method = method, Request = request};
-                    }
+                        }
+                        );                                                                             
+                    return new ShippingApiMethodRequest() { Method = method, Request = request};
                 }
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-
             return null;
         }
     }

@@ -10,6 +10,8 @@ Content-Type: text/httpRequest
 
 POST /shippingservices/v1/shipments?includeDeliveryCommitment=False HTTP/1.1
 x-pb-transactionId:9a9-b8e1-9395137992b1
+x-pb-shipmentgroupid:12345
+x-pb-integrator-carrierid:456789
 Authorization: Bearer 0wH85iHV0nVOrox5iLz9GK8GHeja
 minimaladdressvalidation:true
 Content-Type: application/json

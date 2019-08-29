@@ -1,5 +1,5 @@
 ﻿/*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -15,7 +15,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 */
 
-
+using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -41,6 +41,7 @@ namespace PitneyBowes.Developer.ShippingApi
         private async static Task<ShippingApiResponse<Response>> Request<Response, Request>(string uri, HttpVerb verb, Request request, bool deleteBody, ISession session = null) where Request : IShippingApiRequest
         {
             if (session == null) session = Globals.DefaultSession;
+            session.LogDebug("Calling method");
             var response = new ShippingApiResponse<Response>();
             var stopwatch = new Stopwatch();
             stopwatch.Start();

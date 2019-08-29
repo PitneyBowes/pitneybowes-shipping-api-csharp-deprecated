@@ -1,5 +1,45 @@
 # Pitney Bowes Shipping API C# SDK Changes
 
+## Version 1.2.0
+### Framework and supporting library version updates
+* JSON.net version downgraded to 10.0.3
+
+### Fixes
+* Removed the DotNetFramework example project and made the Myship example project target both dotnet core and .net framewotk
+* Fixed MyShip project. 
+* Removed redundant items from the shippingapisettings.json file
+* Fixed issue where the recording folder and file was created when recording option was off.
+* Fixed CancelPickup
+* Made header lookup case insensitve in file request processing
+* Fixed Pickup PackageLocation mapping
+
+### New Features
+* Carrier surcharges
+* Document DocTab
+* PB Presort Labels
+* UPS Labels
+* Carrier account license API Call
+* Carrier account registration API call
+* SoldToAddress in shipment
+* Added irregular parcel girth to ParcelFluent
+* Added event date and event time to Tracking object
+* Changed default user agent string
+
+### Tests
+* Added Carrier Lincense Test
+* Added Pickup Test
+* Added Label Test
+* Added Transaction Report Test
+* Made ShipmentFromFile tests into separate tests that can be run individually
+* Added standard mail and UPS tests. These require special account setup by the support and/or implementation team.
+
+### Other
+Switched main development environment to VSCode (from Visual Studio and Visual Studio for Mac)
+
+
+### Known Issues
+* Running 'dotnet test' hangs. I think it is something to do with the XUnit console runner.
+
 ## Version 1.1.0
 ### Framework and supporting library version updates
 * Shipping API framework changed from .net standard 1.3 to .net standard 2.0

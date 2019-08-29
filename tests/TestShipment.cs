@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -36,6 +36,7 @@ namespace tests
         [Fact]
         public void TestShipmentDetailed()
         {
+
             var shipment = ShipmentFluent<Shipment>.Create()
                 .ToAddress((Address)AddressFluent<Address>.Create()
                     .AddressLines("643 Greenway RD")

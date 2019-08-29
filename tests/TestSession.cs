@@ -1,5 +1,5 @@
 ﻿/*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -20,7 +20,7 @@ using Microsoft.Extensions.Configuration; // Required for windows
 using PitneyBowes.Developer.ShippingApi;
 using PitneyBowes.Developer.ShippingApi.Mock;
 using PitneyBowes.Developer.ShippingApi.Model;
-using System.IO;
+using System;
 using System.Text;
 using Xunit.Abstractions;
 using Microsoft.Extensions.Logging.Xunit;
@@ -30,15 +30,15 @@ namespace tests
 {
     public class TestSession
     {
-        protected ILogger Logger { get; set; }
-        private readonly ITestOutputHelper testOutputHelper;
-        private readonly LoggerFactory loggerFactory;
+        //protected ILogger Logger { get; set; }
+        //private readonly ITestOutputHelper testOutputHelper;
+        //private readonly LoggerFactory loggerFactory;
 
         public TestSession(ITestOutputHelper testOutputHelper)
         {
-            this.testOutputHelper = testOutputHelper;
-            this.loggerFactory = new LoggerFactory(new[] { new XunitLoggerProvider(testOutputHelper) });
-            Logger = loggerFactory.CreateLogger(this.GetType().Name);
+            //this.testOutputHelper = testOutputHelper;
+            //this.loggerFactory = new LoggerFactory(new[] { new XunitLoggerProvider(testOutputHelper) });
+            //Logger = loggerFactory.CreateLogger(this.GetType().Name);
         }
 
         private static IConfiguration Configuration { get; set; }
@@ -46,16 +46,15 @@ namespace tests
         static readonly object lockObject = new object();
         static bool _initialized = false;
 
-        public void InitializeFramework( )
+        public void InitializeFramework()
         {
-            if (_initialized) return;
             lock (lockObject)
             {
                 // Initialize framework
                 if (_initialized) return;
                 _initialized = true;
 
- 
+                Console.WriteLine("Initializing");
                 var configurationBuilder = new ConfigurationBuilder();
                 configurationBuilder.SetBasePath(Globals.GetConfigBaseDirectory());
 
@@ -76,10 +75,12 @@ namespace tests
                 sandbox.GetConfigItem = (s) => Configuration[s];
 
                 // Hook in your logger
-                sandbox.LogWarning = (s) => Logger.LogWarning(s);
-                sandbox.LogError = (s) => Logger.LogError(s);
-                sandbox.LogConfigError = (s) => Logger.LogCritical(s);
-                sandbox.LogDebug = (s) => Logger.LogInformation(s);
+                sandbox.LogWarning = (s) => Console.WriteLine(s);
+                sandbox.LogError = (s) => Console.WriteLine(s);
+                sandbox.LogConfigError = (s) => Console.WriteLine(s);
+                sandbox.LogDebug = (s) => Console.WriteLine(s);
+
+                sandbox.LogDebug($"Logging debug output to console");
 
                 // Hook in your secure API key decryption
                 sandbox.GetApiSecret = ()=>new StringBuilder(Configuration["ApiSecret"]);
@@ -87,10 +88,8 @@ namespace tests
                 sandbox.TraceWriter = new MemoryTraceWriter();
 
                 Globals.DefaultSession = sandbox;
-
-
+                Console.WriteLine("Done initializing");
             }
         }
-
     }
 }

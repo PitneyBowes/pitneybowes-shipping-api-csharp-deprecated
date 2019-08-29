@@ -1,5 +1,5 @@
 ﻿/*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -34,6 +34,7 @@ namespace tests
         [Fact]
         public void TestLicenseAgreement()
         {
+
             var license = new CarrierLicense();
             license.Carrier = Carrier.UPS;
             license.OriginCountryCode = "US";
@@ -49,6 +50,7 @@ namespace tests
         //[Fact] // Need to have UPS account
         public void TestRegistration()
         {
+
             var license = new CarrierLicense();
             license.Carrier = Carrier.UPS;
             license.OriginCountryCode = "US";

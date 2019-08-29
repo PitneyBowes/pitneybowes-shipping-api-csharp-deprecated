@@ -61,6 +61,7 @@ namespace PitneyBowes.Developer.ShippingApi.Mock
 
             if (request != null)
             {
+                session.LogDebug("Mock - calling method");
                 switch (Verb)
                 {
                     case HttpVerb.DELETE:

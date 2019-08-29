@@ -1,5 +1,5 @@
 ﻿/*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -247,7 +247,7 @@ namespace example
 
                 var transactionsReportRequest = new ReportRequest()
                 {
-                    FromDate = DateTimeOffset.Parse("6/30/2017"),
+                    FromDate = DateTimeOffset.Parse("6/30/2019"),
                     ToDate = DateTimeOffset.Now,
                     DeveloperId = sandbox.GetConfigItem("DeveloperID")
                 };
@@ -259,7 +259,7 @@ namespace example
                 // Transaction report with LINQ
                 TransactionsReport<Transaction> report = new TransactionsReport<Transaction>(sandbox.GetConfigItem("DeveloperID"), maxPages: 2);
                 var query = from transaction in report
-                            where transaction.TransactionDateTime >= DateTimeOffset.Parse("6/30/2017") && transaction.TransactionDateTime <= DateTimeOffset.Now && transaction.TransactionType == TransactionType.POSTAGE_PRINT
+                            where transaction.TransactionDateTime >= DateTimeOffset.Parse("6/30/2019") && transaction.TransactionDateTime <= DateTimeOffset.Now && transaction.TransactionType == TransactionType.POSTAGE_PRINT
                             select new { transaction.TransactionId };
                 foreach (var obj in query)
                     Console.WriteLine(obj);

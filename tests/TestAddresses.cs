@@ -1,5 +1,5 @@
 ﻿/*
-Copyright 2018 Pitney Bowes Inc.
+Copyright 2019 Pitney Bowes Inc.
 
 Licensed under the MIT License(the "License"); you may not use this file except in compliance with the License.  
 You may obtain a copy of the License in the README file or at
@@ -34,8 +34,7 @@ namespace tests
         [Fact]
         public void VerifyAddress()
         {
-
-       
+      
             var company = "ABC Company";
             var name = "Rufous Sirius Canid";
             var phone = "323 555-1212";
@@ -77,7 +76,7 @@ namespace tests
 
             address = (Address)addressFluent.Verify();
             Assert.True(address.Status == AddressStatus.VALIDATED_AND_NOT_CHANGED);
-            Assert.Same(address.PostalCode,"28607-4819");
+            Assert.True(address.PostalCode == "28607-4819");
             
 
         }
