@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ZXing.Net.Bindings.SkiaSharp" Version="0.16.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="SkiaSharp" Version="1.59.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="IBoundingBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Shapes\" />
+    <Folder Include="Changes\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Render\" />
+    <Folder Include="Constraints\" />
+    <Folder Include="Template\" />
+  </ItemGroup>
+</Project>

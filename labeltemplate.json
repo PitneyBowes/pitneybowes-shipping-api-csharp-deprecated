@@ -1,0 +1,355 @@
+{
+  "contents": [
+    {
+      "group": {
+        "contents": [
+          {
+            "box": {
+              "topLeft": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "bottomRight": {
+                "x": 1.0,
+                "y": 1.0
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "line": {
+              "start": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "end": {
+                "x": 1.0,
+                "y": 1.0
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "line": {
+              "start": {
+                "x": 0.0,
+                "y": 1.0
+              },
+              "end": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "objectPath": null
+            }
+          }
+        ],
+        "anchor": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "objectPath": null,
+        "id": "aff4e5d5-7839-4367-9fe4-b852c9911cc8",
+        "name": "Service Icon"
+      }
+    },
+    {
+      "group": {
+        "contents": [
+          {
+            "box": {
+              "topLeft": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "bottomRight": {
+                "x": 3.0,
+                "y": 1.0
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "textbox": {
+              "anchor": {
+                "x": 1.0,
+                "y": 0.25
+              },
+              "height": 0.6,
+              "width": 1.5,
+              "margin": 2.0,
+              "horizontalAlignment": "Center",
+              "text": {
+                "staticText": {
+                  "boundObjectPath": null,
+                  "format": null,
+                  "textValue": "PARCEL SELECT\r\nPostage Paid\r\nPB Presort Svcs Inc.\r\neVS"
+                },
+                "boundObjectPath": null,
+                "format": null
+              },
+              "objectPath": null,
+              "drawBoundingBox": true
+            }
+          }
+        ],
+        "anchor": {
+          "x": 1.0,
+          "y": 0.0
+        },
+        "objectPath": null,
+        "name": "Indicium",
+        "defaultText": {
+          "style": "Normal",
+          "fontName": "Arial",
+          "fontSize": 8.0
+        }
+      }
+    },
+    {
+      "group": {
+        "contents": [
+          {
+            "box": {
+              "topLeft": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "bottomRight": {
+                "x": 4.0,
+                "y": 0.3125
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "textbox": {
+              "anchor": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "height": 0.5,
+              "width": 4.0,
+              "margin": 0.0,
+              "horizontalAlignment": "Center",
+              "text": {
+                "staticText": {
+                  "boundObjectPath": null,
+                  "format": null,
+                  "textValue": "USPS PARCEL SELECT "
+                },
+                "boundObjectPath": null,
+                "format": null
+              },
+              "objectPath": null
+            }
+          }
+        ],
+        "anchor": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "objectPath": null,
+        "name": "Branding",
+        "defaultText": {
+          "style": "Bold",
+          "fontName": "Arial",
+          "fontSize": 14.0
+        }
+      }
+    },
+    {
+      "group": {
+        "contents": [
+          {
+            "textbox": {
+              "anchor": {
+                "x": 0.1,
+                "y": 0.1
+              },
+              "height": 0.5,
+              "width": 1.5,
+              "margin": 0.0,
+              "horizontalAlignment": "Left",
+              "text": {
+                "staticText": {
+                  "boundObjectPath": null,
+                  "format": null,
+                  "textValue": "From: Patrick Farry\r\n101 Jenkins Pl.\r\nSanta Clara, CA, 95051"
+                },
+                "boundObjectPath": null,
+                "format": null
+              },
+              "objectPath": null,
+              "defaultText": {
+                "style": "Normal",
+                "fontName": "Arial",
+                "fontSize": 8.0
+              }
+            }
+          },
+          {
+            "textbox": {
+              "anchor": {
+                "x": 0.5,
+                "y": 1.0
+              },
+              "height": 0.5,
+              "width": 1.5,
+              "margin": 0.0,
+              "horizontalAlignment": "Left",
+              "text": {
+                "staticText": {
+                  "boundObjectPath": null,
+                  "format": null,
+                  "textValue": "To: Patrick Farry\r\n101 Jenkins Pl.\r\nSanta Clara, CA, 95051"
+                },
+                "boundObjectPath": null,
+                "format": null
+              },
+              "objectPath": null
+            }
+          }
+        ],
+        "anchor": {
+          "x": 0.0,
+          "y": 1.3125
+        },
+        "objectPath": null,
+        "id": "3d4a2453-f996-4c87-9eb6-87f3d21ea621",
+        "defaultText": {
+          "style": "BoldItallic",
+          "fontName": "Arial",
+          "fontSize": 12.0
+        }
+      }
+    },
+    {
+      "group": {
+        "contents": [
+          {
+            "line": {
+              "start": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "end": {
+                "x": 4.0,
+                "y": 0.0
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "line": {
+              "start": {
+                "x": 0.0,
+                "y": 1.5
+              },
+              "end": {
+                "x": 4.0,
+                "y": 1.5
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "textbox": {
+              "anchor": {
+                "x": 0.0,
+                "y": 0.0
+              },
+              "height": 0.5,
+              "width": 4.0,
+              "margin": 0.0,
+              "horizontalAlignment": "Center",
+              "text": {
+                "staticText": {
+                  "boundObjectPath": null,
+                  "format": null,
+                  "textValue": "USPS TRACKING#"
+                },
+                "boundObjectPath": null,
+                "format": null
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "textbox": {
+              "anchor": {
+                "x": 0.0,
+                "y": 1.22
+              },
+              "height": 0.5,
+              "width": 4.0,
+              "margin": 0.0,
+              "horizontalAlignment": "Center",
+              "text": {
+                "staticText": {
+                  "boundObjectPath": null,
+                  "format": null,
+                  "textValue": "9212 3998 3487 3412 3456 78"
+                },
+                "boundObjectPath": null,
+                "format": null
+              },
+              "objectPath": null
+            }
+          },
+          {
+            "barcode": {
+              "anchor": {
+                "x": 0.25,
+                "y": 0.3
+              },
+              "height": 0.8,
+              "maxWidth": 3.5,
+              "symbology": "Code128C",
+              "data": {
+                "staticBarcodeData": {
+                  "boundObjectPath": null
+                },
+                "boundObjectPath": null
+              },
+              "objectPath": null
+            }
+          }
+        ],
+        "anchor": {
+          "x": 0.0,
+          "y": 4.0
+        },
+        "objectPath": null,
+        "name": "IMpb",
+        "defaultLine": {
+          "width": 4.0
+        }
+      }
+    }
+  ],
+  "anchor": {
+    "x": 0.0,
+    "y": 0.0
+  },
+  "objectPath": null,
+  "defaultColors": {
+    "foreground": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "background": {
+      "red": 255,
+      "green": 255,
+      "blue": 255
+    }
+  },
+  "defaultLine": {
+    "width": 1.0
+  },
+  "defaultText": {
+    "style": "Normal",
+    "fontName": "Arial",
+    "fontSize": 12.0
+  }
+}

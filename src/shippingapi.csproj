@@ -52,7 +52,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="reactive.streams" Version="1.0.2" />
+    <PackageReference Include="SkiaSharp" Version="1.68.0" />
     <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="zxing.net" Version="0.16.4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="webservice\mock\" />
