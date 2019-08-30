@@ -83,9 +83,7 @@
                   "boundObjectPath": null,
                   "format": null,
                   "textValue": "PARCEL SELECT\r\nPostage Paid\r\nPB Presort Svcs Inc.\r\neVS"
-                },
-                "boundObjectPath": null,
-                "format": null
+                }
               },
               "objectPath": null,
               "drawBoundingBox": true
@@ -136,9 +134,7 @@
                   "boundObjectPath": null,
                   "format": null,
                   "textValue": "USPS PARCEL SELECT "
-                },
-                "boundObjectPath": null,
-                "format": null
+                }
               },
               "objectPath": null
             }
@@ -175,9 +171,7 @@
                   "boundObjectPath": null,
                   "format": null,
                   "textValue": "From: Patrick Farry\r\n101 Jenkins Pl.\r\nSanta Clara, CA, 95051"
-                },
-                "boundObjectPath": null,
-                "format": null
+                }
               },
               "objectPath": null,
               "defaultText": {
@@ -202,9 +196,7 @@
                   "boundObjectPath": null,
                   "format": null,
                   "textValue": "To: Patrick Farry\r\n101 Jenkins Pl.\r\nSanta Clara, CA, 95051"
-                },
-                "boundObjectPath": null,
-                "format": null
+                }
               },
               "objectPath": null
             }
@@ -267,9 +259,7 @@
                   "boundObjectPath": null,
                   "format": null,
                   "textValue": "USPS TRACKING#"
-                },
-                "boundObjectPath": null,
-                "format": null
+                }
               },
               "objectPath": null
             }
@@ -289,9 +279,7 @@
                   "boundObjectPath": null,
                   "format": null,
                   "textValue": "9212 3998 3487 3412 3456 78"
-                },
-                "boundObjectPath": null,
-                "format": null
+                }
               },
               "objectPath": null
             }
@@ -308,8 +296,7 @@
               "data": {
                 "staticBarcodeData": {
                   "boundObjectPath": null
-                },
-                "boundObjectPath": null
+                }
               },
               "objectPath": null
             }

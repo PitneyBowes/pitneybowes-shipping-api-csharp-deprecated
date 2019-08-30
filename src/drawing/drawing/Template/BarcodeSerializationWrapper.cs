@@ -17,11 +17,13 @@ namespace PitneyBowes.Developer.Drawing
         public StaticBarcodeData StaticBarcodeData { get => Wrapped as StaticBarcodeData; }
 
         public bool ShouldSerializeBoundBarcodeData() => BoundBarcodeData != null;
+
         public BoundBarcodeData BoundBarcodeData { get => Wrapped as BoundBarcodeData; }
 
         [JsonIgnore]
         public IShape Shape { get => Wrapped.Shape; set => Wrapped.Shape = value; }
-
+        
+        [JsonIgnore]
         public string BoundObjectPath { get => Wrapped.BoundObjectPath; set { Wrapped.BoundObjectPath = value;  } }
 
         public byte[] BarcodeData(object boundObject) => Wrapped.BarcodeData(boundObject);

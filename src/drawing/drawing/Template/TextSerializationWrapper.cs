@@ -22,7 +22,9 @@ namespace PitneyBowes.Developer.Drawing
 
         [JsonIgnore]
         public IShape Shape { get => Wrapped.Shape; set => Wrapped.Shape = value; }
+        [JsonIgnore]
         public string BoundObjectPath { get; set; }
+        [JsonIgnore]
         public string Format { get; set; }
 
         public IText Duplicate()
@@ -32,6 +34,10 @@ namespace PitneyBowes.Developer.Drawing
 
         public string Text(object boundObject = null, IFormatProvider formatProvider = null)
         {
+            if (boundObject == null )
+            {
+                return string.Empty;
+            }
             throw new NotImplementedException();
         }
     }
