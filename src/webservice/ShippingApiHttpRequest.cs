@@ -98,7 +98,7 @@ namespace PitneyBowes.Developer.ShippingApi
                             {
                                 request.SerializeBody(writer, session);
                                 stream.Seek(0, SeekOrigin.Begin);
-                                requestMessage.Content = reqContent; 
+                                requestMessage.Content = reqContent;
                                 reqContent.Headers.ContentType = new MediaTypeHeaderValue(request.ContentType);
                                 recordingStream.WriteRecordCRLF(string.Format("user-agent:{0}", Globals.UserAgent));
                                 recordingStream.WriteRecordCRLF(string.Format("X-PB-UnifiedErrorStructure : true"));
@@ -116,7 +116,10 @@ namespace PitneyBowes.Developer.ShippingApi
                                     requestMessage.Method = HttpMethod.Post;
                                 }
                                 requestMessage.RequestUri = new Uri(client.BaseAddress + uriBuilder);
-                                httpResponseMessage = await client.SendAsync(requestMessage);
+
+                                httpResponseMessage = client.SendAsync(requestMessage).GetAwaiter().GetResult();
+
+
                             }
                         }
 
@@ -124,14 +127,14 @@ namespace PitneyBowes.Developer.ShippingApi
                         {
                             requestMessage.Method = HttpMethod.Delete;
                             requestMessage.RequestUri = new Uri(client.BaseAddress + uriBuilder);
-                            httpResponseMessage = await client.SendAsync(requestMessage);
+                            httpResponseMessage = client.SendAsync(requestMessage).GetAwaiter().GetResult();
 
                         }
                         else
                         {
                             requestMessage.Method = HttpMethod.Get;
                             requestMessage.RequestUri = new Uri(client.BaseAddress + uriBuilder);
-                            httpResponseMessage = await client.SendAsync(requestMessage);
+                            httpResponseMessage = client.SendAsync(requestMessage).GetAwaiter().GetResult();
 
                         }
                     }
@@ -139,7 +142,7 @@ namespace PitneyBowes.Developer.ShippingApi
 
                 using (var respStream = await httpResponseMessage.Content.ReadAsStreamAsync())
                 {
-                    recordingStream.SetBaseStream( respStream, "text/httpResponse");
+                    recordingStream.SetBaseStream(respStream, "text/httpResponse");
 
                     recordingStream.WriteRecordCRLF(string.Format("HTTP/1.1 {0} {1}", (int)httpResponseMessage.StatusCode, httpResponseMessage.ReasonPhrase));
                     recordingStream.WriteRecordCRLF(string.Format("Content-Length: {0}", httpResponseMessage.Content.Headers.ContentLength));

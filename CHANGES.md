@@ -1,6 +1,13 @@
 # Pitney Bowes Shipping API C# SDK Changes
 
-## Version 1.2.0
+## Version 1.1.2
+
+## Fixes
+* Fix of Version issue in log.
+* DPI information not getting parse when sending request.
+* Context issue with web application.
+
+## Version 1.1.1
 ### Framework and supporting library version updates
 * JSON.net version downgraded to 10.0.3
 
