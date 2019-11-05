@@ -138,7 +138,7 @@ namespace example
                     var trackingResponse = Api.Tracking<TrackingStatus>(trackingRequest).GetAwaiter().GetResult();
 
                     // Parcel Reprint
-                    var reprintRequest = new ReprintShipmentRequest() { Shipment = label.APIResponse.ShipmentId };
+                    var reprintRequest = new ReprintShipmentRequest() { Shipment = label.APIResponse.ShipmentId,Carrier= Carrier.NEWGISTICS.ToString() };
 
                     var reprintResponse = Api.ReprintShipment<Shipment>(reprintRequest).GetAwaiter().GetResult();
 
