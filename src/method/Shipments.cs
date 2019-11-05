@@ -117,6 +117,11 @@ namespace PitneyBowes.Developer.ShippingApi
         /// Shipment to reprint
         /// </summary>
         public string Shipment {get;set;}
+
+        /// <summary>
+        /// Carrier of the Lable to reprint
+        /// </summary>
+        public string Carrier { get; set;}
     }
 
     public static partial class Api
@@ -155,7 +160,7 @@ namespace PitneyBowes.Developer.ShippingApi
         public async static Task<ShippingApiResponse<T>> CreateShipment<T>(T request, ISession session = null) where T:IShipment, new()
         {
             var wrapped = new JsonShipment<T>(request);
-            return await WebMethod.Post< T, JsonShipment<T>>( "/shippingservices/v1/shipments", wrapped, session );
+            return WebMethod.Post< T, JsonShipment<T>>( "/shippingservices/v1/shipments", wrapped, session ).GetAwaiter().GetResult();
         }
         /// <summary>
         /// Use this operation to cancel an unused shipment label and initiate a request for an electronic refund.
@@ -174,7 +179,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <returns></returns>
         public async static Task<ShippingApiResponse<CancelShipmentResponse>> CancelShipment( CancelShipmentRequest request, ISession session = null)
         {
-            return await WebMethod.DeleteWithBody<CancelShipmentResponse, CancelShipmentRequest>( "/shippingservices/v1/shipments/{ShipmentToCancel}", request, session );
+            return WebMethod.DeleteWithBody<CancelShipmentResponse, CancelShipmentRequest>( "/shippingservices/v1/shipments/{ShipmentToCancel}", request, session ).GetAwaiter().GetResult();
         }
         /// <summary>
         /// Use this operation to reprint a shipment label for which the initial Create Shipment request was successful but the response object did not save properly.
@@ -191,7 +196,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <returns></returns>
         public async static Task<ShippingApiResponse<T>>  ReprintShipment<T>(ReprintShipmentRequest request, ISession session = null) where T : IShipment, new()
         {
-            return  await WebMethod.Get<T, ReprintShipmentRequest>( "/shippingservices/v1/shipments/{Shipment}", request, session );
+            return  WebMethod.Get<T, ReprintShipmentRequest>( "/shippingservices/v1/shipments/{Shipment}?carrier={Carrier}", request, session ).GetAwaiter().GetResult();
         }
         //TODO: Retry shipment
     }

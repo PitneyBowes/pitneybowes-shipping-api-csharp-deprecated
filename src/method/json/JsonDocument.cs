@@ -77,6 +77,7 @@ namespace PitneyBowes.Developer.ShippingApi.Json
         }
 
         [JsonProperty("resolution")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public Resolution? Resolution 
         {
             get => Wrapped.Resolution;

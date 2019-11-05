@@ -75,7 +75,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <returns></returns>
         public async static Task<ShippingApiResponse<T>> Tracking<T>(TrackingRequest request, ISession session = null) where T : ITrackingStatus, new()
         {
-            return await WebMethod.Get<T, TrackingRequest>("/shippingservices/v1/tracking/{TrackingNumber}", request, session);
+            return  WebMethod.Get<T, TrackingRequest>("/shippingservices/v1/tracking/{TrackingNumber}", request, session).GetAwaiter().GetResult();
         }
     }
 }

@@ -96,7 +96,7 @@ namespace PitneyBowes.Developer.ShippingApi.Rules
         /// </summary>
         public async static Task<ShippingApiResponse<CarrierRule>> RatingServices(RatingServicesRequest request, ISession session = null) 
         {
-            var response =  await WebMethod.Get<ServiceRule[], RatingServicesRequest>("/shippingservices/v1/information/rules/rating-services", request, session);
+            var response =   WebMethod.Get<ServiceRule[], RatingServicesRequest>("/shippingservices/v1/information/rules/rating-services", request, session).GetAwaiter().GetResult();
             var carrierRuleResponse = new ShippingApiResponse<CarrierRule>
             {
                 Errors = response.Errors,

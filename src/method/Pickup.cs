@@ -94,7 +94,7 @@ namespace PitneyBowes.Developer.ShippingApi
         public async static Task<ShippingApiResponse<T>> Schedule<T>(T request, ISession session = null) where T : IPickup, new()
         {
             var scheduleRequest = new JsonPickup<T>(request);
-            return await WebMethod.Post<T, JsonPickup<T>>("/shippingservices/v1/pickups/schedule", scheduleRequest, session);
+            return  WebMethod.Post<T, JsonPickup<T>>("/shippingservices/v1/pickups/schedule", scheduleRequest, session).GetAwaiter().GetResult();
         }
         /// <summary>
         /// Cancels the pickup.

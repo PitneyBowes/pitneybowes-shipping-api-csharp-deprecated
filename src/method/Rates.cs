@@ -39,7 +39,7 @@ namespace PitneyBowes.Developer.ShippingApi
         public async static Task<ShippingApiResponse<T>> Rates<T>(T request, ISession session = null) where T : IShipment, new()
         {
             var ratesRequest = new JsonShipment<T>(request);
-            return await WebMethod.Post<T, JsonShipment<T>>("/shippingservices/v1/rates", ratesRequest, session);
+            return WebMethod.Post<T, JsonShipment<T>>("/shippingservices/v1/rates", ratesRequest, session).GetAwaiter().GetResult();
         }
     }
 }

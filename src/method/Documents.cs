@@ -52,7 +52,7 @@ namespace PitneyBowes.Developer.ShippingApi
                         {
                             stream = nextPageAction(stream, pageCount);
                         }
-                        await WriteBase64Page(page.Contents, stream, session);
+                        WriteBase64Page(page.Contents, stream, session).GetAwaiter().GetResult();
                     }
                 }
                 finally
@@ -63,15 +63,15 @@ namespace PitneyBowes.Developer.ShippingApi
             }
             else
             {
-                await WriteURL(document.Contents, stream, document.FileFormat, session);
+                 WriteURL(document.Contents, stream, document.FileFormat, session).GetAwaiter().GetResult();
             }
         }
 
         private static async Task WriteBase64Page(string page, Stream stream, ISession session )
         {
             var buffer = Convert.FromBase64String(page);
-            await stream.WriteAsync(buffer, 0, buffer.Length);
-            await stream.FlushAsync();
+             stream.WriteAsync(buffer, 0, buffer.Length).GetAwaiter().GetResult();
+             stream.FlushAsync().GetAwaiter().GetResult();
         }
         private static async Task WriteURL(string page, Stream stream, FileFormat format, ISession session)
         {
@@ -95,9 +95,9 @@ namespace PitneyBowes.Developer.ShippingApi
             }
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, page);
             requestMessage.Headers.Add("user-agent", Globals.UserAgent); 
-            var httpResponseMessage = await client.SendAsync(requestMessage);
-            await httpResponseMessage.Content.CopyToAsync(stream);
-            await stream.FlushAsync();
+            var httpResponseMessage = client.SendAsync(requestMessage).GetAwaiter().GetResult();
+             httpResponseMessage.Content.CopyToAsync(stream).GetAwaiter().GetResult();
+             stream.FlushAsync().GetAwaiter().GetResult();
         }
 
     }
