@@ -182,8 +182,7 @@ namespace PitneyBowes.Developer.ShippingApi
         public async static Task<ShippingApiResponse<MerchantsPageResponse>> MerchantsPage(MerchantsReportRequest request, ISession session = null)
         {
             if (session == null) session = Globals.DefaultSession;
-            request.Authorization = new StringBuilder(session.AuthToken.AccessToken);
-            return await WebMethod.Get<MerchantsPageResponse, MerchantsReportRequest>("/v1/developers/{DeveloperId}/merchants", request, session);
+            return await WebMethod.Get<MerchantsPageResponse, MerchantsReportRequest>("/shippingservices/v1/developers/{DeveloperId}/merchants", request, session);
         }
         /// <summary>
         /// Iterate through the merchant report - fetches pages as necessary.

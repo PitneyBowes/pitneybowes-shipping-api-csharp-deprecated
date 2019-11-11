@@ -187,5 +187,13 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         /// </summary>
         /// <value>The external identifier.</value>
         virtual public string ExternalId { get; set; }
+        /// <value>The Shipment Id</value>
+        virtual public string ShipmentId { get; set; }
+        /// <value>Internal identification number for the postage meter that was used</value>
+        virtual public string MeterNumber { get; set; }
+        /// <value>This status of the transaction</value>
+        virtual public string Status { get; set; }
+        /// <value>Currently used only for ACH transactions. Details on the status of the ACH transaction.</value>
+        virtual public string Description { get; set; }
     }
 }

@@ -28,7 +28,7 @@ using PitneyBowes.Developer.ShippingApi.Fluent;
 using PitneyBowes.Developer.ShippingApi.Model;
 using PitneyBowes.Developer.ShippingApi.Rules;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration; 
+using Microsoft.Extensions.Configuration;
 
 #endregion
 
@@ -121,7 +121,7 @@ namespace example
 
 
                 var label = Api.CreateShipment((Shipment)shipment).GetAwaiter().GetResult();
-                
+
                 #endregion
                 #region UseShipment
                 if (label.Success)
@@ -138,7 +138,7 @@ namespace example
                     var trackingResponse = Api.Tracking<TrackingStatus>(trackingRequest).GetAwaiter().GetResult();
 
                     // Parcel Reprint
-                    var reprintRequest = new ReprintShipmentRequest() { Shipment = label.APIResponse.ShipmentId,Carrier= Carrier.NEWGISTICS.ToString() };
+                    var reprintRequest = new ReprintShipmentRequest() { Shipment = label.APIResponse.ShipmentId, Carrier = Carrier.USPS.ToString()};
 
                     var reprintResponse = Api.ReprintShipment<Shipment>(reprintRequest).GetAwaiter().GetResult();
 
@@ -167,7 +167,7 @@ namespace example
                             string fileName = string.Format("{0}{1}.{2}", Path.GetTempPath(), reprintResponse.APIResponse.ShipmentId, d.FileFormat.ToString());
                             using (StreamWriter sw = new StreamWriter(fileName))
                             {
-                                Api.WriteToStream(d, sw.BaseStream ).GetAwaiter().GetResult();
+                                Api.WriteToStream(d, sw.BaseStream).GetAwaiter().GetResult();
                                 Console.WriteLine("Document written to " + fileName);
                             }
                         }
@@ -197,7 +197,7 @@ namespace example
                         {
                             using (StreamWriter sw = new StreamWriter(fileName))
                             {
-                                Api.WriteToStream(d, sw.BaseStream ).GetAwaiter().GetResult();
+                                Api.WriteToStream(d, sw.BaseStream).GetAwaiter().GetResult();
                                 Console.WriteLine("Document written to " + fileName);
                             }
                         }
@@ -244,11 +244,11 @@ namespace example
                 #endregion
                 #region TransactionReports
                 // Transaction report with IEnumerable
-
+                TimeSpan SpanDuration = new TimeSpan(31, 0, 0, 0); //Previous 31 days
                 var transactionsReportRequest = new ReportRequest()
                 {
-                    FromDate = DateTimeOffset.Parse("6/30/2019"),
-                    ToDate = DateTimeOffset.Now,
+                    FromDate = DateTimeOffset.UtcNow.Subtract(SpanDuration),
+                    ToDate = DateTimeOffset.UtcNow,
                     DeveloperId = sandbox.GetConfigItem("DeveloperID")
                 };
                 foreach (var t in TransactionsReport<Transaction>.Report(transactionsReportRequest, x => x.CreditCardFee == null || x.CreditCardFee > 10.0M, maxPages: 2))
@@ -259,11 +259,23 @@ namespace example
                 // Transaction report with LINQ
                 TransactionsReport<Transaction> report = new TransactionsReport<Transaction>(sandbox.GetConfigItem("DeveloperID"), maxPages: 2);
                 var query = from transaction in report
-                            where transaction.TransactionDateTime >= DateTimeOffset.Parse("6/30/2019") && transaction.TransactionDateTime <= DateTimeOffset.Now && transaction.TransactionType == TransactionType.POSTAGE_PRINT
+                            where transaction.TransactionDateTime >= DateTimeOffset.UtcNow.Subtract(SpanDuration) && transaction.TransactionDateTime <= DateTimeOffset.UtcNow && transaction.TransactionType == TransactionType.POSTAGE_PRINT
                             select new { transaction.TransactionId };
                 foreach (var obj in query)
                     Console.WriteLine(obj);
 
+                #endregion
+                #region MerchantReports
+                // Merchant report with IEnumerable
+                var merchantsReportRequest = new MerchantsReportRequest()
+                {
+                    DeveloperId = sandbox.GetConfigItem("DeveloperID")
+                };
+                foreach (var m in MerchantsReport<Merchant>.Report(merchantsReportRequest))
+                {
+                    Console.WriteLine("Merchant Name : " + m.FullName);
+                    Console.WriteLine("Merchant Status : " + m.MerchantStatus);
+                }
                 #endregion
                 #region CarrierRules
 
@@ -366,13 +378,13 @@ namespace example
 
 
                 }
-                foreach( var u in sandbox.Counters.Keys )
+                foreach (var u in sandbox.Counters.Keys)
                 {
                     Console.WriteLine(u);
                     Console.WriteLine("Errors: {0}", sandbox.Counters[u].ErrorCount);
-                    foreach( var b in sandbox.Counters[u].CallHistogram.Keys )
+                    foreach (var b in sandbox.Counters[u].CallHistogram.Keys)
                     {
-                        Console.WriteLine("{0} {1}", 10 * b, sandbox.Counters[u].CallHistogram[b] );
+                        Console.WriteLine("{0} {1}", 10 * b, sandbox.Counters[u].CallHistogram[b]);
                     }
                 }
             }
@@ -427,10 +439,10 @@ namespace example
                 { "DeveloperID", "YOUR_DEVELOPER_ID" }
             };
             var configurationBuilder = new ConfigurationBuilder();
-            
+
             configurationBuilder
                 .AddInMemoryCollection(configs)
-                .AddJsonFile(Globals.GetConfigPath("shippingapisettings.json") , optional: true, reloadOnChange: true);
+                .AddJsonFile(Path.Combine(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory), "shippingapisettings.json"), optional: true, reloadOnChange: true);
             Configuration = configurationBuilder.Build();
         }
         #endregion

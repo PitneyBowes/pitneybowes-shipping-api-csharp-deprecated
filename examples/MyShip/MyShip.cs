@@ -25,8 +25,8 @@ namespace MyShip
             var configurationBuilder = new ConfigurationBuilder();
             configurationBuilder
                 .AddInMemoryCollection(configs)
-                .AddJsonFile(Globals.GetConfigPath("shippingapisettings.json") , optional: true, reloadOnChange: true);
-        
+                .AddJsonFile(Path.Combine(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory), "shippingapisettings.json"), optional: true, reloadOnChange: true);
+
             sandbox.GetConfigItem = (c) => configurationBuilder.Build()[c];
             Model.RegisterSerializationTypes(sandbox.SerializationRegistry);
             Globals.DefaultSession = sandbox;

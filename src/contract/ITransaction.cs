@@ -32,7 +32,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// Note: Prefix the transactionId with a % symbol.
         /// For example:%12343345
         /// </summary>
-        string TransactionId {get;set;}
+        string TransactionId { get; set; }
         /// <summary>
         /// Date and time of of the transaction.
         /// </summary>
@@ -192,5 +192,13 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         /// <value>The external identifier.</value>
         string ExternalId { get; set; }
+        /// <value>The Shipment Id</value>
+        string ShipmentId { get; set; }
+        /// <value>Internal identification number for the postage meter that was used</value>
+        string MeterNumber { get; set; }
+        /// <value>This status of the transaction</value>
+        string Status { get; set; }
+        /// <value>Currently used only for ACH transactions. Details on the status of the ACH transaction.</value>
+        string Description { get; set; }
     }
 }

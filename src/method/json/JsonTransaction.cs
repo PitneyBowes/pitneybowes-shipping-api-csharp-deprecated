@@ -241,32 +241,55 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             set => Wrapped.RefundDenialReason = value;
         }
         [JsonProperty("printStatus")]
-        public SBRPrintStatus? PrintStatus 
-        { 
-            get => Wrapped.PrintStatus; 
-            set => Wrapped.PrintStatus = value; 
+        public SBRPrintStatus? PrintStatus
+        {
+            get => Wrapped.PrintStatus;
+            set => Wrapped.PrintStatus = value;
         }
 
         [JsonProperty("refundRequestor")]
-        public string RefundRequestor 
-        { 
-            get => Wrapped.RefundRequestor; 
-            set => Wrapped.RefundRequestor = value; 
+        public string RefundRequestor
+        {
+            get => Wrapped.RefundRequestor;
+            set => Wrapped.RefundRequestor = value;
         }
 
         [JsonProperty("adjustmentReason")]
-        public AdjustmentReason? AdjustmentReason 
-        { 
-            get => Wrapped.AdjustmentReason; 
-            set => Wrapped.AdjustmentReason = value; 
+        public AdjustmentReason? AdjustmentReason
+        {
+            get => Wrapped.AdjustmentReason;
+            set => Wrapped.AdjustmentReason = value;
         }
 
         [JsonProperty("externalId")]
-        public string ExternalId 
-        { 
-            get => Wrapped.ExternalId; 
-            set => Wrapped.ExternalId = value; 
+        public string ExternalId
+        {
+            get => Wrapped.ExternalId;
+            set => Wrapped.ExternalId = value;
         }
-
+        [JsonProperty("shipmentId")]
+        public string ShipmentId
+        {
+            get => Wrapped.ShipmentId;
+            set => Wrapped.ShipmentId = value;
+        }
+        [JsonProperty("meterNumber")]
+        public string MeterNumber
+        {
+            get => Wrapped.MeterNumber;
+            set => Wrapped.MeterNumber = value;
+        }
+        [JsonProperty("status")]
+        public string Status
+        {
+            get => Wrapped.Status;
+            set => Wrapped.Status = value;
+        }
+        [JsonProperty("description")]
+        public string Description
+        {
+            get => Wrapped.Description;
+            set => Wrapped.Description = value;
+        }
     }
 }

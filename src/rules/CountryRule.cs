@@ -52,7 +52,7 @@ namespace PitneyBowes.Developer.ShippingApi.Rules
         private static void Load()
         {
             if (Session == null) Session = Globals.DefaultSession;
-            if (LastUpdate == null || DateTimeOffset.Now - LastUpdate > TimeSpan.FromHours(1))
+            if (LastUpdate == null || DateTimeOffset.UtcNow - LastUpdate > TimeSpan.FromHours(1))
             {
                 lock (_lock)
                 {
@@ -70,7 +70,7 @@ namespace PitneyBowes.Developer.ShippingApi.Rules
                         {
                             _rules[c.CountryCode] = c.CountryName;
                         }
-                        LastUpdate = DateTimeOffset.Now;
+                        LastUpdate = DateTimeOffset.UtcNow;
                     }
                     else
                     {
