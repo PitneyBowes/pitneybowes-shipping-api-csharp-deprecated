@@ -62,7 +62,7 @@ namespace MyShip
             var label = Api.CreateShipment(shipment).GetAwaiter().GetResult();
             if (label.Success)
             {
-                var sw = new StreamWriter("label.pdf");
+                var sw = new StreamWriter("label.png");
                 foreach (var d in label.APIResponse.Documents)
                 {
                     Api.WriteToStream(d, sw.BaseStream).GetAwaiter().GetResult();
