@@ -30,11 +30,15 @@ namespace PitneyBowes.Developer.ShippingApi
     /// </summary>
     public class WebMethod
     {
-        private static bool Retry(HttpStatusCode status, List<ErrorDetail> errors)
+        private static bool Retry(HttpStatusCode status, List<ErrorDetail> errors, ISession session)
         {
             foreach( var e in errors)
             {
-                if (e.ErrorCode.Equals("PB-APIM-ERR-1003") || e.ErrorCode.Equals("PB-APIM-ERR-1003")) return true;
+                if (e.ErrorCode.Equals("PB-APIM-ERR-1003"))
+                    {
+                    session.AuthToken.AccessToken = null;
+                    return true;
+                }
             }
             return false;
         }
@@ -49,9 +53,13 @@ namespace PitneyBowes.Developer.ShippingApi
             {
                 int timeout = Globals.TimeOutMilliseconds;
 #pragma warning disable CS0618
-                int configRetries = session.Retries;
+                int configRetries = 1;
+                if (!(session.Retries <= 0))
+                {
+                    configRetries = session.Retries;
+                }
 #pragma warning restore CS0618
-                for (int retries = configRetries; retries > 0; retries--)
+                for (int retries = configRetries; retries >= 0; retries--)
                 {
                     if (session.AuthToken == null || session.AuthToken.AccessToken == null ) //TODO: Check if token should have expired
                     {
@@ -79,8 +87,8 @@ namespace PitneyBowes.Developer.ShippingApi
                     request.Authorization = new StringBuilder(session.AuthToken.AccessToken);
                     response = await session.Requester.HttpRequest<Response, Request>(uri, verb, request, deleteBody, session);
                     if (response.Success) break;
-                    if (!Retry(response.HttpStatus, response.Errors)) break;
-                    if (stopwatch.ElapsedMilliseconds > Globals.TimeOutMilliseconds)
+                    if (!Retry(response.HttpStatus, response.Errors, session)) break;
+                   if (stopwatch.ElapsedMilliseconds > Globals.TimeOutMilliseconds)
                     {
                         response.HttpStatus = HttpStatusCode.RequestTimeout;
                         response.Errors.Add(new ErrorDetail() { ErrorCode = "Client Timeout", Message = "Client Timeout" });
