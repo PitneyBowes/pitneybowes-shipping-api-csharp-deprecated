@@ -91,7 +91,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// Response only. Destination Zone based on the fromAddress and toAddress specified.
         /// </summary>
-        int? DestinationZone { get; set; }
+        float? DestinationZone { get; set; }
         /// <summary>
         /// Surcharges
         /// </summary>

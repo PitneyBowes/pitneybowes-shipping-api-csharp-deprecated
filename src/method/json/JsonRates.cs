@@ -160,7 +160,7 @@ namespace PitneyBowes.Developer.ShippingApi.Json
 
 
         [JsonProperty("destinationZone")]
-        public int? DestinationZone
+        public float? DestinationZone
         {
             get => Wrapped.DestinationZone;
             set { Wrapped.DestinationZone = value; }

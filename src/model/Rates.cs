@@ -109,6 +109,6 @@ namespace PitneyBowes.Developer.ShippingApi.Model
         /// <summary>
         /// Response only. Destination Zone based on the fromAddress and toAddress specified.
         /// </summary>
-        virtual public int? DestinationZone { get; set;}
+        virtual public float? DestinationZone { get; set;}
     }
 }
