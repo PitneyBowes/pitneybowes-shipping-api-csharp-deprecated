@@ -15,7 +15,9 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 */
 
-using System; 
+
+using System;
+using System.Runtime.Serialization;
 
 namespace PitneyBowes.Developer.ShippingApi
 {
@@ -83,7 +85,12 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// UPS
         /// </summary>
-        UPS
+        UPS,
+        /// <summary>
+        /// FEDEX
+        /// </summary>
+
+        FEDEX
     }
 
     /// <summary>
@@ -813,6 +820,7 @@ namespace PitneyBowes.Developer.ShippingApi
     /// </summary>
     public enum Services
     {
+      
         /// <summary>
         /// USPS First Class Mail
         /// </summary>
@@ -904,6 +912,10 @@ namespace PitneyBowes.Developer.ShippingApi
         /// UPS 2nd Day Air® A.M.
         /// U.S. 48, Alaska, Hawaii
         /// </summary>
+        /// 
+
+
+
 	    UPS_2DA_AM, //2DA_AM,
         /// <summary>
         /// UPS 2nd Day Air
@@ -961,8 +973,64 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// UPS Standard (to US Only)
         /// </summary>
-        STD_USA
+         STD_USA,
+        /// <summary>
+        ///FedEx 2Day®
+        /// </summary>
+        [EnumMember(Value = "2DA")]
+         TwoDA,
+        /// <summary>
+        ///FedEx Express Saver®
+        /// </summary>
+        [EnumMember(Value = "3DA")]
+        ThreeDA,
+        /// <summary>
+        ///FedEx Home Delivery®
+        /// </summary>
+        HOM,
+        /// <summary>
+        ///FedEx First Overnight® Freight
+        /// </summary>
+        NDA_AM_FREIGHT,
+        /// <summary>
+        ///FedEx Two day  Overnight® Freight
+        /// </summary>
+        [EnumMember(Value = "2DA_FREIGHT")]
+          TwoDA_FREIGHT,
+        /// <summary>
+        ///FedEx Three day  Overnight® Freight
+        /// </summary>
+        [EnumMember(Value = "3DA_FREIGHT")]
+        ThreeDA_FREIGHT,
+        /// <summary>
+        ///FedEx SmartPost parcel select lightweight
+        /// </summary>
+        SP_PRE_STD,
+        /// <summary>
+        ///FedEx SmartPost parcel select
+        /// </summary>
+        SP_PRCLSEL,
+        /// <summary>
+        ///FedEx SmartPost® Media
+        /// </summary>
+        SP_MEDIA,
+        /// <summary>
+        ///FedEx SmartPost® Bound Printed Matter
+        /// </summary>
+        SP_PRE_PRINT,
+        /// <summary>
+        ///FedEx 1Day® Freight
+         /// </summary>
+
+        NDA_FREIGHT,
+
+
+
+
+
     }
+
+
 
     /// <summary>
     /// Shipment options.

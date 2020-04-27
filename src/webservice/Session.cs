@@ -57,6 +57,7 @@ namespace PitneyBowes.Developer.ShippingApi
         {
             _configs.Add("SANDBOX_ENDPOINT", "https://api-sandbox.pitneybowes.com");
             _configs.Add("PRODUCTION_ENDPOINT", "https://api-sandbox.pitneybowes.com");
+            _configs.Add("QA_ENDPOINT", "https://api-qa.pitneybowes.com");
             GetConfigItem = (s) => {
                 if (!_configs.ContainsKey(s))
                     throw new ArgumentException(string.Format("Config string {0} not found", s));

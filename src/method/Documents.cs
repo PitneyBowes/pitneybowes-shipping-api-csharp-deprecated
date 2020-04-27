@@ -73,6 +73,8 @@ namespace PitneyBowes.Developer.ShippingApi
              stream.WriteAsync(buffer, 0, buffer.Length).GetAwaiter().GetResult();
              stream.FlushAsync().GetAwaiter().GetResult();
         }
+
+     
         private static async Task WriteURL(string page, Stream stream, FileFormat format, ISession session)
         {
             var uri = new Uri(page);

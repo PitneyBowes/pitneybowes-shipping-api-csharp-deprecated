@@ -370,6 +370,15 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         [JsonProperty("currencyCode")]
         string CurrencyCode { get; set; }
+
+        [JsonProperty("createdDateTimeUtc")]
+        DateTimeOffset  CreatedDateTimeUtc { get; set; }
+
+        [JsonProperty("lastAutoRefill")]
+        DateTimeOffset LastAutoRefill { get; set; }
+
+        [JsonProperty("lastAutoRefillFailure")]
+        KeyValuePair<string, string> LastAutoRefillFailure { get; set; }
     }
     /// <summary>
     /// Request object for the Mechantdeactivate call
@@ -513,7 +522,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <returns></returns>
         public async static Task<ShippingApiResponse<AccountBalanceResponse>> MerchantAccountBalance<AccountBalanceResponse>(AccountBalanceRequest request, ISession session = null)
         {
-            return await WebMethod.Get<AccountBalanceResponse, AccountBalanceRequest>("/shippingservices/v1/ledger/accounts/{AccountId}/balance ", request, session);
+            return await WebMethod.Get<AccountBalanceResponse, AccountBalanceRequest>("/shippingservices/v1/ledger/accounts/{AccountNumber}/balance ", request, session);
         }
         /// <summary>
         /// This POST operation disables an active merchant account and starts the process of refunding the merchant’s postage balance. Once deactivated, the account can no longer print labels. Refunds are processed within 30 days. After 30 days the account’s transaction history is deleted. Eventually Pitney Bowes deletes the account.
