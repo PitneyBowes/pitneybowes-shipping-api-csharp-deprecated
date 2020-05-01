@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICarrierAccount
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICarrierAccount
+   ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount">
+  
+  
+  <h1 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount" class="text-break">Interface ICarrierAccount
+  </h1>
+  <div class="markdown level0 summary"><p>Additional carrier account for a merchant to use with the PB Shipping APIs. The merchant 
+must have an existing account with the carrier. Currently, the API supports integration with UPS.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PitneyBowes.Developer.ShippingApi.html">PitneyBowes.Developer.ShippingApi</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICarrierAccount</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountAddress_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountAddress*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountAddress" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountAddress">AccountAddress</h4>
+  <div class="markdown level1 summary"><p>Required. The merchant’s “ship from” address as it appears on the carrier account.
+For UPS, this address must exactly match the “ship from” address on the merchant’s UPS invoice.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAddress AccountAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IAddress.html">IAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountCountryCode_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountCountryCode*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountCountryCode" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountCountryCode">AccountCountryCode</h4>
+  <div class="markdown level1 summary"><p>The two-character ISO country code for the merchant’s country.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AccountCountryCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountNumber_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountNumber*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountNumber" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountNumber">AccountNumber</h4>
+  <div class="markdown level1 summary"><p>The merchant’s account number with the carrier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AccountNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountPostalCode_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountPostalCode*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_AccountPostalCode" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.AccountPostalCode">AccountPostalCode</h4>
+  <div class="markdown level1 summary"><p>The merchant’s postal code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AccountPostalCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_Carrier_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.Carrier*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_Carrier" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.Carrier">Carrier</h4>
+  <div class="markdown level1 summary"><p>The carrier to add to the merchant’s account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Carrier Carrier { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.Carrier.html">Carrier</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_ContactAddress_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.ContactAddress*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_ContactAddress" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.ContactAddress">ContactAddress</h4>
+  <div class="markdown level1 summary"><p>Required. The merchant’s contact address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAddress ContactAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IAddress.html">IAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_ContactTitle_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.ContactTitle*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_ContactTitle" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.ContactTitle">ContactTitle</h4>
+  <div class="markdown level1 summary"><p>The title of the primary contact that the merchant provided to the carrier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ContactTitle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_DeveloperId_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.DeveloperId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_DeveloperId" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.DeveloperId">DeveloperId</h4>
+  <div class="markdown level1 summary"><p>Your Pitney Bowes developer ID. To retrieve your developer ID, log into Developer Hub and click your 
+username and select Profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DeveloperId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_DeviceIdentity_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.DeviceIdentity*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_DeviceIdentity" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.DeviceIdentity">DeviceIdentity</h4>
+  <div class="markdown level1 summary"><p>The black-box identity of the merchant’s machine.
+For help in retrieving this information, consult your Pitney Bowes implementation engineer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DeviceIdentity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_EndUserIP_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.EndUserIP*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_EndUserIP" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.EndUserIP">EndUserIP</h4>
+  <div class="markdown level1 summary"><p>The IP address of the merchant’s machine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string EndUserIP { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceAmount_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceAmount*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceAmount" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceAmount">InvoiceAmount</h4>
+  <div class="markdown level1 summary"><p>The amount charged on a recent invoice. The invoice must be from within the last 90 days. 
+Use the same invoice for all the INVOICE_* parameters in this table.
+The value for this parameter can have a maximum of 16 digits before the decimal and 2 digits after the decimal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">decimal InvoiceAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceControlId_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceControlId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceControlId" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceControlId">InvoiceControlId</h4>
+  <div class="markdown level1 summary"><p>The Control ID displayed on the invoice.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string InvoiceControlId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceCurrenyCode_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceCurrenyCode*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceCurrenyCode" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceCurrenyCode">InvoiceCurrenyCode</h4>
+  <div class="markdown level1 summary"><p>The currency code used on the invoice.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string InvoiceCurrenyCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceDate_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceDate*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceDate" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceDate">InvoiceDate</h4>
+  <div class="markdown level1 summary"><p>The date of the invoice. The invoice date should be within the last 90 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset InvoiceDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceNumber_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceNumber*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_InvoiceNumber" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.InvoiceNumber">InvoiceNumber</h4>
+  <div class="markdown level1 summary"><p>The invoice number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string InvoiceNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_Key_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.Key*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_Key" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.Key">Key</h4>
+  <div class="markdown level1 summary"><p>API Key  for subsequest API calls</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_LicenseText_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.LicenseText*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_LicenseText" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.LicenseText">LicenseText</h4>
+  <div class="markdown level1 summary"><p>The text of the merchant’s license agreement with the carrier, as retrieved through the Get Carrier License Agreement API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string LicenseText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_Password_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.Password*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_Password" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.Password">Password</h4>
+  <div class="markdown level1 summary"><p>Password for subsequest API calls</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Password { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_PostalReportingNumber_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.PostalReportingNumber*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_PostalReportingNumber" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.PostalReportingNumber">PostalReportingNumber</h4>
+  <div class="markdown level1 summary"><p>The unique ID used to identify the merchant. To retrieve the merchant’s postalReportingNumber, issue t
+he Get All Merchants API call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string PostalReportingNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_ShipperCarrierAccountId_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.ShipperCarrierAccountId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_ShipperCarrierAccountId" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.ShipperCarrierAccountId">ShipperCarrierAccountId</h4>
+  <div class="markdown level1 summary"><p>Response Only. The identifier to use when the merchant performs an operation that uses this 
+carrier account. The identifier is passed in the X-PB-Shipper-Carrier-AccountId request header 
+of the API request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ShipperCarrierAccountId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_TransactionId_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.TransactionId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_TransactionId" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.TransactionId">TransactionId</h4>
+  <div class="markdown level1 summary"><p>A unique identifier for the transaction, up to 25 characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string TransactionId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_UserId_" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.UserId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_ICarrierAccount_UserId" data-uid="PitneyBowes.Developer.ShippingApi.ICarrierAccount.UserId">UserId</h4>
+  <div class="markdown level1 summary"><p>User Id for subsequest API calls</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string UserId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

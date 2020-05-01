@@ -1,0 +1,2544 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/ShippingAPI/SDK/pitneybowes-shipping-api-csharp/src",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.AccountBalanceRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.AccountBalanceRequest.html",
+          "hash": "viSVigSI2a4UWEtzuCuv2A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.AccountBalanceResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.AccountBalanceResponse.html",
+          "hash": "dR52PmylE+D4RFpDG2wwYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.AddressStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.AddressStatus.html",
+          "hash": "WYIGs5un3YabPpKqmEZKBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.AddressSuggestions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.AddressSuggestions.html",
+          "hash": "larjZX+DXULizkB4I0g5Aw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.AdjustmentReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.AdjustmentReason.html",
+          "hash": "i1TSqc3rrIB3lqOKNsDNyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Api.html",
+          "hash": "cxEYvCd/EaSGzebWHEqPEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.CancelInitiator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.CancelInitiator.html",
+          "hash": "qCdW1aj+cvrBSyAxNYG+OA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.CancelShipmentRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.CancelShipmentRequest.html",
+          "hash": "NLqvtVnr7Gi2K72fnT0FCQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.CancelShipmentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.CancelShipmentResponse.html",
+          "hash": "6PUmBPzS3mv/HMxZky6waQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Carrier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Carrier.html",
+          "hash": "A8kAUApRtTWDgfsSUzkT7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.CarrierSurcharge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.CarrierSurcharge.html",
+          "hash": "hZEYoPfyR5hktOkqBMK3sQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ContentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ContentType.html",
+          "hash": "dblDv2c55CBu07z7/oFy4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Counters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Counters.html",
+          "hash": "/cMX+dfAgPWGB5tYKzVzVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.CreditCardType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.CreditCardType.html",
+          "hash": "XKoUpHA2/LB89HvTRpWASQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.DocumentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.DocumentType.html",
+          "hash": "Gax3146PGrCzrposlRTCpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ErrorDetail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ErrorDetail.html",
+          "hash": "bE+9/atEV3CgpQVAugmVIg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.FileFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.FileFormat.html",
+          "hash": "D5uR2/+w67N/f+ykDqppOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.AddressFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.AddressFluent`1.html",
+          "hash": "XHQ23d3PVgzrRTLjBcddNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.DocumentsArrayFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.DocumentsArrayFluent`1.html",
+          "hash": "yt+/8CAmrn2isOAYSh7euA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.ManifestFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.ManifestFluent`1.html",
+          "hash": "Mp10tV6kqjBA0fkt8zJPlg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.NewgisticsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.NewgisticsExtensions.html",
+          "hash": "QixoSb7BUwvV4NNNHhRkfg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.PBPresortExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.PBPresortExtensions.html",
+          "hash": "9sFK1Y9tUWSvymrSGIsLPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.PMODPaymentMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.PMODPaymentMethod.html",
+          "hash": "OgOkPLmXaKKD/aMgFDUsxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.ParcelFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.ParcelFluent`1.html",
+          "hash": "Gj349bTK46dYoI65euCJaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.PickupFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.PickupFluent`1.html",
+          "hash": "/9BnStniJgVN+8tlk2HVmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.RatesArrayFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.RatesArrayFluent`1.html",
+          "hash": "+5iejyA05UOgUqduq0TQFg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.ShipmentFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.ShipmentFluent`1.html",
+          "hash": "10FnedO4rOrY4Tt12f1SKQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.ShipmentOptionsArrayFluent`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.ShipmentOptionsArrayFluent`1.html",
+          "hash": "0GukFcBGLjPDTqyirjjCxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.UPSExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.UPSExtensions.html",
+          "hash": "nxA81g2RNaoM6l8j2MPwjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.USPSExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.USPSExtensions.html",
+          "hash": "2e5o1NVpXfZEqtta9QqtRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.USPSFacility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.USPSFacility.html",
+          "hash": "fxUesMwI55iOe6ga4uS0Zg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Fluent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Fluent.html",
+          "hash": "T1rY+x5leM/U36IQGsiCxQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Frame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Frame.html",
+          "hash": "gA+iWd+ed5nya7IL0dqt9Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Globals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Globals.html",
+          "hash": "ufmS8F6SD9hhK2DWk9CViA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.HttpVerb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.HttpVerb.html",
+          "hash": "O2uiyR2jcvjUq4v/jkU0Rw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IAddress.html",
+          "hash": "aZ5wLBYnbQaDlkqUVZS4Nw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IAutoRefill.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IAutoRefill.html",
+          "hash": "LXV8c7wSXU6cF8F7jrkN6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ICarrierAccount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ICarrierAccount.html",
+          "hash": "BLyIBnI573K0nLcQnL9Wjg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ICarrierLicense.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ICarrierLicense.html",
+          "hash": "iR1YLDl2G+jcm6p+VWFasw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ICarrierSurcharge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ICarrierSurcharge.html",
+          "hash": "3j9uhkOOCGXy8FPsZSUHUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ICcPaymentDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ICcPaymentDetails.html",
+          "hash": "KSUOnb0bpeI6f1lbNROniA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ICustoms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ICustoms.html",
+          "hash": "LZvj4YiwZ98BDzLIku1oJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ICustomsInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ICustomsInfo.html",
+          "hash": "6cchy8RqNzMtNRWxf0cZlw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ICustomsItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ICustomsItems.html",
+          "hash": "5gTDb9e+Vu+y8DVNe8Po4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IDeliveryCommitment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IDeliveryCommitment.html",
+          "hash": "SdW/46MJfdBKkXIOQq1t/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IDocTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IDocTab.html",
+          "hash": "yCfFOZ77xnE2l/sYsFyXCg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IDocument.html",
+          "hash": "+RalyoMGxLJyNtq46Vxnug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IHttpRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IHttpRequest.html",
+          "hash": "UkfNlOMiGv0m6MUJisB42w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IManifest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IManifest.html",
+          "hash": "LfoAdWhpAXZtp3bQhGXcIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IMerchant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IMerchant.html",
+          "hash": "wmxh3RsyX0c882ynZIOvng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IPage.html",
+          "hash": "MMmhe+xQbFasobeVo2Zsug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IParameter.html",
+          "hash": "lSTzHZngPDDiMNOw13/26w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IParcel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IParcel.html",
+          "hash": "1by2CTGWPipcHXRaYIvrCw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IParcelDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IParcelDimension.html",
+          "hash": "76mWLfKBKMfw9x1t/R2K9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IParcelWeight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IParcelWeight.html",
+          "hash": "IDVA64oHcJGpMnXPVBPBMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IPaymentInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IPaymentInfo.html",
+          "hash": "MIEzmR9JruePPXqxIr+ZPw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IPickup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IPickup.html",
+          "hash": "qzaXMHGbH8vfffwdkW4S9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IPickupCount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IPickupCount.html",
+          "hash": "Y/wfWgr+APdTf0CsGqtoQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IPpPaymentDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IPpPaymentDetails.html",
+          "hash": "DByXE3fbCuMBDeFHDEVBUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IRates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IRates.html",
+          "hash": "aijOU0cXbKm9ciA+AEN7bQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IReference.html",
+          "hash": "Tchn59p9uZfA7VlnNKa0GQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IReportRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IReportRequest.html",
+          "hash": "32A7UEHxXT6d/fFe/MkIqA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ISession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ISession.html",
+          "hash": "Mxx6MH1vE4R8Fc3FRWjB7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IShipment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IShipment.html",
+          "hash": "x4Gojhlc9j7StfmfehrLAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IShipmentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IShipmentOptions.html",
+          "hash": "Ey9kekn1waol0unngV/3BQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IShippingApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IShippingApiRequest.html",
+          "hash": "EFzMTS4M81ycZiHaf/9U4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ISpecialServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ISpecialServices.html",
+          "hash": "RMO0+YX+QADJK9ihhspnFg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ITrackingEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ITrackingEvent.html",
+          "hash": "ugRXCc+0Tx95oMSGBVikOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ITrackingStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ITrackingStatus.html",
+          "hash": "m9mqQSfke4JFeNpg9MYJhA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ITransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ITransaction.html",
+          "hash": "C8swU9RYCyiMMPJH+kzg7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ITransactionSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ITransactionSort.html",
+          "hash": "Zq7b+bjqFw9c03+ryrfNHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.IUserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.IUserInfo.html",
+          "hash": "vPWEjQ8EcFsZ1yim13OZcw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.InterfaceValidators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.InterfaceValidators.html",
+          "hash": "/VukJc7JvAaSt26oPZVZ2w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ManifestParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ManifestParameter.html",
+          "hash": "rHmOoFDTvh6/0YDL8na6vQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ManifestType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ManifestType.html",
+          "hash": "cl/PoBRAkZgEx4vyZCuaVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantAutoRefillRuleRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantAutoRefillRuleRequest.html",
+          "hash": "slViO2eoKqIJLMhrmgQBng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantCredentialsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantCredentialsRequest.html",
+          "hash": "6LsQq2HJwbhrdisRl49i8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantDeactivateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantDeactivateRequest.html",
+          "hash": "OgReT5fBdTAbIWOwGx5F+Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantPaymentMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantPaymentMethod.html",
+          "hash": "nLRrOdX+WJSY7JpdoajOMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantRegisterRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantRegisterRequest.html",
+          "hash": "55OankEkzYsoQFISx967Dg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantSignupRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantSignupRequest.html",
+          "hash": "tfS/TsnJ3GfGV+b+hF1W4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantStatus.html",
+          "hash": "24JaBJH0AaEyLDNeiGS2mQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantsPageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantsPageResponse.html",
+          "hash": "K7g/EqwL1f/ZiQbHHNUu9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantsReportProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantsReportProvider.html",
+          "hash": "1XAkkvDNnXaquCowWboMYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantsReportRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantsReportRequest.html",
+          "hash": "WNq/qPSXm3nz2hE9c0SF7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.MerchantsReport`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.MerchantsReport`1.html",
+          "hash": "JIj7+p/6qOUuzyuI2DS0nA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Mock.MimeStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Mock.MimeStream.html",
+          "hash": "SVWgdorDz8YxmFFsar5s7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Mock.RequestDeserializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Mock.RequestDeserializer.html",
+          "hash": "xvCC27uODX5RjFdnxcwyVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Mock.ShippingAPIMock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Mock.ShippingAPIMock.html",
+          "hash": "qtrpkx+HcrtAtJUZBqPdoA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Mock.ShippingApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Mock.ShippingApiMethod.html",
+          "hash": "TBQ7D45nmKmIWQYp7sJtQA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Mock.ShippingApiMethodRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Mock.ShippingApiMethodRequest.html",
+          "hash": "gfssuhieLbV8KOecR1rIZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Mock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Mock.html",
+          "hash": "Pb+kgi3x+dtJXA3+PzQgSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Address.html",
+          "hash": "OeDnyXyTeoeBmfFnFTUaJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.AutoRefill.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.AutoRefill.html",
+          "hash": "bczcnCGXZ3Po9xfmsketlQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.CarrierAccount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.CarrierAccount.html",
+          "hash": "q0q/LEoBImIzY4B4mbathQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.CarrierLicense.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.CarrierLicense.html",
+          "hash": "GfSuloCkgWhEm7e6L6COKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.CcPaymentDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.CcPaymentDetails.html",
+          "hash": "GDM/FimBefn0ErJ5CBaUAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Customs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Customs.html",
+          "hash": "+7AcBJxfcb5WJeLcj4M8RQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.CustomsInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.CustomsInfo.html",
+          "hash": "lyGwB9mTccgNan0Q7WW1ww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.CustomsItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.CustomsItems.html",
+          "hash": "7vZnIgQpLHoLnv/uB4aeZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.DeliveryCommitment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.DeliveryCommitment.html",
+          "hash": "ZH1akk45UwcszbHW/X4uDQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.DocTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.DocTab.html",
+          "hash": "crKIqdpG9F4r+Xa+nSmMiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Document.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Document.html",
+          "hash": "iYRkJBVtVebXywTEDV9D5g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Manifest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Manifest.html",
+          "hash": "hz/Dg1PGLDsX7keJbeclgA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Merchant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Merchant.html",
+          "hash": "+DIOJTtc/7Ka5b3foGFlKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Model.html",
+          "hash": "Jh2+YIa8Tj9Q0RRBJNpeMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Page.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Page.html",
+          "hash": "q6z/658m2epVQkHJ5Cch7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Parameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Parameter.html",
+          "hash": "UWrsOCD+43VFG9UTzrpkRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Parcel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Parcel.html",
+          "hash": "OX7Hm21Xm9ZcYPmlqgdlfg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.ParcelDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.ParcelDimension.html",
+          "hash": "zATK2OTgqeQBD1gfOquxxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.ParcelWeight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.ParcelWeight.html",
+          "hash": "dBIn5KWlUxTt8KbPTBZJAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.PaymentInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.PaymentInfo.html",
+          "hash": "kp5F/2M8ZfFvvNpuUFXiQA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Pickup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Pickup.html",
+          "hash": "cVh+GVL0zVr2aKK5xYpwCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.PickupCount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.PickupCount.html",
+          "hash": "61VQtX40kDiK65nS7BqLwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.PpPaymentDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.PpPaymentDetails.html",
+          "hash": "GuHOey3cY4tLRbiR2HFNGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Rates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Rates.html",
+          "hash": "XTfjLdTsRTK5HdKa3t5T/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Reference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Reference.html",
+          "hash": "ubqH8A0ZKg4wJ36POQiZ8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Shipment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Shipment.html",
+          "hash": "xnzu4jJvLsnoU/AftkOS4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.ShipmentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.ShipmentOptions.html",
+          "hash": "TVS+s9uZWfBCCKTiY1Cmmg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.SpecialServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.SpecialServices.html",
+          "hash": "nhS1gZ26g1Ag1EfgTb64LQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.TrackingEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.TrackingEvent.html",
+          "hash": "MUiSdIBU6JjFRmnr1scoMA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.TrackingStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.TrackingStatus.html",
+          "hash": "n68fN6Db+Bu9Juhry4PLRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.Transaction.html",
+          "hash": "6woqdx07px/mok7aLZzKng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.TransactionSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.TransactionSort.html",
+          "hash": "kLTj9zUjaOg14caON+/gBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.UserInfo.html",
+          "hash": "XbaXCkdVyJVf8WNaTXToig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Model.html",
+          "hash": "q+5sKayrz1kuK1rL/6CPMw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.NonDeliveryOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.NonDeliveryOption.html",
+          "hash": "bOzWQPp5EnFwQpbV7+ikTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.NotificationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.NotificationType.html",
+          "hash": "oYU/lcJd8kjaF153p4eMmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.NotificationsServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.NotificationsServiceOptions.html",
+          "hash": "W3owKZPilnDJVdYWZq92kw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PackageIdentifierType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PackageIdentifierType.html",
+          "hash": "vN6a8i0WqqHt+YQP/2vBTQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PackageLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PackageLocation.html",
+          "hash": "fBJ2CdB3TwH2CrDVHdVB1g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PackageTypeIndicator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PackageTypeIndicator.html",
+          "hash": "TnM0XKhZk1J/ZS6EQp449g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ParcelType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ParcelType.html",
+          "hash": "TMSiborx0R18wVhZCUhO8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PaymentMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PaymentMethod.html",
+          "hash": "tXGSqQ+dMYfVgNkWej4P5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PaymentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PaymentType.html",
+          "hash": "/6huQQK1oY1pj448KlJzKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PickupCancelRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PickupCancelRequest.html",
+          "hash": "xqav9vsh7SVXCnE7Y14W3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PickupService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PickupService.html",
+          "hash": "vNEtBavy8C1sobpZL96K6Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.PrintDialogOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.PrintDialogOption.html",
+          "hash": "Fq7piyGeSxRyMR6Vh4Q+Tg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ReasonForExport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ReasonForExport.html",
+          "hash": "YmsrFKj76/fMDgpr6iZb/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.RecipientNotificationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.RecipientNotificationType.html",
+          "hash": "56bOcMdR5M29/rHNv7Pfnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.RecordingStream.RecordType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.RecordingStream.RecordType.html",
+          "hash": "XNx30HqzlfrptZW3hc2wFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.RecordingStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.RecordingStream.html",
+          "hash": "1+bv4AYwX6uqa6VdCxZKHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.RefundStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.RefundStatus.html",
+          "hash": "SqbttlYJdP8BgQkBSo3UkA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.RenderRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.RenderRequest.html",
+          "hash": "wzI9XXwa68sfwmiiIByqig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.RenderResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.RenderResponse.html",
+          "hash": "7u+6H0KnreZAZahrTjzelg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Report.ReportBase`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Report.ReportBase`1.html",
+          "hash": "6RYwDMV633YsmbT07UhKdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Report.ReportProviderBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Report.ReportProviderBase.html",
+          "hash": "mup1eZEK8oY/7R3xwqfchw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Report.RequestFinderVisitor`2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Report.RequestFinderVisitor`2.html",
+          "hash": "++NaPMDuufK1LDd9PgMRUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Report.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Report.html",
+          "hash": "daEragjISCQuaJrWdG9VEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ReportRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ReportRequest.html",
+          "hash": "kTBr/Kcv+8YRF0LwPyparA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ReprintManifestRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ReprintManifestRequest.html",
+          "hash": "VC2cSzz2Sd/jmL3p20HOyw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ReprintShipmentRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ReprintShipmentRequest.html",
+          "hash": "vFfkS8bKy3bEG8ZUVRCL2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Resolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Resolution.html",
+          "hash": "LbwhBPvcD7UsGiKfJZ7AwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.RetryManifestRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.RetryManifestRequest.html",
+          "hash": "hW5tCHL9TukMa/3TUKmy/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.CarrierRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.CarrierRule.html",
+          "hash": "rJEP55eJuQozX/802tCoQQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.CarrierRulesMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.CarrierRulesMethods.html",
+          "hash": "6zVs2rVlCnIyo1f2ZD/O8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.ConvenienceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.ConvenienceExtensions.html",
+          "hash": "Rx+G6Lp7v2pLwhOPx1V2iw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.CountriesMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.CountriesMethods.html",
+          "hash": "ExAxg/XbK1M4l2YQ5ryIBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.CountriesRequest`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.CountriesRequest`1.html",
+          "hash": "9dqmDFvHwStSDsG9MJVLvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.Country.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.Country.html",
+          "hash": "QAvHMlmtvlEiz2RJs2XlCw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.CountryRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.CountryRule.html",
+          "hash": "bNYXvR/Ie3l4jxQruXjK3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.DimensionRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.DimensionRule.html",
+          "hash": "oKkhQNBKHl1Ob+4EcZmEmA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.IRateRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.IRateRule.html",
+          "hash": "DklzjNSSNsQZpn12WUAF8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.IRateRuleVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.IRateRuleVisitor.html",
+          "hash": "v1teFin9mEldFG4z3JcqwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.IndexedList`2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.IndexedList`2.html",
+          "hash": "8fpXoyX7gg3LS/jJ5l9kMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.ParcelTypeRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.ParcelTypeRule.html",
+          "hash": "Z0VkNwXD2BOiC16QqPprHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.RatingServicesRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.RatingServicesRequest.html",
+          "hash": "/r7sJZadkzY+BzK1iZIczQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.RuleReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.RuleReport.html",
+          "hash": "B6F5x7tNisj1QRkEhP4WSQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.ServiceRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.ServiceRule.html",
+          "hash": "PQ36EhCk2a12yolRpY1ATA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.ServicesParameterRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.ServicesParameterRule.html",
+          "hash": "xWcDPbhsOtHJAxdS5nMt8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.ServicesPrerequisiteRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.ServicesPrerequisiteRule.html",
+          "hash": "bpjkomiF9vCeaiD8Ciyoug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.ShipmentValidator.ValidationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.ShipmentValidator.ValidationState.html",
+          "hash": "xkscUseXu/l4+oopich0Wg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.ShipmentValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.ShipmentValidator.html",
+          "hash": "Jh8qZLblxT4+Jb4I6gXBaA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.SpecialServicesRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.SpecialServicesRule.html",
+          "hash": "x1FUVjxD3Ff3tu6Gv1iTaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.WeightRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.WeightRule.html",
+          "hash": "Qkp7TbZX4afEHjrjvOILlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Rules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Rules.html",
+          "hash": "Y2SKfVl8opNZeECaX+x3JA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.SBRPrintStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.SBRPrintStatus.html",
+          "hash": "3ie2RueG/onUeqPMVzz2wQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.SerializationRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.SerializationRegistry.html",
+          "hash": "7haKgM0AUo8iEpRl0grhjg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Services.html",
+          "hash": "oAM7jAYKqct2BqEiYeiqnA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Session.html",
+          "hash": "c3QmkjsyKYvNeeIq48MbDQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShipmentOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShipmentOption.html",
+          "hash": "E6IX3Dkwh47FoHNB9sKWwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShipmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShipmentType.html",
+          "hash": "MfJ7Hj6rt/nCKFDeHNsjTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingAPIException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingAPIException.html",
+          "hash": "3unlMf554+LMQGTJc6X8OA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingApiAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingApiAttribute.html",
+          "hash": "DIsKCUq6h1WqrTr5yf+iow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingApiHeaderAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingApiHeaderAttribute.html",
+          "hash": "02GCJr2e8PrJwDaqleugHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingApiHttpRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingApiHttpRequest.html",
+          "hash": "VRh+st2f+JQd+rjel+1v1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingApiQueryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingApiQueryAttribute.html",
+          "hash": "B01TiF840rtpFj3M34Qe3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingApiRequest.html",
+          "hash": "u8Y/jbi8MolnEQ25bYMioQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingApiResponse.html",
+          "hash": "aiQkcHq+uvXhSY7uGSVTVA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.ShippingApiResponse`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.ShippingApiResponse`1.html",
+          "hash": "FHrfGc4HKR7lIu7Y0Hh2DA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Size.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Size.html",
+          "hash": "6cNarLaAEksyfXTCBAvKLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.SpecialServiceCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.SpecialServiceCodes.html",
+          "hash": "r13z9L3g9brBO/3ENav2Jg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Surcharges.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Surcharges.html",
+          "hash": "EnaWCfcbiiQW7ZyDBDzvAQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Token.html",
+          "hash": "LyU+iUIlEhv/fKjHoRCI7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.TokenMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.TokenMethods.html",
+          "hash": "FKGPQkYBeyI5LVGzkMAJPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.Trackable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.Trackable.html",
+          "hash": "l2uVrtZQwTtk02OZjq4xUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.TrackingRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.TrackingRequest.html",
+          "hash": "Ena/0tgdV7mS9x3/7ju30g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.TrackingStatusCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.TrackingStatusCode.html",
+          "hash": "j4v/zTJyBOb8FuBAEhWOYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.TransactionPageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.TransactionPageResponse.html",
+          "hash": "UIW39vPDVuNuVX/VET2bbQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.TransactionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.TransactionType.html",
+          "hash": "1NfI6XkJv7FRRFhdvIVAiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.TransactionsReportProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.TransactionsReportProvider.html",
+          "hash": "DLRt5mHVR+BC3YIwdJa07Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.TransactionsReport`1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.TransactionsReport`1.html",
+          "hash": "ta6CGYD7Q/7Fo9uU2PgF7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.UnitOfDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.UnitOfDimension.html",
+          "hash": "6M/6hOlf5GtxNSaGQsT+ug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.UnitOfWeight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.UnitOfWeight.html",
+          "hash": "EWt8Lh3aIjRWydLQQ7uW4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.VerifySuggestResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.VerifySuggestResponse.html",
+          "hash": "iYCJeSaea6SJfwgL30ZPpw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.WebMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.WebMethod.html",
+          "hash": "9B0GlXXjJIHWWCZTzcenYg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/yml/PitneyBowes.Developer.ShippingApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "PitneyBowes.Developer.ShippingApi.html",
+          "hash": "hvOZeLfYPzklRpjGKYC0FQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../docs/yml/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "4EJIHtzqXgHHou9AV7siGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 207,
+          "skipped_file_count": 207
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

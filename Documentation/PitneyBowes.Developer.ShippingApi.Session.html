@@ -1,0 +1,733 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Session
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Session
+   ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PitneyBowes.Developer.ShippingApi.Session">
+  
+  
+  <h1 id="PitneyBowes_Developer_ShippingApi_Session" data-uid="PitneyBowes.Developer.ShippingApi.Session" class="text-break">Class Session
+  </h1>
+  <div class="markdown level0 summary"><p>Various environmental items that get injected into most methods. They can be overridden to configure the system.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Session</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PitneyBowes.Developer.ShippingApi.ISession.html">ISession</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PitneyBowes.Developer.ShippingApi.html">PitneyBowes.Developer.ShippingApi</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="PitneyBowes_Developer_ShippingApi_Session_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Session : ISession</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session__ctor_" data-uid="PitneyBowes.Developer.ShippingApi.Session.#ctor*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session__ctor" data-uid="PitneyBowes.Developer.ShippingApi.Session.#ctor">Session()</h4>
+  <div class="markdown level1 summary"><p>Constructor sets defaults for most items so the system can run with minimal configuration.</p>
+<p>Default parameters
+Record = false;
+RecordPath = Globals.GetPath(Path.GetTempPath(), &quot;recordings&quot;, &quot;shippingApi&quot;);
+RecordOverwrite = false;
+Retries = 3;
+UserAgent = &quot;Pitney Bowes CSharp SDK 1.0&quot;;
+ThrowExceptions = false;</p>
+<p>Configuration is set to use the dictionary in the session object
+The configuration item &quot;SANDBOX_ENDPOINT&quot; is defined &quot;https://api-sandbox.pitneybowes.com&quot;
+The configuration item &quot;PRODUCTION_ENDPOINT&quot; is defined &quot;https://api-sandbox.pitneybowes.com&quot;</p>
+<p>Logging is disabled</p>
+<p>API secret is retrieved from the &quot;ApiSecret&quot; config item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Session()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_AddConfigItem_" data-uid="PitneyBowes.Developer.ShippingApi.Session.AddConfigItem*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_AddConfigItem" data-uid="PitneyBowes.Developer.ShippingApi.Session.AddConfigItem">AddConfigItem</h4>
+  <div class="markdown level1 summary"><p>Adds an item to the default configuration provider - a dictionary stored in the session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;string, string&gt; AddConfigItem { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_AuthToken_" data-uid="PitneyBowes.Developer.ShippingApi.Session.AuthToken*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_AuthToken" data-uid="PitneyBowes.Developer.ShippingApi.Session.AuthToken">AuthToken</h4>
+  <div class="markdown level1 summary"><p>The current token is cached in the session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Token AuthToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.Token.html">Token</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_Counters_" data-uid="PitneyBowes.Developer.ShippingApi.Session.Counters*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_Counters" data-uid="PitneyBowes.Developer.ShippingApi.Session.Counters">Counters</h4>
+  <div class="markdown level1 summary"><p>Counters holds statistics for each method call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Counters&gt; Counters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="PitneyBowes.Developer.ShippingApi.Counters.html">Counters</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_EndPoint_" data-uid="PitneyBowes.Developer.ShippingApi.Session.EndPoint*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_EndPoint" data-uid="PitneyBowes.Developer.ShippingApi.Session.EndPoint">EndPoint</h4>
+  <div class="markdown level1 summary"><p>Sets the endpoint for the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EndPoint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_GetApiSecret_" data-uid="PitneyBowes.Developer.ShippingApi.Session.GetApiSecret*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_GetApiSecret" data-uid="PitneyBowes.Developer.ShippingApi.Session.GetApiSecret">GetApiSecret</h4>
+  <div class="markdown level1 summary"><p>Delegate to get the API secret. Best practice is to store the API secret encrypted and only decrypt at the last minute. The SDK
+does not store the API secret (except if you are using the default config from the sesssion, in which case the API Secret is store in 
+cleartext in memory). Authentication is infrequent - at startup and then every 10 hours, so a reasonable implementation would be to 
+store the API secret encrypted on disk, and then decrypt it in the GetApiSecret call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;StringBuilder&gt; GetApiSecret { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">StringBuilder</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_GetConfigItem_" data-uid="PitneyBowes.Developer.ShippingApi.Session.GetConfigItem*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_GetConfigItem" data-uid="PitneyBowes.Developer.ShippingApi.Session.GetConfigItem">GetConfigItem</h4>
+  <div class="markdown level1 summary"><p>Delegate to return a configuration item. Plug in your own config provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;string, string&gt; GetConfigItem { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_LogConfigError_" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogConfigError*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_LogConfigError" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogConfigError">LogConfigError</h4>
+  <div class="markdown level1 summary"><p>Delegate to log fatal errors dur to configration missing or otherwise screwed up - e.g. not having deserialization classes defined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;string&gt; LogConfigError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_LogDebug_" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogDebug*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_LogDebug" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogDebug">LogDebug</h4>
+  <div class="markdown level1 summary"><p>Delegate to log debug messages. Plug in your own logger here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;string&gt; LogDebug { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_LogError_" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogError*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_LogError" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogError">LogError</h4>
+  <div class="markdown level1 summary"><p>Delegate to log errors. Plug in your own logger here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;string&gt; LogError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_LogWarning_" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogWarning*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_LogWarning" data-uid="PitneyBowes.Developer.ShippingApi.Session.LogWarning">LogWarning</h4>
+  <div class="markdown level1 summary"><p>Delegate to log warnings. Plug in your own logger here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;string&gt; LogWarning { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_Record_" data-uid="PitneyBowes.Developer.ShippingApi.Session.Record*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_Record" data-uid="PitneyBowes.Developer.ShippingApi.Session.Record">Record</h4>
+  <div class="markdown level1 summary"><p>Flag to indicate whether messages should be recorded. Recorded messages can be used for debugging or for replay by the mock requester.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Record { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_RecordOverwrite_" data-uid="PitneyBowes.Developer.ShippingApi.Session.RecordOverwrite*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_RecordOverwrite" data-uid="PitneyBowes.Developer.ShippingApi.Session.RecordOverwrite">RecordOverwrite</h4>
+  <div class="markdown level1 summary"><p>Flag to indicate whether to overwrite existing recording files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RecordOverwrite { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_RecordPath_" data-uid="PitneyBowes.Developer.ShippingApi.Session.RecordPath*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_RecordPath" data-uid="PitneyBowes.Developer.ShippingApi.Session.RecordPath">RecordPath</h4>
+  <div class="markdown level1 summary"><p>Path for the recording files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RecordPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_Requester_" data-uid="PitneyBowes.Developer.ShippingApi.Session.Requester*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_Requester" data-uid="PitneyBowes.Developer.ShippingApi.Session.Requester">Requester</h4>
+  <div class="markdown level1 summary"><p>Requester encapsulates the http request and response. Two subclasses are provided, one that calls the web service and the other 
+that calls a mock interface which provides responses from messages stored in the file system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IHttpRequest Requester { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IHttpRequest.html">IHttpRequest</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_Retries_" data-uid="PitneyBowes.Developer.ShippingApi.Session.Retries*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_Retries" data-uid="PitneyBowes.Developer.ShippingApi.Session.Retries">Retries</h4>
+  <div class="markdown level1 summary"><p>Number of retries in the event of network errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Retries { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_SerializationRegistry_" data-uid="PitneyBowes.Developer.ShippingApi.Session.SerializationRegistry*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_SerializationRegistry" data-uid="PitneyBowes.Developer.ShippingApi.Session.SerializationRegistry">SerializationRegistry</h4>
+  <div class="markdown level1 summary"><p>Object to hold mappings between the service contract interfaces, wrapper classes that implement the json/web service messages 
+and concrete objects that are created during deserialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SerializationRegistry SerializationRegistry { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.SerializationRegistry.html">SerializationRegistry</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_ThrowExceptions_" data-uid="PitneyBowes.Developer.ShippingApi.Session.ThrowExceptions*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_ThrowExceptions" data-uid="PitneyBowes.Developer.ShippingApi.Session.ThrowExceptions">ThrowExceptions</h4>
+  <div class="markdown level1 summary"><p>Defines whether to throw exceptions due to deserialization and http errors. If exceptions are not thrown, errors can be seen in the 
+Errors member of the response object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ThrowExceptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_TimeOutMilliseconds_" data-uid="PitneyBowes.Developer.ShippingApi.Session.TimeOutMilliseconds*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_TimeOutMilliseconds" data-uid="PitneyBowes.Developer.ShippingApi.Session.TimeOutMilliseconds">TimeOutMilliseconds</h4>
+  <div class="markdown level1 summary"><p>Time out for the call. The SDK will attempt to return within the timeout, although this is not guaranteed when token 
+authentication is required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TimeOutMilliseconds { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_TraceWriter_" data-uid="PitneyBowes.Developer.ShippingApi.Session.TraceWriter*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_TraceWriter" data-uid="PitneyBowes.Developer.ShippingApi.Session.TraceWriter">TraceWriter</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the JSON.Net trace writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITraceWriter TraceWriter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITraceWriter</span></td>
+        <td><p>The trace writer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_ClearCounters_" data-uid="PitneyBowes.Developer.ShippingApi.Session.ClearCounters*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_ClearCounters" data-uid="PitneyBowes.Developer.ShippingApi.Session.ClearCounters">ClearCounters()</h4>
+  <div class="markdown level1 summary"><p>Reset the counters</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearCounters()</code></pre>
+  </div>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Session_UpdateCounters_" data-uid="PitneyBowes.Developer.ShippingApi.Session.UpdateCounters*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Session_UpdateCounters_System_String_System_Boolean_System_TimeSpan_" data-uid="PitneyBowes.Developer.ShippingApi.Session.UpdateCounters(System.String,System.Boolean,System.TimeSpan)">UpdateCounters(String, Boolean, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Update the performance counters with the result of the latest service call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateCounters(string uri, bool success, TimeSpan time)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td><p>URI</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td><p>Whether the call was successful</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">time</span></td>
+        <td><p>Call duration in milliseconds</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PitneyBowes.Developer.ShippingApi.ISession.html">ISession</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

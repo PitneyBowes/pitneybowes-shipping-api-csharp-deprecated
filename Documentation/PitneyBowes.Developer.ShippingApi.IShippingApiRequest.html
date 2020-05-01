@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IShippingApiRequest
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IShippingApiRequest
+   ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest">
+  
+  
+  <h1 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest" class="text-break">Interface IShippingApiRequest
+  </h1>
+  <div class="markdown level0 summary"><p>Interface for all API requests. Implement this interface if you want to add new methods. In most instances you will want to inherit from
+ShippingApiRequest as well.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PitneyBowes.Developer.ShippingApi.html">PitneyBowes.Developer.ShippingApi</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IShippingApiRequest</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_Authorization_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.Authorization*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_Authorization" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.Authorization">Authorization</h4>
+  <div class="markdown level1 summary"><p>OAUTH token. This is set automatically, implement as {get;set;}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">StringBuilder Authorization { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">StringBuilder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_ContentType_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.ContentType*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_ContentType" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.ContentType">ContentType</h4>
+  <div class="markdown level1 summary"><p>Http Content-Type header. For almost all purposes implement as a constant value returning &quot;application/json&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ContentType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_RecordingSuffix_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.RecordingSuffix*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_RecordingSuffix" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.RecordingSuffix">RecordingSuffix</h4>
+  <div class="markdown level1 summary"><p>When using the recorder, add this string to the end of the file name. USed if there are multiple items which would be otherwise
+named the same.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string RecordingSuffix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_GetHeaders_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.GetHeaders*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_GetHeaders" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.GetHeaders">GetHeaders()</h4>
+  <div class="markdown level1 summary"><p>Get headers. To use properties from the object inherit from ShippingAPiRequest
+ShippingApiRequest.GetHeaders()</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Tuple&lt;ShippingApiHeaderAttribute, string, string&gt;&gt; GetHeaders()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Tuple</span>&lt;<a class="xref" href="PitneyBowes.Developer.ShippingApi.ShippingApiHeaderAttribute.html">ShippingApiHeaderAttribute</a>, <span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_GetUri_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.GetUri*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_GetUri_System_String_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.GetUri(System.String)">GetUri(String)</h4>
+  <div class="markdown level1 summary"><p>Return the actual URI by substuting for the {} elements. To use properties from the object inherit from ShippingAPiRequest
+ShippingApiRequest.GetUri()</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetUri(string baseUrl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">baseUrl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_RecordingFullPath_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.RecordingFullPath*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_RecordingFullPath_System_String_PitneyBowes_Developer_ShippingApi_ISession_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.RecordingFullPath(System.String,PitneyBowes.Developer.ShippingApi.ISession)">RecordingFullPath(String, ISession)</h4>
+  <div class="markdown level1 summary"><p>Full path to the recording file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string RecordingFullPath(string resource, ISession session)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.ISession.html">ISession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_SerializeBody_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.SerializeBody*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_IShippingApiRequest_SerializeBody_StreamWriter_PitneyBowes_Developer_ShippingApi_ISession_" data-uid="PitneyBowes.Developer.ShippingApi.IShippingApiRequest.SerializeBody(StreamWriter,PitneyBowes.Developer.ShippingApi.ISession)">SerializeBody(StreamWriter, ISession)</h4>
+  <div class="markdown level1 summary"><p>Return the body of the http message. To use properties from the object inherit from ShippingAPiRequest
+ShippingApiRequest.SerializeBody()</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SerializeBody(StreamWriter writer, ISession session)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">StreamWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.ISession.html">ISession</a></td>
+        <td><span class="parametername">session</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

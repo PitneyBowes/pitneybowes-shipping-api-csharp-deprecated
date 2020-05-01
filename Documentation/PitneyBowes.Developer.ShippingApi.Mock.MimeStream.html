@@ -1,0 +1,577 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MimeStream
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MimeStream
+   ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream">
+  
+  
+  <h1 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream" class="text-break">Class MimeStream
+  </h1>
+  <div class="markdown level0 summary"><p>Implements a stream class that provides stream access to the body of a particular part of a MIME message. Methods are provided to access the MIME 
+headers and navigate to the required part.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MimeStream</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PitneyBowes.Developer.ShippingApi.Mock.html">PitneyBowes.Developer.ShippingApi.Mock</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MimeStream : Stream</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream__ctor_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.#ctor*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream__ctor_Stream_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.#ctor(Stream)">MimeStream(Stream)</h4>
+  <div class="markdown level1 summary"><p>Create a MIME stream based on an underlying stream. Provides methods to work with parts of the MIME stream and gives stream access to MIME body parts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MimeStream(Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The underlying stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_FirstLine" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.FirstLine">FirstLine</h4>
+  <div class="markdown level1 summary"><p>The first line of the mome stream. The call to ReadHeaders can be used to read http headers of a MIME part as well as MIME headers. If this is done then the first line of the 
+http part is the protocol information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FirstLine</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_CanRead_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.CanRead*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_CanRead" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.CanRead">CanRead</h4>
+  <div class="markdown level1 summary"><p>Returns true</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanRead { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_CanSeek_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.CanSeek*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_CanSeek" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.CanSeek">CanSeek</h4>
+  <div class="markdown level1 summary"><p>Whether the underlying stream can seek.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanSeek { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if underlying stream can seek; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_CanWrite_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.CanWrite*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_CanWrite" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.CanWrite">CanWrite</h4>
+  <div class="markdown level1 summary"><p>Returns false</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanWrite { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>false</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Headers_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Headers*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Headers" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Headers">Headers</h4>
+  <div class="markdown level1 summary"><p>MIME or http headers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, List&lt;string&gt;&gt; Headers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>The headers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Length_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Length*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Length" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Length">Length</h4>
+  <div class="markdown level1 summary"><p>Not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long Length { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>Throws NotImplementedException</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Position_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Position*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Position" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Position">Position</h4>
+  <div class="markdown level1 summary"><p>Gets the position within the current body part. Set is not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long Position { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_ClearHeaders_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.ClearHeaders*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_ClearHeaders" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.ClearHeaders">ClearHeaders()</h4>
+  <div class="markdown level1 summary"><p>Clears the headers in preparation for the next read. If you have a reference to the old headers it will still be good. ClearHeaders allocates a new object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearHeaders()</code></pre>
+  </div>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Dispose_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Dispose*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Dispose" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Does nothing. Dispose the underlying stream yourself. This is deliberate. This class does not manage the underlying stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Flush_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Flush*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Flush" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Flush">Flush()</h4>
+  <div class="markdown level1 summary"><p>Not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Flush()</code></pre>
+  </div>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Read_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Read*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Read_System_Byte___System_Int32_System_Int32_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Read(System.Byte[],System.Int32,System.Int32)">Read(Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Provides a stream read method for the current body part.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Read(byte[] buffer, int offset, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>Buffer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_ReadHeaders_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.ReadHeaders*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_ReadHeaders" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.ReadHeaders">ReadHeaders()</h4>
+  <div class="markdown level1 summary"><p>Reads the current set of MIME or http headers. Assumes the underlying stream is positioned at the start of the header block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReadHeaders()</code></pre>
+  </div>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Seek_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Seek*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Seek_System_Int64_SeekOrigin_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Seek(System.Int64,SeekOrigin)">Seek(Int64, SeekOrigin)</h4>
+  <div class="markdown level1 summary"><p>Provides a seek operation in the current body part. Only SeekOrigin.Begin and offset == 0 is supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override long Seek(long offset, SeekOrigin origin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">SeekOrigin</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>Origin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><p>The seek.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_SeekNextPart_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.SeekNextPart*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_SeekNextPart" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.SeekNextPart">SeekNextPart()</h4>
+  <div class="markdown level1 summary"><p>Seeks the next part of the MIME stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SeekNextPart()</code></pre>
+  </div>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_SetLength_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.SetLength*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_SetLength_System_Int64_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.SetLength(System.Int64)">SetLength(Int64)</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetLength(long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>NotImplementedException</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Write_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Write*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Mock_MimeStream_Write_System_Byte___System_Int32_System_Int32_" data-uid="PitneyBowes.Developer.ShippingApi.Mock.MimeStream.Write(System.Byte[],System.Int32,System.Int32)">Write(Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(byte[] buffer, int offset, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>Buffer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Count.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

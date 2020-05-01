@@ -1,0 +1,846 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Shipment
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Shipment
+   ">
+    <meta name="generator" content="docfx 1.0.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment">
+  
+  
+  <h1 id="PitneyBowes_Developer_ShippingApi_Model_Shipment" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment" class="text-break">Class Shipment
+  </h1>
+  <div class="markdown level0 summary"><p>Object to create a shipment and purchases a shipment label. The API returns the label as either a Base64 string or a link to a PDF.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Shipment</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PitneyBowes.Developer.ShippingApi.IShipment.html">IShipment</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PitneyBowes.Developer.ShippingApi.Model.html">PitneyBowes.Developer.ShippingApi.Model</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Shipment : IShipment</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AltReturnAddress_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AltReturnAddress*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AltReturnAddress" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AltReturnAddress">AltReturnAddress</h4>
+  <div class="markdown level1 summary"><p>INTERNATIONAL SHIPMENTS ONLY. Required if the return shipment is not going to the fromAddress but is instead to an alternate 
+return address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IAddress AltReturnAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IAddress.html">IAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_CarrierAccountId_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.CarrierAccountId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_CarrierAccountId" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.CarrierAccountId">CarrierAccountId</h4>
+  <div class="markdown level1 summary"><p>The unique identifier returned in the shipperCarrierAccountId field by the Register an Existing Carrier Account API call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string CarrierAccountId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Customs_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Customs*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Customs" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Customs">Customs</h4>
+  <div class="markdown level1 summary"><p>ONLY FOR: international, APO/FPO/DPO, territories/possessions, and FAS shipments. Customs related information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICustoms Customs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.ICustoms.html">ICustoms</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Documents_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Documents*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Documents" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Documents">Documents</h4>
+  <div class="markdown level1 summary"><p>A list of shipment documents pertaining to a shipment, including the label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;IDocument&gt; Documents { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="PitneyBowes.Developer.ShippingApi.IDocument.html">IDocument</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_FromAddress_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.FromAddress*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_FromAddress" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.FromAddress">FromAddress</h4>
+  <div class="markdown level1 summary"><p>REQUIRED. Origin address. See Create a Shipment for considerations when specifying multiple address lines when using 
+MINIMAL_ADDRESS_VALIDATION.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IAddress FromAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IAddress.html">IAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_IncludeDeliveryCommitment_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.IncludeDeliveryCommitment*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_IncludeDeliveryCommitment" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.IncludeDeliveryCommitment">IncludeDeliveryCommitment</h4>
+  <div class="markdown level1 summary"><p>Request devlivery commitment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IncludeDeliveryCommitment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_IntegratorCarrierId_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.IntegratorCarrierId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_IntegratorCarrierId" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.IntegratorCarrierId">IntegratorCarrierId</h4>
+  <div class="markdown level1 summary"><p>Negotiated services rate, if applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string IntegratorCarrierId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_IntegratorRatePlan_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.IntegratorRatePlan*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_IntegratorRatePlan" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.IntegratorRatePlan">IntegratorRatePlan</h4>
+  <div class="markdown level1 summary"><p>Negotiated services rate, if applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string IntegratorRatePlan { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_MinimalAddressValidation_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.MinimalAddressValidation*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_MinimalAddressValidation" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.MinimalAddressValidation">MinimalAddressValidation</h4>
+  <div class="markdown level1 summary"><p>MinimalAddressValidation header option</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string MinimalAddressValidation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Parcel_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Parcel*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Parcel" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Parcel">Parcel</h4>
+  <div class="markdown level1 summary"><p>REQUIRED. Contains physical characteristics of the parcel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IParcel Parcel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IParcel.html">IParcel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ParcelTrackingNumber_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ParcelTrackingNumber*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ParcelTrackingNumber" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ParcelTrackingNumber">ParcelTrackingNumber</h4>
+  <div class="markdown level1 summary"><p>Tracking number assigned to the shipment by the system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ParcelTrackingNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Rates_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Rates*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_Rates" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.Rates">Rates</h4>
+  <div class="markdown level1 summary"><p>REQUIRED. Information related to the shipment rates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;IRates&gt; Rates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="PitneyBowes.Developer.ShippingApi.IRates.html">IRates</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_References_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.References*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_References" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.References">References</h4>
+  <div class="markdown level1 summary"><p>Newgistics Only. This array maps client-generated identifiers to fields in the Newgistics package record. 
+The information in this array does not appear on the shipping label. The array takes up to three objects, 
+and each object maps an identifier to a specific Newgistics field.An object’s sequence in the array 
+determines which Newgistics field the object maps to.The first object in the array maps to the Newgistics 
+“ReferenceNumber” field; the second to the “AddlRef1” field; and the third to the “AddlRef2” field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IReference&gt; References { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="PitneyBowes.Developer.ShippingApi.IReference.html">IReference</a>&gt;</td>
+        <td><p>The references.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentGroupId_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentGroupId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentGroupId" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentGroupId">ShipmentGroupId</h4>
+  <div class="markdown level1 summary"><p>Required for PB Presort. The job number that represents the agreement between the merchant and PB Presort. 
+This was provided by Pitney Bowes during merchant onboarding for PB Presort.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ShipmentGroupId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentId_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentId" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentId">ShipmentId</h4>
+  <div class="markdown level1 summary"><p>Unique identifier for the shipment, generated by the system in response to shipment purchase.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ShipmentId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentOptions_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentOptions*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentOptions" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentOptions">ShipmentOptions</h4>
+  <div class="markdown level1 summary"><p>Each object in this array defines a shipment option. The available options depend on the carrier, origin country, and destination country.
+If you are creating a shipment, this array is required and must contain the SHIPPER_ID option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;IShipmentOptions&gt; ShipmentOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="PitneyBowes.Developer.ShippingApi.IShipmentOptions.html">IShipmentOptions</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentType_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentType*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipmentType" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipmentType">ShipmentType</h4>
+  <div class="markdown level1 summary"><p>SBR LABELS ONLY.</p>
+<p>If you are creating a scan-based return (SBR) label, set this to RETURN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ShipmentType ShipmentType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.ShipmentType.html">ShipmentType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipperRatePlan_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipperRatePlan*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ShipperRatePlan" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ShipperRatePlan">ShipperRatePlan</h4>
+  <div class="markdown level1 summary"><p>Shipper rate plan, if available.
+Important: Do not include this header if creating a scan-based return (SBR) label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ShipperRatePlan { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_SoldToAddress_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.SoldToAddress*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_SoldToAddress" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.SoldToAddress">SoldToAddress</h4>
+  <div class="markdown level1 summary"><p>UPS Only. This object is required for shipments from the U.S.to Puerto Rico or an international destination.
+The soldToAddress.countryCode must match the toAddress.countryCode, with the exception of shipments to Canada 
+and to U.S.satellite countries. Enter the importer’s address in the toAddress object. If importer’s address is 
+the same as the final recipient, the entries in the toAddress object must match the entries in the soldToAddress 
+object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IAddress SoldToAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IAddress.html">IAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ToAddress_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ToAddress*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_ToAddress" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.ToAddress">ToAddress</h4>
+  <div class="markdown level1 summary"><p>REQUIRED.Destination address.
+Note: You can specify multiple address lines in the shipment抯 destination address.See address object for information on how 
+the API processes multiple address lines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IAddress ToAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IAddress.html">IAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_TransactionId_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.TransactionId*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_TransactionId" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.TransactionId">TransactionId</h4>
+  <div class="markdown level1 summary"><p>REQUIRED. A unique identifier for each transaction that cannot exceed 25 characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string TransactionId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AddDocument_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AddDocument*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AddDocument_PitneyBowes_Developer_ShippingApi_IDocument_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AddDocument(PitneyBowes.Developer.ShippingApi.IDocument)">AddDocument(IDocument)</h4>
+  <div class="markdown level1 summary"><p>Add a Document to the Documents IEnumerable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDocument AddDocument(IDocument d)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IDocument.html">IDocument</a></td>
+        <td><span class="parametername">d</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IDocument.html">IDocument</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AddRates_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AddRates*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AddRates_PitneyBowes_Developer_ShippingApi_IRates_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AddRates(PitneyBowes.Developer.ShippingApi.IRates)">AddRates(IRates)</h4>
+  <div class="markdown level1 summary"><p>Add Rates object to the Rates IEnumerable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IRates AddRates(IRates r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IRates.html">IRates</a></td>
+        <td><span class="parametername">r</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IRates.html">IRates</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AddShipmentOptions_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AddShipmentOptions*"></a>
+  <h4 id="PitneyBowes_Developer_ShippingApi_Model_Shipment_AddShipmentOptions_PitneyBowes_Developer_ShippingApi_IShipmentOptions_" data-uid="PitneyBowes.Developer.ShippingApi.Model.Shipment.AddShipmentOptions(PitneyBowes.Developer.ShippingApi.IShipmentOptions)">AddShipmentOptions(IShipmentOptions)</h4>
+  <div class="markdown level1 summary"><p>Add option to the ShipmentOptions IEnumerable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IShipmentOptions AddShipmentOptions(IShipmentOptions s)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IShipmentOptions.html">IShipmentOptions</a></td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PitneyBowes.Developer.ShippingApi.IShipmentOptions.html">IShipmentOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PitneyBowes.Developer.ShippingApi.IShipment.html">IShipment</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
