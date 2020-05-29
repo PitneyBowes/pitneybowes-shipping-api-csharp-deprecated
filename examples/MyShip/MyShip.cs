@@ -28,8 +28,8 @@ namespace SampleApplicationNewGisticLabelGeneration
             };
             var configs = new Dictionary<string, string>
                 {
-                    { "ApiKey", "QKvdnC9QZlvu3i48Fu2MBTm0NzRSa8pa" },
-                    { "ApiSecret", "Iwjvm5BexuwXhytO" },
+                    { "ApiKey", "YOUR_API_KEY" },
+                    { "ApiSecret", "YOUR_API_SECRET" },
                     ///{ "ShipperID", "9025678752" },
                    /// { "DeveloperID", "<Developer_Id>" },
                 {"RecordAPICalls","true" }
