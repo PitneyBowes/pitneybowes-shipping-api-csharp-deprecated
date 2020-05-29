@@ -793,6 +793,7 @@ namespace PitneyBowes.Developer.ShippingApi
     /// </summary>
     public enum Size
     {
+        DOC_4X4,
         /// <summary>
         /// 4 by 6 inch thermal label
         /// </summary>
@@ -808,11 +809,11 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// (Newgistics labels only)
         /// </summary>
-        DOC_4x5,
+        DOC_4X5,
         /// <summary>
         /// 4 by 8 inch thermal label. 4x6 label with doctab.
         /// </summary>
-        DOC_4x8
+        DOC_4X8
     }
 
     /// <summary>

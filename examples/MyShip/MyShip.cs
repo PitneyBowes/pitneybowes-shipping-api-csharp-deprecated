@@ -1,12 +1,21 @@
 ﻿using System;
+using System.Text;
+using System.Linq;
+using System.Security;
+using System.Runtime.InteropServices;
 using System.IO;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using PitneyBowes.Developer.ShippingApi;
-using PitneyBowes.Developer.ShippingApi.Model;
+using PitneyBowes.Developer.ShippingApi.Mock;
 using PitneyBowes.Developer.ShippingApi.Fluent;
+using PitneyBowes.Developer.ShippingApi.Model;
+using PitneyBowes.Developer.ShippingApi.Rules;
+using Microsoft.Extensions.Configuration;
 
-namespace MyShip
+
+
+
+namespace SampleApplicationNewGisticLabelGeneration
 {
     class Program
     {
@@ -19,80 +28,46 @@ namespace MyShip
             };
             var configs = new Dictionary<string, string>
                 {
-                    { "ApiKey", "9DugRoGkf4rvvlMfnlxumj3ggzzWDCWY" },
-                    { "ApiSecret", "IY5tGLbnNAV7dYH5" },
-                    { "RatePlan", "YOUR_RATE_PLAN" },
-                    { "ShipperID", "3000107147" },
-                 ///   { "DeveloperID", "58172307" }
+                    { "ApiKey", "QKvdnC9QZlvu3i48Fu2MBTm0NzRSa8pa" },
+                    { "ApiSecret", "Iwjvm5BexuwXhytO" },
+                    ///{ "ShipperID", "9025678752" },
+                   /// { "DeveloperID", "<Developer_Id>" },
+                {"RecordAPICalls","true" }
                 };
             var configurationBuilder = new ConfigurationBuilder();
             configurationBuilder
                 .AddInMemoryCollection(configs)
-                .AddJsonFile(Path.Combine(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory), "shippingapisettings.json"), optional: true, reloadOnChange: true);
+                .AddJsonFile(Globals.GetConfigPath("shippingapisettings.json"), optional: true, reloadOnChange: true);
 
             sandbox.GetConfigItem = (c) => configurationBuilder.Build()[c];
             Model.RegisterSerializationTypes(sandbox.SerializationRegistry);
             Globals.DefaultSession = sandbox;
-            var shipment = (Shipment)ShipmentFluent<Shipment>.Create()
-                          .ToAddress((Address)AddressFluent<Address>.Create()
-                          .Company("Shop")
-                          .Name("Mary Jones")
-                          .Phone("620-555-0000")
-                          .Email("mary@example.com")
 
-                             .AddressLines("284 W Fulton")
-                              .CityTown("Garden City").StateProvince("KS")
-                              .PostalCode("67846")
-                              .CountryCode("US")
-                              )
-                         .FromAddress((Address)AddressFluent<Address>.Create()
-                              .Company("Supplies")
-                               .Name("Kathryn Smith")
-                               .Phone("334-000-0000 ")
-                               .Email("kathryn@example.com")
+            var shipment = ShipmentFluent<Shipment>.Create()
+                 .ToAddress((Address)AddressFluent<Address>.Create()
+                    .AddressLines("704 Hickory Hill Rd")
+                    .Name("Recipent_Name")
+                    .CityTown("Wyckoff").StateProvince("NJ").PostalCode("07481-1603")
+                     .CountryCode("US")
+                     .Verify())
+                 .FromAddress((Address)AddressFluent<Address>.Create()
+                    .Company("Baker's Best Health")
+                    .Name("Sender_Name")
+                    .AddressLines("P.O. BOX 2099")
+                    .CityTown("Wixom").StateProvince("MI").PostalCode("48393-2099")
+                    .CountryCode("US"))
+                 .Parcel((Parcel)ParcelFluent<Parcel>.Create()
+                          .Dimension(12, 12, 10)
+                           .Weight(16m, UnitOfWeight.OZ))
+                 .Rates(RatesArrayFluent<Rates>.Create().Add().Carrier(Carrier.NEWGISTICS)
+                       .NewgisticsRates<Rates>(Services.BPM))
+                 .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
+                        .ShippingLabel(ContentType.URL, Size.DOC_4X4, FileFormat.PDF))
+                 .ShipmentOptions(ShipmentOptionsArrayFluent<ShipmentOptions>.Create()
+                        .ShipperId("9025678752").AddOption(ShipmentOption.CLIENT_FACILITY_ID, "0093").AddOption(ShipmentOption.CARRIER_FACILITY_ID, "1585"))
+                 .TransactionId(Guid.NewGuid().ToString().Substring(15));
 
-
-
-
-                              .AddressLines("2352 Bent Creek Rd")
-                              .CityTown("Auburn").StateProvince("AL").PostalCode("36830")
-                              .CountryCode("US")
-                              )
-                         .Parcel((Parcel)ParcelFluent<Parcel>.Create()
-                              ///.Dimension(12, 0.25M, 9)
-                              .Weight(20, UnitOfWeight.OZ))
-                         .Rates(RatesArrayFluent<Rates>.Create().
-                              Add().Carrier(Carrier.FEDEX)
-                               .Service(Services.TwoDA)
-                              .ParcelType(ParcelType.PKG))
-                       ///  .SpecialService<ISpecialServices>(SpecialServiceCodes.INS,0M,new Parameter() { Name = "INPUT_VALUE", Value = "0" })))
-
-                       /// .SpecialService<SpecialServices>(SpecialServiceCodes.INS, 0M, new Parameter("INPUT_VALUE", "50")))
-
-                       .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
-                              .ShippingLabel(ContentType.URL, Size.DOC_4X6, FileFormat.PDF))
-
-                         .ShipmentOptions(ShipmentOptionsArrayFluent<ShipmentOptions>.Create()
-                              .ShipperId(sandbox.GetConfigItem("ShipperID"))
-                              /// .MinimalAddressvalidation().AddOption(ShipmentOption.PERMIT_NUMBER, "SHFL")
-                              )
-                         .TransactionId(Guid.NewGuid().ToString().Substring(15));
-
-            shipment.IncludeDeliveryCommitment = true;
-            var shipmentreq = (Shipment)shipment;
-            shipmentreq.IncludeDeliveryCommitment = true;
-            ///shipmentreq.CarrierAccountId= "323832c1-0646-4c99-80f5-7a7fe97ecdd9";
-            var label = Api.CreateShipment(shipment).GetAwaiter().GetResult();
-            if (label.Success)
-            {
-                var sw = new StreamWriter("label.png");
-                foreach (var d in label.APIResponse.Documents)
-                {
-                    Api.WriteToStream(d, sw.BaseStream).GetAwaiter().GetResult();
-                }
-            }
-
+            var label = Api.CreateShipment((Shipment)shipment).GetAwaiter().GetResult();
         }
     }
 }
-
