@@ -1,5 +1,16 @@
 # Pitney Bowes Shipping API C# SDK Changes
 
+## 1.2.1
+
+## Fixes
+* Fix of Label support size DOC_4X4.
+
+## 1.2.0
+
+## New Feature
+* Support for FedEx carrier 
+
+
 ## Version 1.1.2
 
 ## Fixes
