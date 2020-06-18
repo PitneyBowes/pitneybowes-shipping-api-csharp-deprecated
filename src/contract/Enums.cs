@@ -967,9 +967,23 @@ namespace PitneyBowes.Developer.ShippingApi
         /// UPS Expedited
         /// </summary>
         XPD_USA,
+
+        /// <summary>
+        /// FedEx International Priority® Freight
+        /// </summary>
+        EXP_FREIGHT,
+        /// <summary>
+        /// FedEx International Economy® Freight
+        /// </summary>
+
+        XPD_FREIGHT,
         /// <summary>
         /// UPS 3 Day Select (to US Only)
         /// </summary>
+        /// 
+
+
+
         UPS_3DA_USA,
         /// <summary>
         /// UPS Standard (to US Only)
@@ -998,6 +1012,11 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         [EnumMember(Value = "2DA_FREIGHT")]
           TwoDA_FREIGHT,
+        /// <summary>
+        ///FedEx 2Day® A.M.
+       /// </summary>
+        [EnumMember(Value = "2DA_AM")]
+        TwoDA_AM,
         /// <summary>
         ///FedEx Three day  Overnight® Freight
         /// </summary>

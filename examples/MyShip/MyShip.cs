@@ -1,21 +1,12 @@
 ﻿using System;
-using System.Text;
-using System.Linq;
-using System.Security;
-using System.Runtime.InteropServices;
 using System.IO;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using PitneyBowes.Developer.ShippingApi;
-using PitneyBowes.Developer.ShippingApi.Mock;
-using PitneyBowes.Developer.ShippingApi.Fluent;
 using PitneyBowes.Developer.ShippingApi.Model;
-using PitneyBowes.Developer.ShippingApi.Rules;
-using Microsoft.Extensions.Configuration;
+using PitneyBowes.Developer.ShippingApi.Fluent;
 
-
-
-
-namespace SampleApplicationNewGisticLabelGeneration
+namespace MyShip
 {
     class Program
     {
@@ -28,46 +19,69 @@ namespace SampleApplicationNewGisticLabelGeneration
             };
             var configs = new Dictionary<string, string>
                 {
-                    { "ApiKey", "YOUR_API_KEY" },
-                    { "ApiSecret", "YOUR_API_SECRET" },
-                    ///{ "ShipperID", "9025678752" },
-                   /// { "DeveloperID", "<Developer_Id>" },
-                {"RecordAPICalls","true" }
-                };
+                    { "ApiKey", "your api key" },
+                    { "ApiSecret", "your api secret" },
+                    { "RatePlan", "YOUR_RATE_PLAN" },
+                    { "ShipperID", "your shipper id" },
+                                };
             var configurationBuilder = new ConfigurationBuilder();
             configurationBuilder
                 .AddInMemoryCollection(configs)
-                .AddJsonFile(Globals.GetConfigPath("shippingapisettings.json"), optional: true, reloadOnChange: true);
+                .AddJsonFile(Path.Combine(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory), "shippingapisettings.json"), optional: true, reloadOnChange: true);
 
             sandbox.GetConfigItem = (c) => configurationBuilder.Build()[c];
             Model.RegisterSerializationTypes(sandbox.SerializationRegistry);
             Globals.DefaultSession = sandbox;
+            var shipment = (Shipment)ShipmentFluent<Shipment>.Create()
+                          .ToAddress((Address)AddressFluent<Address>.Create()
+                          .Company("Shop")
+                          .Name("Mary Jones")
+                          .Phone("620-555-0000")
+                          .Email("mary@example.com")
 
-            var shipment = ShipmentFluent<Shipment>.Create()
-                 .ToAddress((Address)AddressFluent<Address>.Create()
-                    .AddressLines("704 Hickory Hill Rd")
-                    .Name("Recipent_Name")
-                    .CityTown("Wyckoff").StateProvince("NJ").PostalCode("07481-1603")
-                     .CountryCode("US")
-                     .Verify())
-                 .FromAddress((Address)AddressFluent<Address>.Create()
-                    .Company("Baker's Best Health")
-                    .Name("Sender_Name")
-                    .AddressLines("P.O. BOX 2099")
-                    .CityTown("Wixom").StateProvince("MI").PostalCode("48393-2099")
-                    .CountryCode("US"))
-                 .Parcel((Parcel)ParcelFluent<Parcel>.Create()
-                          .Dimension(12, 12, 10)
-                           .Weight(16m, UnitOfWeight.OZ))
-                 .Rates(RatesArrayFluent<Rates>.Create().Add().Carrier(Carrier.NEWGISTICS)
-                       .NewgisticsRates<Rates>(Services.BPM))
-                 .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
-                        .ShippingLabel(ContentType.URL, Size.DOC_4X4, FileFormat.PDF))
-                 .ShipmentOptions(ShipmentOptionsArrayFluent<ShipmentOptions>.Create()
-                        .ShipperId("9025678752").AddOption(ShipmentOption.CLIENT_FACILITY_ID, "0093").AddOption(ShipmentOption.CARRIER_FACILITY_ID, "1585"))
-                 .TransactionId(Guid.NewGuid().ToString().Substring(15));
+                             .AddressLines("284 W Fulton")
+                              .CityTown("Garden City").StateProvince("KS")
+                              .PostalCode("67846")
+                              .CountryCode("US")
+                              )
+                         .FromAddress((Address)AddressFluent<Address>.Create()
+                              .Company("Supplies")
+                               .Name("Kathryn Smith")
+                               .Phone("334-000-0000 ")
+                               .Email("kathryn@example.com")
+                              .AddressLines("2352 Bent Creek Rd")
+                              .CityTown("Auburn").StateProvince("AL").PostalCode("36830")
+                              .CountryCode("US"))
+                              
+                         .Parcel((Parcel)ParcelFluent<Parcel>.Create()
+                           .Weight(20, UnitOfWeight.OZ))
+                         .Rates(RatesArrayFluent<Rates>.Create().
+                              Add().Carrier(Carrier.FEDEX)
+                               .Service(Services.TwoDA_AM)
+                              .ParcelType(ParcelType.PKG))
+                              .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
+                              .ShippingLabel(ContentType.URL, Size.DOC_4X6, FileFormat.PDF))
 
-            var label = Api.CreateShipment((Shipment)shipment).GetAwaiter().GetResult();
+                         .ShipmentOptions(ShipmentOptionsArrayFluent<ShipmentOptions>.Create()
+                              .ShipperId(sandbox.GetConfigItem("ShipperID"))
+                             
+                              )
+                         .TransactionId(Guid.NewGuid().ToString().Substring(15));
+
+            shipment.IncludeDeliveryCommitment = true;
+            var shipmentreq = (Shipment)shipment;
+            shipmentreq.IncludeDeliveryCommitment = true;
+                var label = Api.CreateShipment(shipment).GetAwaiter().GetResult();
+            if (label.Success)
+            {
+                var sw = new StreamWriter("label.png");
+                foreach (var d in label.APIResponse.Documents)
+                {
+                    Api.WriteToStream(d, sw.BaseStream).GetAwaiter().GetResult();
+                }
+            }
+
         }
     }
 }
+
