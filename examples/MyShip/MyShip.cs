@@ -59,7 +59,7 @@ namespace MyShip
                               Add().Carrier(Carrier.FEDEX)
                                .Service(Services.TwoDA_AM)
                               .ParcelType(ParcelType.PKG)
-                              ///  .SpecialService<ISpecialServices>(SpecialServiceCodes.INS,0M,new Parameter() { Name = "INPUT_VALUE", Value = "0" })))
+                              
 
                              .SpecialService<SpecialServices>(SpecialServiceCodes.INS, 0M, new Parameter("INPUT_VALUE", "50")))
                               .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
