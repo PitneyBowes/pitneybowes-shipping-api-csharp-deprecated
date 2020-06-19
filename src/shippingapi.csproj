@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>shippingapi</AssemblyName>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <PackageId>shippingapi</PackageId>
-    <PackageVersion>1.2.1</PackageVersion>
+    <PackageVersion>1.2.2</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.2.1</AssemblyVersion>
-    <FileVersion>1.2.1.0</FileVersion>
+    <AssemblyVersion>1.2.2</AssemblyVersion>
+    <FileVersion>1.2.2.0</FileVersion>
     <Authors>Amit Kumar Singh</Authors>
     <Company>Pitney Bowes</Company>
     <Description>Package that provides a local interface to the Pitney Bowes Shipping API. Features and fluent API, strong type support, mocking, linq interface to transaction reports.</Description>
