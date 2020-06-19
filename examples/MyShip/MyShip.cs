@@ -58,7 +58,10 @@ namespace MyShip
                          .Rates(RatesArrayFluent<Rates>.Create().
                               Add().Carrier(Carrier.FEDEX)
                                .Service(Services.TwoDA_AM)
-                              .ParcelType(ParcelType.PKG))
+                              .ParcelType(ParcelType.PKG)
+                              ///  .SpecialService<ISpecialServices>(SpecialServiceCodes.INS,0M,new Parameter() { Name = "INPUT_VALUE", Value = "0" })))
+
+                             .SpecialService<SpecialServices>(SpecialServiceCodes.INS, 0M, new Parameter("INPUT_VALUE", "50")))
                               .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
                               .ShippingLabel(ContentType.URL, Size.DOC_4X6, FileFormat.PDF))
 
