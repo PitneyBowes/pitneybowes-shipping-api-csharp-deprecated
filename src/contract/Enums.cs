@@ -1341,103 +1341,103 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         NOTIFICATIONS,
         ///<summary>
-        ///USP Additional handling
+        ///UPS Additional handling
         ///</summary>
         ADD_HDL,
         ///<summary>
-        ///USP Adult Signature Required
+        ///UPS Adult Signature Required
         ///</summary>
         ADULT_SIG,
         ///<summary>
-        ///USP Collect on Delivery (C.O.D.) - Cashier’s Check or Money Order
+        ///UPS Collect on Delivery (C.O.D.) - Cashier’s Check or Money Order
         ///</summary>
         COD_CASHIER,
         ///<summary>
-        ///USP Collect on Delivery (C.O.D.) - Check
+        ///UPS Collect on Delivery (C.O.D.) - Check
         ///</summary>
         COD_CHECK,
         ///<summary>
-        ///USP Declared Value
+        ///UPS Declared Value
         ///</summary>
         INS,
         ///<summary>
-        ///USP Delivery Area Surcharge
+        ///UPS Delivery Area Surcharge
         ///</summary>
         DELIVERY_AREA,
         ///<summary>
-        ///USP Direct Delivery Only
+        ///UPS Direct Delivery Only
         ///</summary>
         DIRECT,
         ///<summary>
-        ///USP Dry Ice
+        ///UPS Dry Ice
         ///</summary>
         DRY_ICE,
         ///<summary>
-        ///USP Extended Area Pickup Surcharge
+        ///UPS Extended Area Pickup Surcharge
         ///</summary>
         EXT_AREA_PU,
         ///<summary>
-        ///USP Extended Area Surcharge
+        ///UPS Extended Area Surcharge
         ///</summary>
         EXTENDED_AREA,
         ///<summary>
-        ///USP Fuel Surcharge
+        ///UPS Fuel Surcharge
         ///</summary>
         FUEL,
         ///<summary>
-        ///USP Hold for Pickup
+        ///UPS Hold for Pickup
         ///</summary>
         HOLD,
         ///<summary>
-        ///USP Large Package Surcharge
+        ///UPS Large Package Surcharge
         ///</summary>
         LARGE_PACKAGE,
         ///<summary>
-        ///USP Peak Season Surcharge
+        ///UPS Peak Season Surcharge
         ///</summary>
         PEAK_SURCHARGE,
         ///<summary>
-        ///USP Peak Season Surcharge - Additional Handling
+        ///UPS Peak Season Surcharge - Additional Handling
         ///</summary>
         PEAK_ADD_HDL,
         ///<summary>
-        ///USP Peak Season Surcharge - Large Package
+        ///UPS Peak Season Surcharge - Large Package
         ///</summary>
         PEAK_LG_PKG,
         ///<summary>
-        ///USP Residential Surcharge
+        ///UPS Residential Surcharge
         ///</summary>
         RESIDENTIAL,
         ///<summary>
-        ///USP Saturday Delivery
+        ///UPS Saturday Delivery
         ///</summary>
         SAT_DELIVERY,
         ///<summary>
-        ///USP Shipper Release
+        ///UPS Shipper Release
         ///</summary>
         SHP_RELEASE,
         ///<summary>
-        ///USP Signature Required
+        ///UPS Signature Required
         ///</summary>
         SIG,
         ///<summary>
-        ///USP UPS carbon neutral
+        /// UPS carbon neutral
         ///</summary>
         CARBON,
         ///<summary>
-        ///USP UPS Delivery Confirmation
+        /// UPS Delivery Confirmation
         ///</summary>
         DEL_CON,
         ///<summary>
-        ///USP UPS Premium Care
+        /// UPS Premium Care
         ///</summary>
         PREMIUM_CARE,
         ///<summary>
-        ///USP UPS Print Return Label
+        /// UPS Print Return Label
         ///</summary>
         PRL,
         ///<summary>
-        ///USP Verbal Confirmation of Delivery
+        ///UPS  Verbal Confirmation of Delivery
         ///</summary>
         VERBAL
 
