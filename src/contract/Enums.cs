@@ -546,6 +546,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// USPS Letter for stamp API call. 
         /// UPS Express Envelope, All U.S. domestic services except 3DA and GRD.  All U.S. intl services except XPD and STD.
         ///     All Canadian domestic services except STD.  All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
+        /// FedEx Envelope 
         /// </summary>
         LTR,
         /// <summary>
@@ -553,6 +554,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// All U.S. intl services except STD.
         /// All Canadian domestic services except STD. 
         /// All Canadian intl services except 3DA_USA, STD_USA.
+        /// FedEx Pak
         /// </summary>
         PACK,
         /// <summary>
@@ -560,6 +562,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// All U.S. intl services except STD.
         /// All Canadian domestic services except STD. 
         /// All Canadian intl services except 3DA_USA, STD_USA.
+        /// FedEx Tube.
         /// </summary>
         TUBE,
         /// <summary>
@@ -567,6 +570,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// All U.S. intl services except STD.
         /// All Canadian domestic services except STD. 
         /// All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
+        /// FedEx Small Box
         /// </summary>
         SMALL_EXP_BOX,
         /// <summary>
@@ -574,6 +578,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// All U.S. intl services except STD.
         /// All Canadian domestic services except STD. 
         /// All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
+        /// FedEx Medium Box
         /// </summary>
         MED_EXP_BOX,
         /// <summary>
@@ -581,6 +586,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// All U.S. intl services except STD.
         /// All Canadian domestic services except STD. 
         /// All Canadian intl services except XPD_USA, 3DA_USA, STD_USA, XPD.
+        /// FedEx Large Box.
         /// </summary>
         LG_EXP_BOX,
         /// <summary>
@@ -590,7 +596,26 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// UPS 10 KG Box, U.S. international services XPP, EXP, EXS.
         /// </summary>
-        UPS_10KG    
+        UPS_10KG ,
+        /// <summary>
+        /// FedEx Box.
+        /// </summary>
+        BOX ,
+        /// <summary>
+        /// FedEx 25 KG Box.
+        /// </summary>
+        [EnumMember(Value = "25KG")]
+        TwentyFiveKG,
+        /// <summary>
+        ///FedEx 10 KG Box.
+        /// </summary>
+        [EnumMember(Value = "10KG")]
+        TenKG,
+        /// <summary>
+        ///FedEx Extra Large Box.
+        /// </summary>
+        EXTRA_LG_EXP_BOX
+
     }
 
     /// <summary>
@@ -895,18 +920,18 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         STANDARD,
         /// <summary>
-        /// UPS Next Day Air Early
-        /// U.S. 48, Alaska, Hawaii
+        /// UPS Next Day Air Early , U.S. 48, Alaska, Hawaii
+        /// FedEx First Overnight
         /// </summary>
         NDA_AM,
         /// <summary>
-        /// UPS Next Day Air
-        /// U.S. 48, Alaska, Hawaii, Puerto Rico
+        /// UPS Next Day Air , U.S. 48, Alaska, Hawaii, Puerto Rico
+        /// FedEx Priority Overnight
         /// </summary>
         NDA,
         /// <summary>
-        /// UPS Next Day Air Saver
-        /// U.S. 48, Alaska, Hawaii
+        /// UPS Next Day Air Saver , U.S. 48, Alaska, Hawaii
+        /// FedEx Standard Overnight
         /// </summary>
         NDA_SVR,
         /// <summary>
@@ -929,6 +954,7 @@ namespace PitneyBowes.Developer.ShippingApi
         UPS_3DA,
         /// <summary>
         /// UPS Ground
+        /// FedEx Ground®	
         /// </summary>
         GRD,
         /// <summary>
@@ -982,8 +1008,6 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         /// 
 
-
-
         UPS_3DA_USA,
         /// <summary>
         /// UPS Standard (to US Only)
@@ -991,16 +1015,19 @@ namespace PitneyBowes.Developer.ShippingApi
          STD_USA,
         /// <summary>
         ///FedEx 2Day®
+        ///UPS 2nd Day Air®
         /// </summary>
         [EnumMember(Value = "2DA")]
          TwoDA,
         /// <summary>
         ///FedEx Express Saver®
+        ///UPS 3 Day Select®	
         /// </summary>
         [EnumMember(Value = "3DA")]
         ThreeDA,
         /// <summary>
         ///FedEx Home Delivery®
+        ///
         /// </summary>
         HOM,
         /// <summary>
@@ -1014,7 +1041,8 @@ namespace PitneyBowes.Developer.ShippingApi
           TwoDA_FREIGHT,
         /// <summary>
         ///FedEx 2Day® A.M.
-       /// </summary>
+        ///UPS 2nd Day Air® A.M. , U.S. 48, Alaska, Hawaii
+        /// </summary>
         [EnumMember(Value = "2DA_AM")]
         TwoDA_AM,
         /// <summary>
@@ -1439,9 +1467,70 @@ namespace PitneyBowes.Developer.ShippingApi
         ///<summary>
         ///UPS  Verbal Confirmation of Delivery
         ///</summary>
-        VERBAL
+        VERBAL,
 
-    }
+        ///<summary>
+        ///Ancillary Endorsements
+        ///</summary>
+        ANCILLARY_ENDORSEMENT,
+        ///<summary>
+        ///Alcohol
+        ///</summary>
+        ALCOHOL,
+
+        ///<summary>
+        ///Carrier Leave If No Response
+        ///</summary>
+        CARRIER_LEAVE_IF_NO_RES,
+
+        ///<summary>
+        ///Direct Signature Required
+        ///</summary>
+        DIRECT_SIG,
+
+        ///<summary>
+        ///FedEx Appointment Home Delivery®
+        ///</summary>
+        APPOINTMENT,
+
+        ///<summary>
+        ///FedEx Date Certain Home Delivery®
+        ///</summary>
+        DATE,
+
+        ///<summary>
+        ///FedEx Evening Home Delivery®
+        ///</summary>
+        EVENING,
+
+        ///<summary>
+        ///FedEx Ground® C.O.D.
+        ///</summary>
+        GCOD,
+
+        ///<summary>
+        ///FedEx Priority Alert®
+        ///</summary>
+        PAL,
+
+        ///<summary>
+        ///FedEx Priority Alert Plus™
+        ///</summary>
+        PAL_PLUS,
+
+        ///<summary>
+        ///Saturday Service - Pickup
+        ///</summary>
+
+        SAT_PICKUP,
+
+        ///<summary>
+        ///No Signature Required (Signature Release)
+        ///</summary>
+
+        NO_SIG,
+
+     }
 
     /// <summary>
     /// Response Only, USPS and UPS Only. Additional fees or surcharges for the shipment. Each object in this array has two 
