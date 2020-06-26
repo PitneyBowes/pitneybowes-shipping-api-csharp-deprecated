@@ -13,7 +13,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// Name of the surcharge
         /// </summary>
-        Surcharges Surcharge { get; set; }
+        String Name { get; set; }
         /// <summary>
         /// Amount of the surcharge
         /// </summary>

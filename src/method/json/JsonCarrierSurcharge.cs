@@ -17,6 +17,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System;
 
 namespace PitneyBowes.Developer.ShippingApi.Json
 {
@@ -28,8 +29,7 @@ namespace PitneyBowes.Developer.ShippingApi.Json
         public JsonCarrierSurcharge(T t) : base(t) { }
 
         [JsonProperty("name")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public Surcharges Surcharge { get => Wrapped.Surcharge; set => Wrapped.Surcharge = value; }
+        public String Name { get => Wrapped.Name; set => Wrapped.Name = value; }
 
         [JsonProperty("fee")]
         public decimal Fee { get => Wrapped.Fee; set => Wrapped.Fee = value; }

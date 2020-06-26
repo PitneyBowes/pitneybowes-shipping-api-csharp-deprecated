@@ -1536,7 +1536,7 @@ namespace PitneyBowes.Developer.ShippingApi
     /// Response Only, USPS and UPS Only. Additional fees or surcharges for the shipment. Each object in this array has two 
     /// fields, name and fee.
     /// </summary>
-    public enum Surcharges
+    /*public enum Surcharges
     {
         /// <summary>
         /// Delivery Area Surcharge 
@@ -1574,7 +1574,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// UPS Premium Car
         /// </summary>
         PREMIUM_CARE
-    }
+    }*/
 
     /// <summary>
     /// You can subscribe the shipment to receive provisioned transit triggers by including the NOTIFICATIONS special service in the request. 

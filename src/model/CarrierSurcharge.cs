@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 namespace PitneyBowes.Developer.ShippingApi
 {
     /// <summary>
@@ -11,7 +13,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// Name of the surcharge
         /// </summary>
-        public Surcharges Surcharge { get; set; }
+        public String Name { get; set; }
         /// <summary>
         /// Amount of the surcharge
         /// </summary>
