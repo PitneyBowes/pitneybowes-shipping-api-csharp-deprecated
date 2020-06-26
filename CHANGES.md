@@ -1,4 +1,12 @@
 # Pitney Bowes Shipping API C# SDK Changes
+## 1.3.0
+## Update 
+****Build is not Backward compatible with earlier version.**** 
+We have removed Surcharge Enum and replaced with String Value so that we could accept new values dynamically 
+
+##1.2.2
+##Fixes
+* Changes to add FedEx ParcelType and Fedex SpecialServiceCodes
 
 ## 1.2.1
 
