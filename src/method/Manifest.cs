@@ -113,7 +113,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <returns></returns>
         public async static Task<ShippingApiResponse<T>> ReprintManifest<T>(ReprintManifestRequest request, ISession session = null) where T : IManifest, new()
         {
-            return await WebMethod.Post<T, ReprintManifestRequest> ("/shippingservices/v1/manifests/{ManifestId} ", request, session);
+            return await WebMethod.Get<T, ReprintManifestRequest> ("/shippingservices/v1/manifests/{ManifestId} ", request, session);
         }
         /// <summary>
         /// This operation retries a Create Manifest request that was submitted but received no response. You can use this operation only if the request received 
@@ -125,7 +125,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <returns></returns>
         public async static Task<ShippingApiResponse<T>> RetryManifest<T>(RetryManifestRequest request, ISession session = null) where T : IManifest, new()
         {
-            return await WebMethod.Post<T, RetryManifestRequest>("/shippingservices/v1/manifests", request, session);
+            return await WebMethod.Get<T, RetryManifestRequest>("/shippingservices/v1/manifests", request, session);
         }
 
     }
