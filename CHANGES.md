@@ -1,4 +1,9 @@
 # Pitney Bowes Shipping API C# SDK Changes
+
+##1.3.1
+##Fixes
+* Changes to Manifest API retry and reprint to bring them in sync to the APIs.
+
 ## 1.3.0
 ## Update 
 ****Build is not Backward compatible with earlier version.**** 
