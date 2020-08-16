@@ -26,6 +26,20 @@ namespace PitneyBowes.Developer.ShippingApi
 {
 
     /// <summary>
+    /// Response object for VerifySuggestAddress web method
+    /// </summary>
+    [JsonObject(MemberSerialization.OptIn)]
+    public class VerifySuggestRequest:IAddressSuggest
+    {
+        /// <summary>
+        /// Validated address
+        /// </summary>
+        [JsonProperty("address")]
+        public IAddress Address { get; set; }
+      
+    }
+
+    /// <summary>
     /// Address suggestions.
     /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
@@ -90,10 +104,10 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <param name="request">Request.</param>
         /// <param name="session">Session.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public async static Task<ShippingApiResponse<VerifySuggestResponse>> VerifySuggestAddress<T>(T request, ISession session = null) where T : IAddress, new()
+        public async static Task<ShippingApiResponse<VerifySuggestResponse>> VerifySuggestAddress<T>(T request, ISession session = null) where T : IAddressSuggest, new()
         {
-            var verifyRequest = new JsonAddress<T>(request) { Suggest = true };
-            return await WebMethod.Post<VerifySuggestResponse, JsonAddress<T>>("/shippingservices/v1/addresses/verify-suggest", verifyRequest, session);
+            var verifyRequest = new JsonAddressSuggest<T>(request) { Suggest = true };
+            return await WebMethod.Post<VerifySuggestResponse, JsonAddressSuggest<T>>("/shippingservices/v1/addresses/verify-suggest", verifyRequest, session);
         }
     }
 }

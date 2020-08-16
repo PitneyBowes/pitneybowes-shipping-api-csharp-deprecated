@@ -271,29 +271,29 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
         /// </summary>
         /// <returns>this</returns>
         /// <param name="session">Session.</param>
-        public IEnumerable<AddressFluent<T>> VerifySuggest(ISession session = null)
-        {
-            if (session == null)
-            {
-                session = Globals.DefaultSession;
-            }
+        //public IEnumerable<AddressFluent<T>> VerifySuggest(ISession session = null)
+        //{
+        //    if (session == null)
+        //    {
+        //        session = Globals.DefaultSession;
+        //    }
 
-            var addressResponse = Api.VerifySuggestAddress<T>(_address, session).GetAwaiter().GetResult();
-            if (addressResponse.Success)
-            {
-                _address = (T)addressResponse.APIResponse.Address;
-                foreach( var a in addressResponse.APIResponse.Suggestions.Addresses)
-                {
-                    yield return new AddressFluent<T>((T)a);
-                }
-            }
-            else
-            {
-                throw new ShippingAPIException(addressResponse);
-            }
+        //    var addressResponse = Api.VerifySuggestAddress<T>(_address, session).GetAwaiter().GetResult();
+        //    if (addressResponse.Success)
+        //    {
+        //        _address = (T)addressResponse.APIResponse.Address;
+        //        foreach( var a in addressResponse.APIResponse.Suggestions.Addresses)
+        //        {
+        //            yield return new AddressFluent<T>((T)a);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        throw new ShippingAPIException(addressResponse);
+        //    }
 
-            yield break;
-        }
+        //    yield break;
+        //}
         /// <summary>
         /// Person the specified name, phone and email.
         /// </summary>
