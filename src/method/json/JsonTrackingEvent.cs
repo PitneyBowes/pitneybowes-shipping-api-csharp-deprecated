@@ -57,7 +57,7 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             get => Wrapped.EventCity;
             set { Wrapped.EventCity = value; }
         }
-        [JsonProperty("eventState")]
+        [JsonProperty("eventStateOrProvince")]
         public string EventState
         {
             get => Wrapped.EventState;
