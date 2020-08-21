@@ -1,4 +1,11 @@
 # Pitney Bowes Shipping API C# SDK Changes
+##1.3.3
+##Fixes
+* Changes to Manifest API retry and reprint to bring them in sync to the APIs.
+
+##1.3.3
+##Fixes
+* Change for AddressSuggest API Request object  
 
 ##1.3.1
 ##Fixes
