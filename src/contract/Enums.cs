@@ -89,8 +89,9 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// FEDEX
         /// </summary>
-
-        FEDEX
+        [EnumMember(Value = "FedEx")]
+        FEDEX,
+        PBI
     }
 
     /// <summary>
@@ -1074,7 +1075,7 @@ namespace PitneyBowes.Developer.ShippingApi
 
 
 
-
+        PBXPS
 
     }
 
