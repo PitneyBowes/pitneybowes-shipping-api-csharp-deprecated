@@ -1,6 +1,6 @@
 # Pitney Bowes Shipping API C# Client
 
-**Latest version 1.3.0 is not backward comaptable with older versions as Surchage Enum from Rates object has been removed and now its a string**
+**Latest version 1.3.0 is not backward compatiable with older versions as Surcharge Enum from Rates object has been removed and now it's a string**
 
 This package provides an easy to use, developer centric .net interface to the Pitney Bowes Shipping API.
 The package uses the [.NET Standard 2.0 framework](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), meaning 

@@ -1,4 +1,9 @@
 # Pitney Bowes Shipping API C# SDK Changes
+##1.4.0
+##Fixes
+* Adding Carrier PBI and Change FEDEX to FedEx to fix Tracking issue
+
+
 ##1.3.3
 ##Fixes
 * Changes to Manifest API retry and reprint to bring them in sync to the APIs.
