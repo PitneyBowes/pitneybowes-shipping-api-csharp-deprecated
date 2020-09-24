@@ -1,3 +1,15 @@
+
+---
+**IMPORTANT:**
+
+**This C# SDK has been replaced by the following C# SDK:**
+
+https://github.com/PitneyBowes/pitneybowes-shipping-api-csharp-openapi
+
+**Please see the new SDK. The SDK on this page is deprecated. For current users, this SDK will continue to work but will not include updated features.**
+
+---
+
 # Pitney Bowes Shipping API C# Client
 
 **Latest version 1.3.0 is not backward compatiable with older versions as Surcharge Enum from Rates object has been removed and now it's a string**
