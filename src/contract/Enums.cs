@@ -1071,6 +1071,21 @@ namespace PitneyBowes.Developer.ShippingApi
          /// </summary>
 
         NDA_FREIGHT,
+        /// <summary>
+        ///This service is cost effective and offers full tracking.
+        /// </summary>
+
+        PBXPS,
+        /// <summary>
+        ///	The service uses postal clearance at the country of destination.
+        /// </summary>
+        PBXUS,
+
+        /// <summary>
+        ///		This service is faster than Prepay Standard and costs more. It offers full tracking. Note: Expedited DDP does not support delivery to P.O. Boxes..
+        /// </summary>
+
+        PBXPE
 
 
 
@@ -1654,7 +1669,16 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// Ounces
         /// </summary>
-        OZ
+        OZ,
+        /// <summary>
+        /// Pounds
+        /// </summary>
+        LB,
+        /// <summary>
+        /// Kilogram
+        /// </summary>
+
+        KG
     }
 
     /// <summary>

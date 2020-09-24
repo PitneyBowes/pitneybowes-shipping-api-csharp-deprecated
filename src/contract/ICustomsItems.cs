@@ -54,6 +54,13 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         /// <value>The origin country code.</value>
         string OriginCountryCode { get; set; }
+
+        /// <summary>
+        /// 	Recommended for CBDS (PBI). The commodity’s URL on the merchant’s site. Ensure the URL works. Providing a accurate URL helps Pitney Bowes assign the correct HS Code. The maximum length for this field is 1000 characters.
+        /// </summary>
+        string Url { get; set; }
+
+        string ItemId { get; set; }
     }
 
     public static partial class InterfaceValidators

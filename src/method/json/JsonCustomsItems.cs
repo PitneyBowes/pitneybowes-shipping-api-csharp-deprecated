@@ -62,6 +62,18 @@ namespace PitneyBowes.Developer.ShippingApi.Json
             get => Wrapped.OriginCountryCode;
             set { Wrapped.OriginCountryCode = value; } 
         }
+        [JsonProperty("url")]
+        public string Url
+        {
+            get => Wrapped.Url;
+            set { Wrapped.Url = value; }
+        }
+        [JsonProperty("itemId")]
+        public string ItemId
+        {
+            get => Wrapped.ItemId;
+            set { Wrapped.ItemId = value; }
+        }
     }
 
 }
