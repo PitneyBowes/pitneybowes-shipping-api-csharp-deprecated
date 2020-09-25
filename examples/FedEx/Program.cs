@@ -55,7 +55,7 @@ namespace FedEx
                          .Parcel((Parcel)ParcelFluent<Parcel>.Create()
                               .Weight(20, UnitOfWeight.OZ))
                          .Rates(RatesArrayFluent<Rates>.Create().
-                              Add().Carrier(Carrier.FEDEX)
+                              Add().Carrier(Carrier.FedEx)
                                .Service(Services.TwoDA)
                               .ParcelType(ParcelType.PKG))
                        .Documents((List<IDocument>)DocumentsArrayFluent<Document>.Create()
