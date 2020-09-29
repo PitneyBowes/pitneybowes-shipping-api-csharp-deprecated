@@ -144,6 +144,11 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
             _current.PrintDialogOption = option;
             return this;
         }
+        public DocumentsArrayFluent<T> Resolution(Resolution resolution)
+        {
+            _current.Resolution = resolution;
+            return this;
+        }
         /// <summary>
         /// Set document defaults for a shipping label.
         /// </summary>
@@ -151,13 +156,15 @@ namespace PitneyBowes.Developer.ShippingApi.Fluent
         /// <param name="contentType">Content type.</param>
         /// <param name="size">Size.</param>
         /// <param name="fileFormat">File format.</param>
-        public DocumentsArrayFluent<T> ShippingLabel( ContentType contentType = ShippingApi.ContentType.URL, Size size = ShippingApi.Size.DOC_8X11, FileFormat fileFormat = ShippingApi.FileFormat.PDF)
+        public DocumentsArrayFluent<T> ShippingLabel( ContentType contentType = ShippingApi.ContentType.URL, Size size = ShippingApi.Size.DOC_8X11, FileFormat fileFormat = ShippingApi.FileFormat.PDF, Resolution 
+            resolution= ShippingApi.Resolution.DPI_300)
         {
             return Add()
                 .DocumentType(ShippingApi.DocumentType.SHIPPING_LABEL)
                 .ContentType(contentType)
                 .Size(size)
                 .FileFormat(fileFormat)
+                .Resolution(resolution)
                 .PrintDialogOption(ShippingApi.PrintDialogOption.NO_PRINT_DIALOG);
         }
     }

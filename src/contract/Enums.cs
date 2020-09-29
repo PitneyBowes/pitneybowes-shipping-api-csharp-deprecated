@@ -1071,27 +1071,8 @@ namespace PitneyBowes.Developer.ShippingApi
         ///FedEx 1Day® Freight
          /// </summary>
 
-        NDA_FREIGHT,
-        /// <summary>
-        ///This service is cost effective and offers full tracking.
-        /// </summary>
-
-        PBXPS,
-        /// <summary>
-        ///	The service uses postal clearance at the country of destination.
-        /// </summary>
-        PBXUS,
-
-        /// <summary>
-        ///		This service is faster than Prepay Standard and costs more. It offers full tracking. Note: Expedited DDP does not support delivery to P.O. Boxes..
-        /// </summary>
-
-        PBXPE
-
-
-
-        PBXPS
-
+        NDA_FREIGHT
+ 
     }
 
 
@@ -1132,6 +1113,14 @@ namespace PitneyBowes.Developer.ShippingApi
         /// Note: This applies to domestic labels ONLY
         /// </summary>
         PRINT_CUSTOM_MESSAGE_2,
+        /// <summary>
+        ///  If a PB Standard Returns shipment creates a QR code, this is the alpha-numeric identifier for the QR code. The actual QR code is returned in the documents object.
+        /// </summary>
+        LABEL_ID,
+        /// <summary>
+        /// The PB Standard SmartLabel® barcode number. This is different from the shipment tracking number returned in the parcelTrackingNumber field
+        /// </summary>
+        SMART_LABEL_BARCODE,
         /// <summary>
         /// Set this value to true in order to make this shipment eligible to be included in the end-of-day manifest.
         /// </summary>
@@ -1210,7 +1199,20 @@ namespace PitneyBowes.Developer.ShippingApi
         /// update your printer’s firmware to a version that supports Unicode.
         /// To request ASCII, set this option to ZP500 (which simply means generate with ASCII and does not mean your printer must be a ZP500):
         /// </summary>
-        PRINTER_MODEL
+        PRINTER_MODEL,
+        /// <summary>
+        /// For a PB Standard Returns label, set this to Standard.
+        /// </summary>
+
+        CLIENT_SERVICE_FLAG,
+        /// <summary>
+        /// For a PB Standard Returns label, the ruleset assigned to the merchant during onboarding for PB Standard Returns. The ruleset determines the routing and the disposition of the returned parcel.
+        /// </summary>
+        DISPOSITION_RULESET_ID,
+        /// <summary>
+        /// For a PB Standard Returns label, this is a merchant-generated identifier for the label.
+        /// </summary>
+        RETURN_ID
     }
 
     /// <summary>
