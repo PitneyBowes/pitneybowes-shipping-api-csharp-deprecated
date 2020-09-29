@@ -48,7 +48,7 @@ namespace PitneyBowes.Developer.ShippingApi
         /// </summary>
         public static string UserAgent
         {
-            get => string.Format("PitneyBowes-CSharpSDK/{0} {1} ", "1.5", DefaultSession.GetConfigItem("DeveloperID"));
+            get => string.Format("PitneyBowes-CSharpSDK/{0} {1} ", "1.5.1", DefaultSession.GetConfigItem("DeveloperID"));
         } 
         /// <summary>
         /// Maximum number of http connections allowed for http client

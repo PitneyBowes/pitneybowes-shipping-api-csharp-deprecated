@@ -1,4 +1,8 @@
 # Pitney Bowes Shipping API C# SDK Changes
+##1.5.1
+##Fixes
+* Adding new shipment options for returns
+
 ##1.5
 ##Fixes
 * Changes breaking backward compatibility for Carrier Enum
