@@ -1212,7 +1212,9 @@ namespace PitneyBowes.Developer.ShippingApi
         /// <summary>
         /// For a PB Standard Returns label, this is a merchant-generated identifier for the label.
         /// </summary>
-        RETURN_ID
+        RETURN_ID,
+
+        CLIENT_ID
     }
 
     /// <summary>
