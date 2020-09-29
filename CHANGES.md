@@ -1,4 +1,7 @@
 # Pitney Bowes Shipping API C# SDK Changes
+##1.5
+##Fixes
+* Changes breaking backward compatibility for Carrier Enum
 ##1.4.0
 ##Fixes
 * Adding Carrier PBI and Change FEDEX to FedEx to fix Tracking issue
