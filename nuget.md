@@ -1,10 +1,10 @@
 # Pitney Bowes Shipping API C# Client
 
 This package provides an easy to use, developer centric .net interface to the Pitney Bowes Shipping API.
-The package uses the [.NET Standard 2.0 framework](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), meaning 
+The package uses the [.NET Standard 2.1 framework](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), meaning 
 it is compatible with:
-* .NET core 2.0 and above
-* .NET framework 4.6.1 and above
+* .NET core 3.0 and above
+
 
 Mono and Xamarin are also supported.
 

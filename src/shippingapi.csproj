@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>shippingapi</AssemblyName>
-    <Version>1.5.1</Version>
+    <Version>1.6.8</Version>
     <PackageId>shippingapi</PackageId>
-    <PackageVersion>1.5.1</PackageVersion>
+    <PackageVersion>1.6.0</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.5.1</AssemblyVersion>
-    <FileVersion>1.5.1.0</FileVersion>
+    <AssemblyVersion>1.6.0</AssemblyVersion>
+    <FileVersion>1.6.0.0</FileVersion>
     <Authors>Amit Kumar Singh</Authors>
     <Company>Pitney Bowes</Company>
     <Description>Package that provides a local interface to the Pitney Bowes Shipping API. Features and fluent API, strong type support, mocking, linq interface to transaction reports.</Description>

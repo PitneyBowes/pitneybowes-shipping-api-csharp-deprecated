@@ -1,4 +1,8 @@
 # Pitney Bowes Shipping API C# SDK Changes
+##1.6.0
+##Version Upgrade
+* Moving thw Target Version to .Net Standard 2.1 to resolve security issues
+
 ##1.5.1
 ##Fixes
 * Adding new shipment options for returns
